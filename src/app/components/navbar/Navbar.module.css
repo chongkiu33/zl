@@ -8,8 +8,14 @@
     position:fixed;
     font-family: "Cormorant Unicase", system-ui;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     
+}
+
+.wAndp{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .container div{
