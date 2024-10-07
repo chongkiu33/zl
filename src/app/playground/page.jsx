@@ -1,6 +1,12 @@
+import styles from './pg.module.css';
+
+
 const plagroundPage = () => {
     return (
-        <div>playgroundpage</div>
+        <div className={styles.container}>
+            <div className={styles.index}>index</div>
+            <div className={styles.project}>project</div>
+        </div>
     )
 }
 

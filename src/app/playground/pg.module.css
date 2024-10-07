@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    gap:10px;
+    height: 100vh;
+}
+
+.index{
+    flex: 7;
+    background-color: antiquewhite;
+}
+
+.project{
+    flex: 13;
+    background-color: blanchedalmond;
+}
