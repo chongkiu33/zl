@@ -5,10 +5,66 @@ import Image from 'next/image';
 const plagroundPage = () => {
     return (
         <div className={styles.container}>
+
+            <div className={styles.line2}></div>
             <div className={styles.index}>
-                <div>
-                    
+
+                <div className={styles.lineContainer}>
+                    <Image src={"/1.png"} fill className={styles.line} />
                 </div>
+
+                
+                <div className={styles.indexgroup}>
+            <div className={styles.element}></div>
+                <div className={styles.cn}> 
+
+                    <div className={styles.projectindex}>Computational Narratives</div>
+                    <div className={styles.projectindex}>Artificial Friend</div>
+                    <div className={styles.projectindex}>The Garden of Forking Paths</div>
+                    <div className={styles.projectindex}>“Listen! Pied Piper is playing”</div>
+                    <div className={styles.projectindex}>Am I too much?</div>
+                    <div className={styles.projectindex}>Enhanced Memory</div>
+                    <div className={styles.projectindex}>ChatGpt as Tarot Reader</div>
+                    <div className={styles.projectindex}>Mirror</div>
+                    <div className={styles.projectindex}>Music From Soul</div>
+                </div>
+
+                <div className={styles.FD}> 
+                    <div className={styles.projectindex}>Frontend Developer</div>
+                    <div className={styles.projectindex}>Catcher’s Curation</div>
+                    <div className={styles.projectindex}>Natural Material Lab</div>
+                </div>
+
+                <div className={styles.BMR}> 
+                    <div className={styles.projectindex}>Bio Material Research</div>
+                    <div className={styles.projectindex}>Bubble Procelain</div>
+                    <div className={styles.projectindex}>Seaweed hairband</div>
+                    <div className={styles.projectindex}>Cocoon</div>
+                </div>
+
+                
+
+                <div className={styles.TE}> 
+                    <div className={styles.projectindex}>Typography Experiment</div>
+                    <div className={styles.projectindex}>Yong</div>
+                    <div className={styles.projectindex}>Mayan Language</div>
+                    <div className={styles.projectindex}>Sound Visualization</div>
+                </div>
+
+                <div className={styles.DH}> 
+                    <div className={styles.projectindex}>Digital Heritage</div>
+                    <div className={styles.projectindex}>Stupa</div>
+                    <div className={styles.projectindex}>A serious window frames for Pavilion</div>
+                </div>
+
+                <div className={styles.Film}> 
+                    <div className={styles.projectindex}>Film</div>
+                    <div className={styles.projectindex}>Solidarity</div>
+                    <div className={styles.projectindex}>Qilin</div>
+                </div>
+
+                </div>
+
             </div>
 
             <div className={styles.project}>

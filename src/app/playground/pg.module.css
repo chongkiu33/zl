@@ -4,15 +4,48 @@
     height: 100vh;
     overflow: scroll;
 }
+.line2{
+    position: fixed;
+    width: 1px;
+    height: 98vh;
+    background-color: black;
+    margin-left: 35vw;
+    margin-top: 1vh;
+}
 
 .index{
     flex: 7;
-    background-color: antiquewhite;
+    
+    font-family: "Bricolage Grotesque", system-ui;
+    align-items: center;
+    font-size: 0.9vw;
+    overflow: hidden;
+   
+}
+
+.indexgroup{
+    margin-top: 15vh;
+    margin-left: 6vw;
+    position: absolute;
+    
+}
+
+.FD,.BMR,.TE,.DH,.Film{
+    padding-top: 30px;
+}
+
+.projectindex{
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.projectindex:hover{
+    translate: 20px;
 }
 
 .project{
     flex: 11;
-    background-color: blanchedalmond;
+
     
     flex-direction: column;
     
@@ -21,6 +54,7 @@
     padding-right: 5vw;
     padding-top: 15px;
     overflow: auto;
+    
    
 }
 
@@ -80,4 +114,36 @@
     display: flex;
     flex-direction: column;
     gap:20px
+}
+
+.element{
+    shape-outside: polygon(
+        0 0%,
+        40% 0%,
+        25% 20%,
+        48% 50%,
+        32% 55%,
+        30% 60%,
+        25% 70%,
+        50% 100%,
+        0 100%
+      );
+  width: 500px;
+  height: 800px;
+  float: left;
+  opacity: 1;
+  
+}
+
+.lineContainer{
+    width: 15vw;
+    height: 95vh;
+    position: fixed;
+    margin-left: 5vw;
+    margin-top: 3vh;
+}
+
+.line{
+    object-fit:contain;
+    opacity: 0.2;
 }

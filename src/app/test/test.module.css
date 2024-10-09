@@ -1,0 +1,25 @@
+.container{
+    width: 60vw;
+    margin-left: 10vw;
+    font-family: "Bricolage Grotesque", system-ui;
+    font-weight: 350;
+}
+
+.block{
+    padding: 5vw;
+}
+
+
+.letter{
+    transition: font-weight 0.8s ease-out;
+}
+
+.letter:hover{
+    font-weight: 750;
+    transition: font-weight 0.1s ease-in;
+    
+}
+
+
+
+
