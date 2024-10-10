@@ -6,12 +6,12 @@
 }
 
 .block{
-    padding: 5vw;
+    padding: 2vw;
 }
 
 
 .letter{
-    transition: font-weight 0.8s ease-out;
+    transition: all 0.8s ease-out;
 }
 
 .letter:hover{
@@ -20,6 +20,65 @@
     
 }
 
+.letter1{
+    display: inline-block;
+    transition: all 1s ease-out;
+}
+
+.letter1:hover{
+    transform:translateY(-10px);
+    transition: all 0.1s ease-in;
+    text-transform: capitalize;
+}
+
+
+.word3 {
+    display: inline-flex;
+    transition: all 0.8s ease-out;
+    margin-left: 0.2em;
+}
+
+.word3:hover {
+    transform: translateY(-10px); /* 鼠标悬停时上移10px */
+    transition: transform 0.3s ease-in;
+}
+
+
+.letter4{
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+
+
+.word5 {
+    transition: all 0.5s ease-in-out;
+}
+.word5:hover{
+    text-shadow: 2px 2px 2px #b9b8b8 ;
+    
+}
+
+.letter5{
+    display: inline-block;
+    transition: all 0.5s ease-out;
+}
+
+.letter5:hover{
+    letter-spacing: 0.5em;
+    transition: all 0.1s ease-in;
+}
+
+.letter6{
+    display: inline-block;
+    transition: all 0.5s ease-out;
+}
+
+.letter6:hover{
+    transform: scaleY(0.1) translateY(-10%);
+    transition: all 0.1s ease-in;
+}
 
 
 
