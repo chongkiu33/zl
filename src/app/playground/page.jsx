@@ -1,14 +1,48 @@
+"use client"
 import styles from './pg.module.css';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 
 const plagroundPage = () => {
+    // const pageTransition = {
+    //     initial:{
+    //       y:1000,
+          
+    //     },
+    //     animate:{
+          
+    //       y:0,
+          
+    //     },
+    //     exit:{
+          
+    //       y:-1000,
+    //     },
+    //   };
+
+
     return (
+
+        // <motion.div
+        //   key={typeof window!== "undefined" ? window.location.pathname:''}
+        //   initial="initial"
+        //   animate="animate"
+        //   exit="exit"
+        //   variants={pageTransition}
+        //   transition={{duration:1}}
+          
+        //   > 
+        <>
+        
+        
         <div className={styles.container}>
 
             <div className={styles.line2}></div>
-            <div className={styles.index}>
 
+            
+            <div className={styles.index}>
+            
                 <div className={styles.lineContainer}>
                     <Image src={"/1.png"} fill className={styles.line} />
                 </div>
@@ -17,6 +51,7 @@ const plagroundPage = () => {
                 <div className={styles.indexgroup}>
             <div className={styles.element}></div>
                 <div className={styles.cn}> 
+                    
 
                     <div className={styles.projectindex}>Computational Narratives</div>
                     <div className={styles.projectindex}>Artificial Friend</div>
@@ -67,6 +102,8 @@ const plagroundPage = () => {
 
             </div>
 
+            
+
             <div className={styles.project}>
                 
                 <div className={styles.projectTitle}>Artificial Friend</div>
@@ -99,7 +136,17 @@ const plagroundPage = () => {
 
                 
             </div>
+
+            
         </div>
+
+
+       
+
+      
+        </>
+
+        // </motion.div>
     )
 }
 
