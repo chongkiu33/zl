@@ -1,0 +1,48 @@
+.container{
+    padding: 10px 5vw 0 15vw;
+    font-family: "Bricolage Grotesque", system-ui;
+    font-weight: 350;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.intro{
+    display: flex;
+}
+
+.introtext{
+    flex: 11;
+    padding-right: 10vw;
+    font-size: 1.7vw;
+}
+
+.introimage{
+    flex:5;
+    height: 50vh;
+    background-color: antiquewhite;
+}
+
+.education .awards{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.blockTitle{
+    font-size: 2vw;
+    font-family: "Cormorant Unicase", system-ui;
+    font-weight:500;
+    padding-bottom: 10px;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+
+.edumajor{
+    translate:-10vw;
+}

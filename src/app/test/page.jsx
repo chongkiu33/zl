@@ -81,6 +81,7 @@ const splitWordsAndLetters2 = (text, wordClass, letterClass) => {
     return (
         <div className={styles.container}>
             <div className={styles.block}>
+                
                 <h3>1.strong加粗</h3>
                 <div>{splitWordsAndLetters(paragraphText, styles.word, styles.letter)}</div>
             </div>
@@ -110,6 +111,26 @@ const splitWordsAndLetters2 = (text, wordClass, letterClass) => {
             <div className={styles.block}>
                 <h4>6.</h4>
                 <div>{splitWordsAndLetters(paragraphText, styles.word6, styles.letter6)}</div>
+            </div>
+
+            <div className={styles.block}>
+                <h4>7.skew</h4>
+                <div>{splitWordsAndLetters(paragraphText, styles.word7, styles.letter7)}</div>
+            </div>
+
+            <div className={styles.block}>
+                <h4>8.blur</h4>
+                <div>{splitWordsAndLetters(paragraphText, styles.word8, styles.letter8)}</div>
+            </div>
+
+            <div className={styles.block}>
+                <h4>9.disppear</h4>
+                <div>{splitWordsAndLetters(paragraphText, styles.word9, styles.letter9)}</div>
+            </div>
+
+            <div className={styles.block}>
+                <h4>10.</h4>
+                <div>{splitWordsAndLetters(paragraphText, styles.word10, styles.letter10)}</div>
             </div>
 
         </div>

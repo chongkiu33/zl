@@ -1,6 +1,9 @@
+import styles from './works.module.css';
 const workPage = () => {
     return (
-        <div>workpage</div>
+        <div className={styles.container}>
+            workpage
+        </div>
     )
 }
 

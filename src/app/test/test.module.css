@@ -80,5 +80,49 @@
     transition: all 0.1s ease-in;
 }
 
+.word7{
+    display: inline-flex;
+    margin-left: 0.2em;
+    transition: all 0.5s ease-out;
+}
+
+
+.word7:hover{
+    transform: skewX(30deg);
+    transition: all 0.1s ease-in;
+}
+
+.letter8{
+    
+    transition: all 3s ease-out;
+}
+
+.letter8:hover{
+    filter: blur(2px);
+    
+    transition: all 0.1s ease-in;
+}
+
+.letter9{
+    display: inline-block;
+    transition: all 3s ease-out;
+}
+
+.letter9:hover{
+    color: white;
+    transition: all 0.1s ease-in;
+    
+}
+
+.letter10{
+    display: inline-block;
+    transition: all 1s ease-out;
+}
+.letter10:hover{
+   
+    transform: perspective(1000px) rotateY(270deg);
+    transition: all 0.1s ease-in;
+}
+
 
 

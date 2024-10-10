@@ -7,10 +7,10 @@
 .line2{
     position: fixed;
     width: 1px;
-    height: 98vh;
+    height: 96vh;
     background-color: black;
     margin-left: 35vw;
-    margin-top: 1vh;
+    margin-top: 2vh;
 }
 
 .index{
