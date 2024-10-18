@@ -2,7 +2,7 @@
     font-family: "Cormorant", serif;
     font-size: 15vh;
     width: 85%;
-    line-height: 0.9;
+    line-height: 1;
     /* text-shadow: -5px 5px 10px #bebdbd; */
     height: 100vh;
     position: fixed;
@@ -37,3 +37,38 @@
     font-weight: 250;
     translate: 0.3vw 3vh;
   }
+
+  .text{
+    position: absolute;
+  }
+
+  .svgpath1{
+    width: 30vw;
+    top: 12vh;
+    position: absolute;
+  }
+
+  .svgpath2{
+    width: 25vw;
+    margin-left: 10vw;
+    margin-top: 68vh;
+    position: absolute;
+  }
+
+  .svgpath3{
+    width: 35vw;
+    margin-left: 60vw;
+    margin-top: 30vh;
+    position: absolute;
+  }
+
+  .svgcontainer{
+    position: fixed;
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+    width: 100%;
+    
+  }
+
