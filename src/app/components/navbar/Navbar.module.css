@@ -9,6 +9,7 @@
     font-family: "Cormorant Unicase", system-ui;
     font-weight: 500;
     font-size: 1.4rem;
+    z-index: 999;
     
 }
 

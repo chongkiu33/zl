@@ -2,6 +2,7 @@ import styles from './about.module.css'
 
 const AboutPage = () => {
     return (
+        <>
         <div className={styles.container}>
             <div className={styles.intro}>
             <div className={styles.introtext}>
@@ -39,6 +40,8 @@ const AboutPage = () => {
                 
             </div>
         </div>
+
+        </>
     )
 }
 

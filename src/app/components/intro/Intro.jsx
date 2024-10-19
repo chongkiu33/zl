@@ -13,6 +13,8 @@ const Intro = () => {
       };
 
     return(
+      
+     
         <div 
         ref={introRef}
          onMouseMove={changeTextShadow}
@@ -81,6 +83,10 @@ const Intro = () => {
 
 
           </div>
+
+          
+
+        
     )
 }
 export default Intro;
