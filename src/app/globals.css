@@ -4,7 +4,7 @@
 *{
   margin: 0;
   padding: 0;
-  overflow: none;
+  
 }
 
 a{
@@ -18,7 +18,24 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  isolation: isolate;
   
-  
+}
+
+
+/* globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+main > div {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
 }
 
