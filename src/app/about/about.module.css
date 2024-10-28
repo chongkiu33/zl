@@ -1,7 +1,7 @@
 .container{
     padding: 10px 5vw 0 15vw;
     font-family: "Bricolage Grotesque", system-ui;
-    font-weight: 350;
+    font-weight: 250;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -9,6 +9,7 @@
 
 .intro{
     display: flex;
+    
 }
 
 .introtext{
@@ -45,4 +46,9 @@
 
 .edumajor{
     translate:-10vw;
+}
+
+.line{
+    width: 100%;
+    padding-bottom: 5px;
 }

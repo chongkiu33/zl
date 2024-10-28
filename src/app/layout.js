@@ -34,14 +34,14 @@ const PageContent = ({ pathname, children }) => {
     <motion.div
       key={pathname}
       initial={{ 
-        opacity: 0, y: 200}}
+        opacity: 0, y: screenHeight }}
       animate={{ 
         opacity: 1, 
         y: 0 
       }}
       exit={{ 
         opacity: 0,
-        y: -200
+        y: -screenHeight
       }}
       transition={{
         duration: 0.8,

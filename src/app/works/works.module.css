@@ -1,8 +1,50 @@
 .container{
-    width: 100%;
+  width: 80%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 15%;
+  padding-top: 1vh;
   font-family: "Bricolage Grotesque", system-ui;
 }
+
+.header{
+  display: flex;
+}
+
+.workIndex{
+  flex: 6;
+}
+
+.tagContainer{
+  flex: 7;
+  display: inline-flex;
+  gap: 5px;
+}
+
+.tag{
+  border: 1px solid #0b0b0b;
+  padding: 5px;
+  height: 20px;
+  border-radius: 10px;
+  
+}
+
+.icons{
+  flex: 3;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+  opacity: 60%;
+}
+
+.svgContainer{
+  width: 22vw;
+}
+
+.arrow{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10vh;
+}
+
+

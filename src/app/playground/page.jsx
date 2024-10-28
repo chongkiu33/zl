@@ -2,6 +2,7 @@
 import styles from './pg.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 
 const plagroundPage = () => {
@@ -33,38 +34,38 @@ const plagroundPage = () => {
         //   transition={{duration:1}}
           
         //   > 
-        <>
-        
-        
+        <>    
         <div className={styles.container}>
-
             <div className={styles.line2}></div>
-
-            
+          
             <div className={styles.index}>
             
                 <div className={styles.lineContainer}>
                     <svg className={styles.line} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253 1126">
                     <motion.path   
-                        d="m231.33,34.69c-27.5,41.04-19.58,46.37-49.25,85.82-15.41,20.3-24.91,13.54-35.57,36.72-8.21,18.14-2.59,20.16-2.59,40.03,0,22.9,14.11,25.49,6.05,46.94-9.79,26.21-29.52,15.12-43.92,39.02-21.74,36.43-11.09,42.48-27.07,81.79-3.31,8.06-2.3,7.06-1.87,15.7.72,17.28-5.62,26.35-7.63,32.69s-.72,26.21,10.66,41.18c7.34,9.65,22.18-4.75,30.24,4.32,12.24,13.68-5.18,29.38,8.78,41.33,18.58,15.84,30.67-.86,49.25,14.83,31.82,27.07,42.33,23.18,61.49,60.48,6.19,11.95-17.86,14.4-22.32,27.07-9.94,27.36-10.94,26.5-22.18,53.28-9.65,22.9-9.5,22.18-21.17,44.06-24.19,45.07-31.25,42.77-50.54,90.14-5.76,14.4,7.06,18.72,7.06,34.13,0,25.92-5.9,25.63-7.34,51.55-1.44,25.92,21.17,33.98,6.91,56.45-21.6,34.56-37.01,21.89-63.07,53.28-13.82,16.7-5.62,18.72-10.8,39.89-3.46,13.82-19.44,11.95-19.44,26.21,0,26.21,8.93,26.21,8.93,52.41"
-                        initial={{ pathLength: 1 }}
+                        d="M252.6,8.5c0,0-11.8,13.8-17.7,21.7s-27.6,29.6-35.5,35.5c-7.9,5.9-19.7,23.6-25.6,29.6s-9.9,9.9-13.8,15.8
+                        s-15.8,25.6-17.7,33.5s-2,23.6,0,29.6c0,0,4.6,12.5,8.6,20.5s0,25-4,29s-10,9-22,12s-19,11-22,15s-18,30-22,37s-17,38-19,42
+                        s-2,10.8,0,13.9s7,9.1,7,15.1s-2,12-5,16c-3,4-8,10-9,13s0,13,1,17s11,28,13,31s7,5,15,3s19-7,24-3s6,13,4,19s-6,20-1,26s14,11,23,9
+                        s26-6,34,0s19,18,23,26s9,32,13,39s9,16,9,18s-1,4-5,5s-6,6-9,16s-1,20-3,28s-2,14-6,22s-7,23-9,30s-7,22-14,31s-24,36-29,43
+                        s-12,21-16,30s-6,13-10,18s-8,11-8,22s4,16,9,23s14,15,14,21s1,20-3,29s-13,15-18,23s-10,17-15,21s-6,8-17,13s-28,18-37,30
+                        s-16,25-18,35s-5,13,3,21s12,11,12,18s-2,23-4,28s-4,20-4,27"
+                        initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1 }}
+                        transition={{ duration: 4 }}
                         />
                         
                     </svg>
                 </div>
 
-                
-                <div className={styles.indexgroup}>
-            <div className={styles.element}></div>
+            
+            <div className={styles.indexgroup}>
+               <div className={styles.element}></div>
+            
                 <div className={styles.cn}> 
                     
 
-                    <div className={styles.projectindex}>Computational Narratives</div>
-                    <div className={styles.projectindex}>Artificial Friend</div>
-                    <div className={styles.projectindex}>The Garden of Forking Paths</div>
-                    <div className={styles.projectindex}>“Listen! Pied Piper is playing”</div>
+                    <Link href={"/index"} className={styles.projectindex}>Computational Narratives<div className={styles.point}></div></Link>
+                    
                     <div className={styles.projectindex}>Am I too much?</div>
                     <div className={styles.projectindex}>Enhanced Memory</div>
                     <div className={styles.projectindex}>ChatGpt as Tarot Reader</div>
@@ -73,13 +74,13 @@ const plagroundPage = () => {
                 </div>
 
                 <div className={styles.FD}> 
-                    <div className={styles.projectindex}>Frontend Developer</div>
+                    <div className={styles.projectindex}>Frontend Developer <div className={styles.point}></div></div>
                     <div className={styles.projectindex}>Catcher’s Curation</div>
                     <div className={styles.projectindex}>Natural Material Lab</div>
                 </div>
 
                 <div className={styles.BMR}> 
-                    <div className={styles.projectindex}>Bio Material Research</div>
+                    <div className={styles.projectindex}>Bio Material Research <div className={styles.point}></div></div>
                     <div className={styles.projectindex}>Bubble Procelain</div>
                     <div className={styles.projectindex}>Seaweed hairband</div>
                     <div className={styles.projectindex}>Cocoon</div>
@@ -88,25 +89,28 @@ const plagroundPage = () => {
                 
 
                 <div className={styles.TE}> 
-                    <div className={styles.projectindex}>Typography Experiment</div>
+                    <div className={styles.projectindex}>Typography Experiment <div className={styles.point}></div></div>
                     <div className={styles.projectindex}>Yong</div>
                     <div className={styles.projectindex}>Mayan Language</div>
                     <div className={styles.projectindex}>Sound Visualization</div>
                 </div>
 
                 <div className={styles.DH}> 
-                    <div className={styles.projectindex}>Digital Heritage</div>
+                    <div className={styles.projectindex}>Digital Heritage <div className={styles.point}></div></div>
                     <div className={styles.projectindex}>Stupa</div>
                     <div className={styles.projectindex}>A serious window frames for Pavilion</div>
                 </div>
 
                 <div className={styles.Film}> 
-                    <div className={styles.projectindex}>Film</div>
+                    <div className={styles.projectindex}>Film <div className={styles.point}></div></div>
                     <div className={styles.projectindex}>Solidarity</div>
                     <div className={styles.projectindex}>Qilin</div>
                 </div>
 
-                </div>
+                
+            </div>
+
+              
 
             </div>
 

@@ -4,7 +4,7 @@
 *{
   margin: 0;
   padding: 0;
-  background-image: url('/bg.jpg');
+  /* background-image: url('/bg.jpg'); */
 }
 
 a{
@@ -41,5 +41,5 @@ main > div {
 
 
 svg{
-  opacity: 40%;
+  opacity: 90%;
 }
