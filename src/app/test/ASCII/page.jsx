@@ -63,7 +63,7 @@ const Ascii = () => {
   //   };
   // }, []);
 
-  return null; // 不需要返回其他内容
+  return <div>ascii</div>;
 };
 
 export default Ascii;
