@@ -5,7 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    /* background-image: url('/bg.jpg'); */
 }
+
+
 
 .intro{
     display: flex;

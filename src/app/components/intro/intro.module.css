@@ -6,7 +6,7 @@
     /* text-shadow: -5px 5px 10px #bebdbd; */
     height: 100vh;
     position: fixed;
-    left: 10%;
+    left: 15%;
   }
   .block{
     display: inline-flex;
@@ -43,20 +43,20 @@
   }
 
   .svgpath1{
-    width: 30vw;
+    width: 500px;
     top: 12vh;
     position: absolute;
   }
 
   .svgpath2{
-    width: 25vw;
+    width: 400px;
     margin-left: 10vw;
     margin-top: 68vh;
     position: absolute;
   }
 
   .svgpath3{
-    width: 35vw;
+    width: 600px;
     margin-left: 60vw;
     margin-top: 30vh;
     position: absolute;
