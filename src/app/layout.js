@@ -73,9 +73,9 @@ export default function RootLayout({ children }) {
           overflowX: 'hidden'
         }}>
           
-            <PageContent pathname={pathname} key={pathname}>
+            <>
               {children}
-            </PageContent>
+            </>
           
         </main>
       </body>

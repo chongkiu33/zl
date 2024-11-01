@@ -1,10 +1,10 @@
 
 .container{
-    position: fixed;
+    position: relative;
 }
 .line2{
     position: fixed;
-    width: 1.5px;
+    width: 1.2px;
     height: 96vh;
     background-color: black;
     margin-left: 36vw;
@@ -17,6 +17,7 @@
     align-items: center;
     font-size: 18px;
     overflow: hidden;
+    position: fixed;
     
    
    
@@ -34,9 +35,9 @@
 
 .lineContainer{
     height: 100vh;
-    position: fixed;
+    position: absolute;
     margin-left: 6vw;
-    z-index: 0;
+    z-index: -1;
     
     
 }
@@ -49,17 +50,14 @@
     stroke-linejoin: round;
     stroke-width: 2.5px;
     height: 100vh;
+    z-index: -1;
 }
 
 
 
 
 .indexgroup{
-  
-   
-   margin-left: 60px;
-    
-    
+   margin-left: 75px; 
 }
 
 .cn{
@@ -68,90 +66,30 @@
 
 
 
-.FD,.BMR,.TE,.DH,.Film{
-    padding-top: 35px;
-}
+
 
 .projectindex{
     display: flex-block;
     transition: all 0.3s ease-in-out;
     z-index: 999;
-    width: 100%;
+    width: 105%;
+    display: block;
+    margin-top: 2px;
+    padding-right: 20px;
 
 
 }
-
 .projectindex:hover{
-    translate: 20px;
+    font-weight: 700;
     
 }
 
-.project{
-    flex: 11;
-    flex-direction: column;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 15px;
-    overflow: auto;
-    
-   
+
+
+.projectgroup{
+    margin-top: 18px;
 }
 
-
-
-.projectTitle{
-    font-family: "Cormorant Unicase", system-ui;
-    font-weight: 400;
-    font-size: 3.3rem;
-}
-
-.ImgContainer{
-    position: relative;
-    width: 55vw;
-    height: 50vh;
-    background-color: turquoise;
-    margin-top: 20px;
-    
-}
-
-.projectImg{
-    object-fit:cover;
-    position: absolute;  
-}
-
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    font-family: "Bricolage Grotesque", system-ui;
-    
-}
-
-.abstract{
-    width: 45vw;
-    margin-left: 9vw;
-    padding-top: 25px;
-    font-style: italic;
-    font-weight: 300;
-}
-
-.chapter{
-    display: flex;
-}
-
-.chapterName{
-    flex: 2;
-    font-family: "Cormorant Unicase", system-ui;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.chaptercontent{
-    flex: 9;
-    display: flex;
-    flex-direction: column;
-    gap:20px
-}
 
 .element{
     shape-outside: polygon(
@@ -194,13 +132,8 @@
   height: 100vh;
   float: left;
   opacity: 1;
+  z-index: -1;
 }
 
 
-.symbol{
-    position: absolute;
-}
 
-.symbolContainer{
-    position: fixed;
-}

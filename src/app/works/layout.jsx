@@ -1,17 +1,32 @@
+import { title } from 'process';
 import styles from './works.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
+
+const projects = [
+    { id:1 , title: 'Artificial Friend',work:true},
+    { id:2 , title: 'The Garden of Forking Paths',work:true},
+    { id:10 , title: 'Listen! Pied Piper is playing',work:false},
+]
 
 
 const WorkLayout = ({ children }) => {
     return(
         <div className={styles.container}>
-           
+         
             <div className={styles.header}>
-                <div className={styles.workIndex}>
-                    <div>Artificial Friend</div>
-                    <div>The Garden of Forking Paths</div>
-                </div>
+            <ul className={styles.workIndex}>
+                {projects
+                    .filter(project => project.work) // 仅保留 work: true 的项目
+                    .map(project => (
+                        <li key={project.id}>
+                            <Link href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
+                                {project.title}
+                            </Link>
+                        </li>
+                    ))}
+            </ul>
 
                 <div className={styles.tagContainer}>
                     <div className={styles.tag}>Animation</div>
@@ -39,8 +54,8 @@ const WorkLayout = ({ children }) => {
                     </svg>
                 </div>
             </div>
-
-            <div className={styles.childrencontainer}>
+          
+            <div >
             {children}
             </div>
         </div>

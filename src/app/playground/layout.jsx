@@ -7,7 +7,7 @@ const PlaygroundLayout = ({ children }) => {
     return(
         <div>
             <Index  />
-            <div className={styles.Container}>
+            <div className={styles.container}>
             {children}
             </div>
         </div>
