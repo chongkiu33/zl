@@ -377,7 +377,7 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
             “The Garden of Forking Paths” 
             
         </div>
-
+{/* 
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Other Links</div>
@@ -387,7 +387,7 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
 
             <div><strong>p5 Links</strong>:Time Cave + Gauntlet: https://editor.p5js.org/B2xx/sketches/BKuuzfkEtTime Cave + Gauntlet + Branch and BottleNeck: https://editor.p5js.org/B2xx/sketches/pltbr8YFKQuest: https://editor.p5js.org/B2xx/sketches/vp3egvtrgCombination: https://editor.p5js.org/B2xx/sketches/b3AjUFh8H</div>
             
-        </div>
+        </div> */}
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Reference</div>
