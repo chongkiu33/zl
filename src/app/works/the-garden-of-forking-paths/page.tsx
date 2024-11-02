@@ -21,6 +21,8 @@ const Page = () => {
             <iframe src="/path/HardMode.html" width="100%" height="400"></iframe>
         </div> */}
 
+        {/* 
+
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Concept Demonstration</div>
             <div>
@@ -377,7 +379,7 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
             “The Garden of Forking Paths” 
             
         </div>
-{/* 
+
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Other Links</div>
