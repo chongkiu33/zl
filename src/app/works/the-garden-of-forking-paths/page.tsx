@@ -63,6 +63,8 @@ const Page = () => {
             <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='Definition' src="/path/Definition-768x339.jpeg" layout="responsive" width={100} height={100} />
             </div>
+
+            </div>
 {/* 
             <CodeBlock language='javascript'>
             {`
