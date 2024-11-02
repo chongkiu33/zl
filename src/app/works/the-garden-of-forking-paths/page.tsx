@@ -64,8 +64,8 @@ const Page = () => {
                 <Image  className={styles.img} alt='Definition' src="/path/Definition-768x339.jpeg" layout="responsive" width={100} height={100} />
             </div>
 
-            </div>
-{/* 
+            
+
             <CodeBlock language='javascript'>
             {`
 function generateTC() {
@@ -81,6 +81,8 @@ function generateTCEnd() {
             </CodeBlock>
 
         </div>
+
+        {/* 
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Development</div>
