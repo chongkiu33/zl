@@ -69,17 +69,17 @@ const Page = () => {
             
 
             <CodeBlock language='javascript'>
-            {`
-function generateTC() {
-  const randomNum = random([2, 3]);
-  const generateText = " || " + randomNum + " " + oRecText;
-  console.log("Time Cave");
-}
+                        {`
+            function generateTC() {
+              const randomNum = random([2, 3]);
+              const generateText = " || " + randomNum + " " + oRecText;
+              console.log("Time Cave");
+            }
 
-function generateTCEnd() {
- EndText += " || " + random([2, 3]) + " " + sucEnd + " " + random([0, 1]) + " ";
- console.log("TCEnd");
-}`}
+            function generateTCEnd() {
+            EndText += " || " + random([2, 3]) + " " + sucEnd + " " + random([0, 1]) + " ";
+            console.log("TCEnd");
+            }`}
             </CodeBlock>
 
         </div>
