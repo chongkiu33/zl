@@ -69,22 +69,22 @@ const Page = () => {
             
 
             <CodeBlock language='javascript'>
-                        {`
-            function generateTC() {
-              const randomNum = random([2, 3]);
-              const generateText = " || " + randomNum + " " + oRecText;
-              console.log("Time Cave");
-            }
+{`
+function generateTC() {
+  const randomNum = random([2, 3]);
+  const generateText = " || " + randomNum + " " + oRecText;
+  console.log("Time Cave");
+}
 
-            function generateTCEnd() {
-            EndText += " || " + random([2, 3]) + " " + sucEnd + " " + random([0, 1]) + " ";
-            console.log("TCEnd");
-            }`}
+function generateTCEnd() {
+  EndText += " || " + random([2, 3]) + " " + sucEnd + " " + random([0, 1]) + " ";
+  console.log("TCEnd");
+}`}
             </CodeBlock>
 
         </div>
 
-        {/* 
+       
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Development</div>
@@ -395,7 +395,7 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
 
             <div><strong>p5 Links</strong>:Time Cave + Gauntlet: https://editor.p5js.org/B2xx/sketches/BKuuzfkEtTime Cave + Gauntlet + Branch and BottleNeck: https://editor.p5js.org/B2xx/sketches/pltbr8YFKQuest: https://editor.p5js.org/B2xx/sketches/vp3egvtrgCombination: https://editor.p5js.org/B2xx/sketches/b3AjUFh8H</div>
             
-        </div> */}
+        </div> 
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Reference</div>
