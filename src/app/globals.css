@@ -45,3 +45,41 @@ main > div {
 svg{
   opacity: 90%;
 }
+
+strong{
+  font-weight: 550;
+  margin-bottom:-7px ;
+}
+
+.dashed-list {
+  list-style-type: none; /* 移除默认的样式 */
+  
+}
+
+.dashed-list li {
+  position: relative;
+  padding-left: 1em;
+}
+
+.dashed-list li::before {
+  content: "- "; /* 添加破折号 */
+  position: absolute;
+  left: 0; /* 定位在左边 */
+  color: #333; /* 自定义破折号颜色 */
+}
+
+.bottomspace{
+   height: 20vh;
+}
+
+
+.video-container {
+  width: 100%; /* 充满屏幕宽度 */
+  overflow: hidden;
+}
+
+.responsive-video {
+  width: 100%; /* 让视频宽度充满父容器 */
+  aspect-ratio: 16 / 9; /* 设置宽高比例为 16:9 */
+  height: auto; /* 高度自动调整以保持比例 */
+}

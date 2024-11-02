@@ -1,10 +1,59 @@
 
 .container{
-    width: 65vw;
+    width: 55vw;
     right: 0;
     position: fixed;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    background-color: rgb(227, 222, 222, 0.2);
+    padding: 0 5vw 0 5vw;
+
+    font-family: "Bricolage Grotesque", system-ui;
+    font-weight: 350;
+    overflow: auto;
+    
     
 }
+
+
+/* side project */
+.spTitle{
+    font-family: "Cormorant Unicase", system-ui;
+    font-size: 3vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.spAbstract{
+    padding-left: 10vw;
+    font-style: italic;
+}
+
+.spChapter{
+    display: flex;
+    padding-top: 30px;
+    
+}
+
+.spChapterTitle{
+    flex:2;
+    font-family: "Cormorant Unicase", system-ui;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.spChapterText{
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+}
+
+.imageBlock{
+    display: block;
+    clear: both;
+}
+
+
+

@@ -19,7 +19,7 @@ const Index = () => {
                 
                 <ProjectGroup 
                     title="Computational Narratives" 
-                    projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "Mirror", "Music From Soul"]} 
+                    projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader","“Listen! Pied Piper is playing”", "Mirror", "Music From Soul"]} 
                 />
                 
                 <ProjectGroup 
@@ -43,7 +43,7 @@ const Index = () => {
                 />
 
                 <ProjectGroup 
-                    title="Film" 
+                    title="Film and Animation" 
                     projects={["Solidarity", "Qilin"]} 
                 />
             </div>
@@ -82,7 +82,7 @@ const ProjectGroup = ({ title, projects }) => {
                 {title} <div className={styles.point}></div>
             </div>
             {projects.map((project, index) => (
-                <Link key={index} className={styles.projectindex} href={`/playground/${project.toLowerCase().replace(/\s+/g, '-')}`}> 
+                <Link key={index} className={styles.projectindex} href={`/playground/${project.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}> 
                         {project}
                 </Link>
             ))}

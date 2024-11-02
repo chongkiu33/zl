@@ -1,0 +1,13 @@
+.pre {
+    background-color: rgb(247, 246, 244);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .code {
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    color: #333;
+    background-color: rgb(247, 246, 244);
+  }

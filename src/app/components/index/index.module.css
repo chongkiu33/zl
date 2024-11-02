@@ -7,7 +7,7 @@
     width: 1.2px;
     height: 96vh;
     background-color: black;
-    margin-left: 36vw;
+    margin-left: 35vw;
     margin-top: 2vh;
 }
 
@@ -57,11 +57,11 @@
 
 
 .indexgroup{
-   margin-left: 75px; 
+   margin-left: 4vw; 
 }
 
 .cn{
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 
@@ -76,6 +76,7 @@
     display: block;
     margin-top: 2px;
     padding-right: 20px;
+    line-height: 0.95em;
 
 
 }
@@ -87,7 +88,7 @@
 
 
 .projectgroup{
-    margin-top: 18px;
+    margin-top: 30px;
 }
 
 
