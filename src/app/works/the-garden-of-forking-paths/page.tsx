@@ -4,7 +4,8 @@ import Image from 'next/image'
 import { useEffect } from 'react';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
-import CodeBlock from '../../components/codeblock/CodeBlock';
+import dynamic from 'next/dynamic';
+const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 
 
 const Page = () => {
