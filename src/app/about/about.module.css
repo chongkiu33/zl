@@ -1,11 +1,12 @@
 .container{
-    padding: 10px 5vw 0 15vw;
+    padding: 10px 5vw 0 10vw;
     font-family: "Bricolage Grotesque", system-ui;
     font-weight: 250;
     display: flex;
     flex-direction: column;
     gap: 50px;
     width: 80vw;
+    z-index: -1;
     /* background-image: url('/bg.jpg'); */
 }
 

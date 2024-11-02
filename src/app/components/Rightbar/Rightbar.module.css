@@ -3,14 +3,28 @@
     flex-direction: column;
     font-family: "Cormorant Unicase", system-ui;
     font-weight: 500;
-    align-items: center;
+    
     height: 100vh;
-    justify-content: space-between;
+    
     right: 0;
     position: fixed;
     font-size: 1.1rem;
+    z-index: 999;
 }
 
 .container div{
     padding: 10px;
+}
+
+.svgContainer{
+    width: 5vw;
+    height: 80vh;
+    
+    margin-top: 1vh;
+  
+}
+
+.path:hover{
+    transform: scaleX(1.5) translateX(-30px);
+    transition: all 0.3s ease;
 }

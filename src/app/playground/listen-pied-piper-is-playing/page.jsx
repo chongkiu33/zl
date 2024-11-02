@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div> 
         <div className={styles.spTitle}>“Listen! Pied Piper is playing”</div>
-        <iframe width="100%" height="500" src="https://editor.p5js.org/B2xx/full/V_meYK4fF"></iframe>
+        <iframe allow="autoplay" width="100%" height="500" src="https://editor.p5js.org/B2xx/full/V_meYK4fF"></iframe>
         <div className={styles.spAbstract}> WARNING! Open the sketch on Chrome or the sound will not work.</div>
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Project Introduction</div>

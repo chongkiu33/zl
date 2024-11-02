@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <Rightbar />
+        <Rightbar className="rightbar" />
         <main style={{
           position: 'relative',
           minHeight: '100vh',

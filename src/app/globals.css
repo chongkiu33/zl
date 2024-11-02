@@ -83,3 +83,7 @@ strong{
   aspect-ratio: 16 / 9; /* 设置宽高比例为 16:9 */
   height: auto; /* 高度自动调整以保持比例 */
 }
+
+.rightbar{
+  z-index: 999;
+}
