@@ -16,10 +16,10 @@ const Page = () => {
             <div className={styles.pDate}>2024</div>
         </div>
 
-        {/* <div className={styles.iframeContainer}>
+        <div className={styles.iframeContainer}>
             <iframe src="/path/EasyMode.html" width="100%" height="400"></iframe>
             <iframe src="/path/HardMode.html" width="100%" height="400"></iframe>
-        </div> */}
+        </div>
 
         {/* 
 
