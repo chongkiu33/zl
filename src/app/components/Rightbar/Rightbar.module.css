@@ -10,21 +10,74 @@
     position: fixed;
     font-size: 1.1rem;
     z-index: 999;
+    align-items: end;
+    
 }
 
 .container div{
-    padding: 10px;
+    
 }
 
 .svgContainer{
     width: 5vw;
-    height: 80vh;
-    
+    height: 85vh;
+ 
     margin-top: 1vh;
+    padding: 10px 10px 0 10px;
+  
+}
+.svgContainer2{
+    width: 5vw;
+    height: 2vh;
+  
+
+    padding: 10px;
   
 }
 
+
+
+.dateContainer{
+   
+   width: 3vw;
+   
+   display: flex;
+   padding: 0 10px 0 10px;
+   flex-direction: column;
+   align-items: center;
+    
+    
+}
+
+.dateLine{
+    
+    height: 1px;
+    background-color: black;
+}
+
+.path{
+    transition: all 0.5s ease-out;
+    
+}
+
+
+
 .path:hover{
-    transform: scaleX(1.5) translateX(-30px);
-    transition: all 0.3s ease;
+    /* transform: scaleX(1.2) translateX(-15px); */
+    transition: all 0.2s ease-in;
+    stroke: aqua;
+    
+    
+   
+}
+
+.titleContainer{
+    position: absolute;
+    
+    transform: translateX(-3.1vw) translateY(-5px);
+    text-align: right;
+    padding-right: 15px;
+    font-family: "Bricolage Grotesque", system-ui;
+    font-size: 13px;
+    font-weight: 250;
 }
