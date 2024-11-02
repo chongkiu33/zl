@@ -5,7 +5,7 @@ const Page = () => {
     <div>
         <div className={styles.spTitle}>Am I Too Much?</div>
         
-        <iframe src="/AmItooMuch/amitoomuch.html" width="100%" height="500"></iframe>
+        <iframe src="/AmItoomuch/amitoomuch.html" width="100%" height="500"></iframe>
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Introduction</div>
             <div className={styles.spChapterText}>
