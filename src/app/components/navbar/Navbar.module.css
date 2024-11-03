@@ -7,7 +7,7 @@
     height: 100vh;
     position:fixed;
     font-family: "Cormorant Unicase", system-ui;
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.4rem;
     z-index: 999;
     
@@ -21,4 +21,33 @@
 
 .container div{
     padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+    .container{
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+        padding: 0 5vw 0 5vw;
+    }
+
+    .wAndp{
+        
+        flex-direction: row;
+        gap: 20px;
+        font-size: 1.2rem;
+        margin-right: -40px;
+    }
+    .about{
+        font-size: 1.2rem;
+    }
+
+    .container div{
+        padding: 10px 0 0 0;
+    }
+
+    
+   
 }

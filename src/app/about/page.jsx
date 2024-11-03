@@ -26,40 +26,11 @@ const AboutPage = () => {
                 <br></br>
                 After her previous research in implementing a pedagogical machine learning library (ml5.js) and building a therapeutic accompanying robot, she is aiming to seek to combine embodied experiences with scientific technology.
                 </div>
-                <div className={styles.introimage}></div>
+                <div className={styles.introimage}>XXXX</div>
             </div>
 
             </div>
 
-            <div className={styles.education}>
-                <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
-                </svg>
-                <div className={styles.content}>
-                    <div>University of Arts, Camberwell</div>
-                    <div className={styles.edumajor}>Graphic Design</div>
-                    <div>2023</div>
-                </div>
-                <div className={styles.content}>
-                    <div>University of Arts, Camberwell</div>
-                    <div className={styles.edumajor}>Graphic Design</div>
-                    <div>2023</div>
-                </div>
-                
-            </div>
-
-            <div className={styles.awards}>
-                <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
-                </svg>
-                <div className={styles.content}>
-                    <div>University of Arts, Camberwell</div>
-                    
-                    <div>2023</div>
-                </div>
-                
-                
-            </div>
         </div>
 
         </>

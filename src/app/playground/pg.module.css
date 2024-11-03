@@ -1,4 +1,5 @@
 
+
 .container{
     width: 55vw;
     right: 0;
@@ -54,6 +55,99 @@
     display: block;
     clear: both;
 }
+
+
+@media (max-width: 1430px) {
+
+    
+
+    .container{
+        
+        padding: 0 3vw 0 3vw;
+    }
+   
+}
+   
+
+@media (max-width: 1200px) {
+    .spChapter{
+        
+        gap: 10px;
+    }
+    .container{
+        width: 56vw;
+        padding: 0 2vw 0 2vw;
+        
+    }
+    .spChapterTitle{
+        flex: 1.5;
+    }
+
+
+   
+
+    .spAbstract{
+        padding-right: 2vw;
+        padding-left: 0;
+        font-style: italic;
+    }
+   
+} 
+
+
+@media (max-width: 1024px) {
+    .spChapter{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container{
+        width: 55vw;
+        padding: 0 2vw 0 2vw;
+        
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .container{
+        width: 94vw;
+        padding: 0 3vw 0 3vw;
+       
+        
+    }
+
+    .spTitle{
+        font-family: "Cormorant Unicase", system-ui;
+        font-size: 4vw;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .spChapterTitle{
+        flex: 1.5;
+    }
+
+    .spChapter{
+        flex-direction:row;
+       
+    }
+   
+}
+
+
+@media (max-width: 600px) {
+
+   
+
+    .spChapter{
+        flex-direction:column;
+       
+    }
+   
+}
+
 
 
 

@@ -88,6 +88,7 @@
 }
 
 .line{
+    
     object-fit:contain;
     fill: none;
     stroke: #000;
@@ -104,23 +105,23 @@
 
 .cn{
     padding-top: 100px;
+    transition: all 0.3s ease-in-out;
 }
 
 
 
 
 
-.projectindex{
-    display: flex-block;
+.projectindex {
+    display: block;
     transition: all 0.3s ease-in-out;
     z-index: 999;
-    width: 105%;
-    display: block;
+    width: 100px;
     margin-top: 2px;
     padding-right: 20px;
     line-height: 0.95em;
-
-
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .projectindex:hover{
     font-weight: 700;
@@ -136,3 +137,127 @@
 
 
 
+
+@media (max-width: 1430px) {
+    .line2{
+        margin-left: 39vw;
+    }
+
+    .lineContainer{
+        margin-left: 4vw;
+    }
+    .indexgroup{
+        margin-left: 2vw; 
+     }
+
+     .line{
+        transform: scaleX(0.9);
+    }
+
+    .index{
+        flex: 6;
+     
+       
+        font-size: 17px;
+          
+    }
+    
+
+    
+   
+}
+
+@media (max-width: 1200px) {
+    
+    .line2{
+        margin-left: 40vw;
+    }
+
+    .lineContainer{
+        margin-left: 2vw;
+    }
+    .indexgroup{
+        margin-left: 1vw; 
+     }
+
+    .line{
+        transform: scaleX(0.8) ;
+    }
+
+    .element{
+        width: 420px;
+        transition: all 0.3s ease-in-out;
+        shape-outside: polygon(
+        0 0%,
+        54% 0%,
+        37% 10%,
+        34% 12%,
+        36% 14%,
+        36% 18%,
+        32% 20%,
+        18% 30%,
+        24% 32%,
+        21% 34%,
+        22% 36%,
+        24% 38%,
+        30% 40%,
+        32% 42%,
+        34% 44%,
+        44% 46%,
+        42% 48%,
+        43% 50%,
+        44% 52%,
+        43% 54%,
+        43% 56%,
+        43% 58%,
+        42% 60%,
+        36% 64%,
+        33% 68%,
+        31% 70%, 
+        30% 72%,
+        31% 76%,
+        33% 80%,
+        28% 84%,
+        10% 88%,
+        10% 90%,
+         0 100%
+
+      );
+    }
+
+    .index{
+        flex: 6;
+        font-size: 16px;
+          
+    }
+}
+
+@media (max-width: 1024px) {
+    .line2{
+        margin-left: 41vw;
+    }
+}
+
+@media (max-width: 850px) {
+    .line{
+        transform: scaleX(0.7) ;
+    }
+
+    .lineContainer{
+        margin-left: 0vw;
+    }
+    .indexgroup{
+        margin-left: -1.5vw; 
+     }
+
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .container{
+       display: none;
+    }
+    
+}

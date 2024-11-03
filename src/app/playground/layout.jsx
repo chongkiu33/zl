@@ -5,8 +5,8 @@ import styles from './pg.module.css';
 
 const PlaygroundLayout = ({ children }) => {
     return(
-        <div>
-            <Index  />
+        <div >
+            <Index   />
             <div className={styles.container}>
             {children}
             </div>
