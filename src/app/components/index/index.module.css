@@ -11,85 +11,6 @@
     margin-top: 2vh;
 }
 
-.index{
-    flex: 7;
-    font-family: "Bricolage Grotesque", system-ui;
-    align-items: center;
-    font-size: 18px;
-    overflow: hidden;
-    position: fixed;
-    
-   
-   
-}
-
-.point{
-    width: 12px;
-    height: 12px;
-    background-color: #383838;
-    display: inline-block;
-    border-radius: 50%;
-    translate:5px 1px
-}
-
-
-.lineContainer{
-    height: 100vh;
-    position: absolute;
-    margin-left: 6vw;
-    z-index: -1;
-    
-    
-}
-
-.line{
-    object-fit:contain;
-    fill: none;
-    stroke: #000;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2.5px;
-    height: 100vh;
-    z-index: -1;
-}
-
-
-
-
-.indexgroup{
-   margin-left: 4vw; 
-}
-
-.cn{
-    padding-top: 100px;
-}
-
-
-
-
-
-.projectindex{
-    display: flex-block;
-    transition: all 0.3s ease-in-out;
-    z-index: 999;
-    width: 105%;
-    display: block;
-    margin-top: 2px;
-    padding-right: 20px;
-    line-height: 0.95em;
-
-
-}
-.projectindex:hover{
-    font-weight: 700;
-    
-}
-
-
-
-.projectgroup{
-    margin-top: 30px;
-}
 
 
 .element{
@@ -132,9 +53,86 @@
   width: 500px;
   height: 100vh;
   float: left;
+  position: relative;
   opacity: 1;
   z-index: -1;
 }
+
+
+.index{
+    flex: 7;
+    font-family: "Bricolage Grotesque", system-ui;
+    align-items: center;
+    font-size: 18px;
+    overflow: hidden;
+    position: fixed;   
+}
+
+.point{
+    width: 12px;
+    height: 12px;
+    background-color: #383838;
+    display: inline-block;
+    border-radius: 50%;
+    translate:5px 1px
+}
+
+
+.lineContainer{
+    height: 100vh;
+    position: absolute;
+    margin-left: 6vw;
+    z-index: -1;
+    
+    
+}
+
+.line{
+    object-fit:contain;
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.5px;
+    height: 100vh;
+    z-index: -1;
+}
+
+.indexgroup{
+   margin-left: 4vw; 
+}
+
+.cn{
+    padding-top: 100px;
+}
+
+
+
+
+
+.projectindex{
+    display: flex-block;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+    width: 105%;
+    display: block;
+    margin-top: 2px;
+    padding-right: 20px;
+    line-height: 0.95em;
+
+
+}
+.projectindex:hover{
+    font-weight: 700;
+    
+}
+
+
+
+.projectgroup{
+    margin-top: 30px;
+}
+
 
 
 

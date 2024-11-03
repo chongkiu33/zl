@@ -10,13 +10,9 @@ const Index = () => {
         <div className={styles.line2}></div>
         <div className={styles.index}>
 
-            
-            
             <div className={styles.indexgroup}>
             <div className={styles.element}></div>
-            <div className={styles.cn}>
-                
-                
+            <div className={styles.cn}>  
                 <ProjectGroup 
                     title="Computational Narratives" 
                     projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader","“Listen! Pied Piper is playing”", "Mirror", "Music From Soul"]} 
