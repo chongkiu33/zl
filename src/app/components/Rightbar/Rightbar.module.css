@@ -12,11 +12,10 @@
     z-index: 999;
     align-items: end;
     
-}
-
-.container div{
     
 }
+
+
 
 .svgContainer{
     width: 5vw;
@@ -78,10 +77,11 @@
     text-align: right;
     padding-right: 15px;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: 13px;
-    font-weight: 250;
+    font-size: 14px;
+    font-weight: 350;
+ 
+  
 }
-
 
 @media (max-width: 768px) {
     .container {

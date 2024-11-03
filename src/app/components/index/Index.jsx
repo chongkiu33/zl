@@ -15,7 +15,7 @@ const Index = () => {
             <div className={styles.cn}>  
                 <ProjectGroup 
                     title="Computational Narratives" 
-                    projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader","“Listen! Pied Piper is playing”", "Mirror", "Music From Soul"]} 
+                    projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader","“Listen! Pied Piper is playing”", "Mirror"]} 
                 />
                 
                 <ProjectGroup 
@@ -30,7 +30,7 @@ const Index = () => {
 
                 <ProjectGroup 
                     title="Typography Experiment" 
-                    projects={["Yong", "Mayan Language", "Sound Visualization"]} 
+                    projects={["Yong","Gui", "Mayan Language", "Sound Visualization"]} 
                 />
 
                 <ProjectGroup 
