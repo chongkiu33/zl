@@ -19,14 +19,14 @@
   .sub{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: 2.5vh;
+    font-size: calc(1vh + 1vw);
     font-weight: 250;
   }
 
   .subb{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: 2.5vh;
+    font-size: calc(1vh + 1vw);
     font-weight: 250;
     translate: 0.3vw 12vh;
   }
@@ -34,7 +34,7 @@
   .subbup{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: 2.5vh;
+    font-size: calc(1vh + 1vw);
     font-weight: 250;
     translate: 0.3vw 3vh;
   }
@@ -123,6 +123,12 @@
     margin-left: 20vw;
     margin-top: 40vh;
     position: absolute;
+  }
+
+
+  .sub,.subb,.subbup{
+    font-size: calc(1.25vh + 1.25vw);
+    transform: translateY(-5px);
   }
 }
 
