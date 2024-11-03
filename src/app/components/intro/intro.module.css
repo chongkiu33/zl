@@ -128,7 +128,11 @@
 
   .sub,.subb,.subbup{
     font-size: calc(1.25vh + 1.25vw);
-    transform: translateY(-5px);
+    
+  }
+
+  .svgcontainer{
+    stroke-width: 2.5px;
   }
 }
 
