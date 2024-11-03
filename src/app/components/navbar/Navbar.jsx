@@ -15,9 +15,10 @@ const Navbar = () => {
             
                 <Link href="/works">Works</Link>
                 <Link href="/playground">Playground</Link>
+                <Link className={styles.about2} href="/about">About</Link>
             </div>
             
-            <div className={styles.about}><Link href="/about">About</Link></div>
+            <div className={styles.about1}><Link href="/about">About</Link></div>
         </div>
     )
 };
