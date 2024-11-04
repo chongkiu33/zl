@@ -19,8 +19,8 @@
 
 /* side project */
 .spTitle{
-    font-family: "Cormorant Unicase", system-ui;
-    font-size: 3vw;
+    font-family: 'Ogg';
+    font-size: 3.5vw;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -38,7 +38,7 @@
 
 .spChapterTitle{
     flex:2;
-    font-family: "Cormorant Unicase", system-ui;
+    font-family: 'Ogg';
     font-weight: 700;
     font-size: 18px;
 }

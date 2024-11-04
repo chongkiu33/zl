@@ -35,7 +35,7 @@ const Index = () => {
 
                 <ProjectGroup 
                     title="Digital Heritage" 
-                    projects={["Stupa", "A serious window frames for Pavilion"]} 
+                    projects={["Stupa", "window frames"]} 
                 />
 
                 <ProjectGroup 

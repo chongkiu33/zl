@@ -100,7 +100,8 @@
 }
 
 .pChapterTitle{
-  font-family: "Cormorant Unicase", system-ui;
+  /* font-family: "Cormorant Unicase", system-ui; */
+  font-family: 'Ogg';
   font-size: 25px;
   display: flex;
   justify-content: center;

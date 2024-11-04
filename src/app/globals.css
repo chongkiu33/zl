@@ -8,6 +8,17 @@
   
 }
 
+@font-face {
+  font-family: 'Ogg';
+  src: url('/Ogg-Roman.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ogg Thin';
+  src: url('/Ogg-Thin.ttf');
+  font-weight: lighter;
+}
 
 a{
   text-decoration: none;
