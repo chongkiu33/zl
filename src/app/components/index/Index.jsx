@@ -40,7 +40,7 @@ const Index = ({pathname}) => {
             <div className={`${isPoeticMode ? styles.poeticline : styles.line2}`}></div>
             <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
             {wordsWithRandomPositions.map((item, index) => (
-                <Draggable>
+                <Draggable key={`draggable-${index}`}>
                 <span
                     key={index}
                     style={{
