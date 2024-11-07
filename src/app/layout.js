@@ -6,6 +6,7 @@ import Rightbar from "./components/Rightbar/Rightbar";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react";
+import { PoeticModeProvider } from './contexts/PoeticModeContext'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -61,11 +62,13 @@ const PageContent = ({ pathname, children }) => {
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
+ 
 
   return (
     <html lang="en">
       <body>
-        <Navbar />
+      <PoeticModeProvider>
+        <Navbar pathname={pathname} />
         <Rightbar className="rightbar" />
         <main style={{
           position: 'relative',
@@ -78,6 +81,7 @@ export default function RootLayout({ children }) {
             </>
           
         </main>
+        </PoeticModeProvider>
       </body>
     </html>
   );

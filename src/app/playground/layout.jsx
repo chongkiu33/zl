@@ -1,15 +1,24 @@
 'use client';
+import { usePathname } from 'next/navigation'
 import Index from '../components/index/Index';
 import styles from './pg.module.css';
+import { WordProvider } from '../contexts/WordContext'; 
 
 
-const PlaygroundLayout = ({ children }) => {
+
+
+const PlaygroundLayout = ({ children}) => {
+    const pathname = usePathname();
+
     return(
         <div >
-            <Index   />
+           <WordProvider>
+            <Index pathname={pathname}/>
+            
             <div className={styles.container}>
             {children}
             </div>
+            </WordProvider>
         </div>
     )
 }

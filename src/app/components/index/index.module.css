@@ -1,7 +1,42 @@
 
 .container{
     position: relative;
+
 }
+
+.poeticContainer{
+    position: absolute;
+    width: 35vw;
+    height: 100vh;
+    font-family: "Bricolage Grotesque", system-ui;   
+    z-index: 0; 
+    display: none;
+}
+
+.poeticMode{
+    display: block;
+}
+
+
+
+/* 鼠标悬停时更改为抓取手形 */
+.draggable:active {
+    cursor: grabbing;
+}
+
+.poeticContainer span{
+    position: absolute;
+    color: white;
+
+}
+
+.poeticMode{
+    background-color: #0d0d0d;
+    z-index: 998;
+  
+}
+
+
 .line2{
     position: fixed;
     width: 1.2px;
@@ -9,6 +44,14 @@
     background-color: black;
     margin-left: 35vw;
     margin-top: 2vh;
+}
+
+.line2 .poeticline{
+    transform: translateX(-100%);
+}
+
+.indexdisable{
+    display: none;
 }
 
 
@@ -56,22 +99,27 @@
   position: relative;
   opacity: 1;
   z-index: -1;
+  
 }
 
 
 .index{
+ 
     flex: 7;
     font-family: "Bricolage Grotesque", system-ui;
     align-items: center;
     font-size: 18px;
     overflow: hidden;
     position: fixed;   
+    
 }
+
+
 
 .point{
     width: 12px;
     height: 12px;
-    background-color: #383838;
+    background-color: #000000;
     display: inline-block;
     border-radius: 50%;
     translate:5px 1px
@@ -83,6 +131,8 @@
     position: absolute;
     margin-left: 6vw;
     z-index: -1;
+    opacity: 0.6;
+    
     
     
 }
@@ -122,11 +172,19 @@
     line-height: 0.95em;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    opacity: 0.6;
+}
+
+.projectindex.active{
+    opacity: 1;
+    font-weight: 600;
 }
 .projectindex:hover{
     font-weight: 700;
     
 }
+
+
 
 
 
@@ -141,6 +199,10 @@
 @media (max-width: 1430px) {
     .line2{
         margin-left: 39vw;
+    }
+
+    .poeticContainer{
+        width: 39vw;
     }
 
     .lineContainer{
@@ -182,6 +244,10 @@
 
     .line{
         transform: scaleX(0.8) ;
+    }
+
+    .poeticContainer{
+        width: 40vw;
     }
 
     .element{
@@ -235,6 +301,10 @@
 @media (max-width: 1024px) {
     .line2{
         margin-left: 41vw;
+    }
+
+    .poeticContainer{
+        width: 41vw;
     }
 }
 

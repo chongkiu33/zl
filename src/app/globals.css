@@ -9,13 +9,13 @@
 }
 
 @font-face {
-  font-family: 'Ogg';
+  font-family: "Cormorant Unicase", system-ui;
   src: url('/Ogg-Roman.ttf');
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Ogg Thin';
+  font-family: "Cormorant Unicase", system-ui;
   src: url('/Ogg-Thin.ttf');
   font-weight: lighter;
 }
@@ -97,4 +97,15 @@ strong{
 
 .rightbar{
   z-index: 999;
+}
+
+
+.collapsible.content {
+  padding: 6px;
+  background-color: #eeeeee;
+}
+.collapsible.header {
+  background-color: #dddddd;
+  padding: 6px;
+  cursor: pointer;
 }

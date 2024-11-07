@@ -1,7 +1,7 @@
 .container{
     padding: 10px 5vw 0 15vw;
     font-family: "Bricolage Grotesque", system-ui;
-    font-weight: 250;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -14,30 +14,37 @@
 
 .intro{
     display: flex;
-    gap:30px;
+    gap:80px;
 }
 
 .introtext{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     flex: 7;
-    font-size: 2vw;
+    font-size: 18px;
+   
 }
+
+
+
+
 
 .introimage{
     flex: 3;
-    height: 50vh;
+    height: 40vh;
     background-color: rgb(147, 133, 115);
 }
 
 
 
 
-.content{
+/* .content{
     display: flex;
     width: 100%;
     justify-content: space-between;
     font-size: 1.3rem;
-}
+} */
 
 .line{
     width: 100%;
@@ -45,12 +52,64 @@
 }
 
 
+.titleButton{
+    all: unset;
+    font-family: "Cormorant Unicase", system-ui;
+    font-size: 25px;
+    font-weight: 450;
+    z-index: 999;
+}
+
+
+/* Experience.module.css */
+
+  
+  .experience {
+    margin-bottom: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+   
+  
+  }
+  
+  .header h3 {
+    
+   
+    margin: 0;
+  }
+  
+
+  
+
+
+  .description li {
+    margin-left: 15px;
+  }
+  
+
+.collapsible.content {
+    padding: 6px;
+    background-color: #eeeeee;
+}
+.collapsible.header {
+    background-color: #dddddd;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.header:hover {
+    background-color: aqua;
+}
+
+  
+
+
 @media (max-width: 1430px) {
 
-    .introtext{
-       
-        font-size: 25px;
-    }
+    
 
    
    
@@ -80,10 +139,7 @@
 
 @media (max-width: 768px) {
 
-    .introtext{
-       
-        font-size: 20px;
-    }
+    
     .container{
         width: 90vw;
       
