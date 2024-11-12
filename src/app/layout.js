@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react";
 import { PoeticModeProvider } from './contexts/PoeticModeContext'
+import {TagProvider} from './contexts/TagContext'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
       <PoeticModeProvider>
         <Navbar pathname={pathname} />
         <Rightbar className="rightbar" />
+        <TagProvider>
         <main style={{
           position: 'relative',
           minHeight: '100vh',
@@ -81,6 +83,7 @@ export default function RootLayout({ children }) {
             </>
           
         </main>
+        </TagProvider>
         </PoeticModeProvider>
       </body>
     </html>
