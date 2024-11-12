@@ -64,11 +64,7 @@ const Index = ({pathname}) => {
                             projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
                         />
 
-                        <ProjectGroup 
-                           pathname={pathname}
-                            title="Frontend Developer" 
-                            projects={["Catcher’s Curation", "Natural Material Lab"]} 
-                        />
+                    
 
                         <ProjectGroup 
                             pathname={pathname}

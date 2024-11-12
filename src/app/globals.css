@@ -8,17 +8,9 @@
   
 }
 
-@font-face {
-  font-family: "Cormorant Unicase", system-ui;
-  src: url('/Ogg-Roman.ttf');
-  font-weight: normal;
-}
 
-@font-face {
-  font-family: "Cormorant Unicase", system-ui;
-  src: url('/Ogg-Thin.ttf');
-  font-weight: lighter;
-}
+
+
 
 a{
   text-decoration: none;
@@ -66,6 +58,12 @@ strong{
   list-style-type: none; /* 移除默认的样式 */
   
 }
+
+button{
+  all: unset;
+}
+
+
 
 .dashed-list li {
   position: relative;

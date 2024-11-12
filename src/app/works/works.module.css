@@ -20,26 +20,33 @@
 }
 
 .workIndex{
-  flex: 5;
+  flex: 4;
   list-style-type: none; 
 }
 
 .tagContainer{
-  flex: 6;
-  display: inline-flex;
+  flex:6 ;
+  
   gap: 5px;
 }
 
 .tag{
   border: 1px solid #0b0b0b;
-  padding: 5px;
-  height: 20px;
+  padding: 2px;
+  margin: 2px;
+
   border-radius: 3px;
+  display: inline-flex;
   
 }
 
+.tag:hover{
+  background-color: #0b0b0b;
+  color: aliceblue;
+}
+
 .icons{
-  flex: 2;
+  flex: 3;
   display: flex;
   gap: 5px;
   justify-content: flex-end;
@@ -64,6 +71,72 @@
   font-weight: 100;
 }
 
+
+/* home page */
+
+.projectContainer{
+  display: flex;
+  gap: 10px;
+  height: 20vh;
+  font-weight: 350;
+  margin-bottom: 50px;
+  
+}
+
+.projectInfo{
+  flex: 4.5;
+  display: flex;
+  
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.porjectTitle{
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.projectTag{
+  padding: 0 3px 0 3px;
+  border: #0b0b0b 1px solid;
+  margin: 3px;
+  line-height: 1.2em;
+  border-radius: 0px;
+  display: inline-flex;
+  font-size: 14px;
+  
+}
+
+.tags{
+  margin-top: 5px;
+}
+
+
+.projectDescription{
+  flex: 6;
+}
+
+.projectImg{
+  flex: 4;
+  height: 20vh;
+  position: relative;
+}
+
+.fitimg{
+  object-fit: cover;
+  width: 100%; /* 让图片宽度填满容器 */
+  height: 100%; 
+}
+
+
+
+.line{
+  
+  
+  width: 100%;
+  margin-bottom: 10px;
+}
 
 
 /* project page */
@@ -121,7 +194,7 @@
 
 .img{
   width: 100%;
-  height: autp;
+  height: auto;
 }
 
 .rightlist{

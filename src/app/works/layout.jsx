@@ -10,6 +10,8 @@ const projects = [
     { id:10 , title: 'Listen! Pied Piper is playing',work:false},
 ]
 
+const allTags = ["All","robotics","interactive installation","critical technology","webpage","material","serious game","folklore","animation","fashion","graphic design","3D modeling","film","creative coding"];
+
 
 const WorkLayout = ({ children }) => {
     return(
@@ -29,9 +31,9 @@ const WorkLayout = ({ children }) => {
             </ul>
 
                 <div className={styles.tagContainer}>
-                    <div className={styles.tag}>Animation</div>
-                    <div className={styles.tag}>Interaction</div>
-                    <div className={styles.tag}>Graphic Design</div>
+                    {allTags.map(tag => (
+                        <button key={tag} className={styles.tag}>{tag}</button>
+                    ))}
                 </div>
 
                 <div className={styles.icons}>
@@ -41,7 +43,7 @@ const WorkLayout = ({ children }) => {
                 </div>
             </div>
 
-            <div className={styles.arrow}>
+            {/* <div className={styles.arrow}>
                 <div className={styles.svgContainer}>
                     <svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191.76 20.79">
                         <path class="cls-1" fill='none' stroke='#000' strokeLinecap='round' strokeWidth={1.1} d="m188,17.69H4.42s34.04-.47,42.64-14.15"/>
@@ -53,7 +55,7 @@ const WorkLayout = ({ children }) => {
                         <path class="cls-1" fill='none' stroke='#000' strokeLinecap='round' strokeWidth={1.1} d="m4.42,17.69h183.58s-34.04-.47-42.64-14.15"/>
                     </svg>
                 </div>
-            </div>
+            </div> */}
           
             <div >
             {children}

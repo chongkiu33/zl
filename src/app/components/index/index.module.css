@@ -5,7 +5,7 @@
 }
 
 .poeticContainer{
-    position: absolute;
+    position: fixed;
     width: 35vw;
     height: 100vh;
     font-family: "Bricolage Grotesque", system-ui;   
@@ -19,13 +19,12 @@
 
 
 
-/* 鼠标悬停时更改为抓取手形 */
 .draggable:active {
     cursor: grabbing;
 }
 
 .poeticContainer span{
-    position: absolute;
+    position: fixed;
     color: white;
 
 }

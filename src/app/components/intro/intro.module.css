@@ -1,9 +1,10 @@
 .intro{
-  /* font-family: "Cormorant Unicase", system-ui; */
+  
   font-family: "Cormorant", system-ui;
     font-size: calc(5.7vh + 6vw);
+    font-weight: 300;
     width: 90%;
-    line-height: 0.92;
+    line-height: 0.90;
     /* text-shadow: -5px 5px 10px #bebdbd; */
     height: 100vh;
     position: fixed;
