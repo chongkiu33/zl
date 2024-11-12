@@ -76,7 +76,7 @@ const works = [
 ];
 
 
-const workPage = () => {
+const WorkPage = () => {
     const { selectedTags } = useTag();
     const { layout } = useLayout();
 
@@ -131,4 +131,4 @@ const workPage = () => {
     )
 }
 
-export default workPage;
+export default WorkPage;
