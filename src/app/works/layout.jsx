@@ -5,6 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTag, TagProvider } from '../contexts/TagContext';
 import { Tag } from 'lucide-react';
+import { useState } from 'react';
+import React from 'react';
+import { useLayout } from '../contexts/LayoutContext';
 
 
 
@@ -19,6 +22,9 @@ const allTags = ["robotics","interactive installation","critical technology","we
 
 const WorkLayout = ({ children }) => {
     const {selectedTags, toggleTag} = useTag();
+    const { layout, toggleLayout } = useLayout();
+
+   
 
 
     return(
@@ -53,15 +59,15 @@ const WorkLayout = ({ children }) => {
                 </div>
 
                 <div className={styles.icons}>
-                    <Image src="/icon/1.png"  width={40} height={24} />
-                    <Image src="/icon/2.png"  width={40} height={24} />
-                    <Image src="/icon/3.png"  width={40} height={24} />
+                    <Image src="/icon/1.png"  onClick={() => toggleLayout('default')} width={40} height={24} />
+                    <Image src="/icon/2.png" onClick={() => toggleLayout('grid3')}  width={40} height={24} />
+                    <Image src="/icon/3.png" onClick={() => toggleLayout('bigimg')} width={40} height={24} />
                 </div>
             </div>
 
           
             <div >
-            {children}
+            {React.cloneElement(children, { layout })}
             </div>
         </div>
        

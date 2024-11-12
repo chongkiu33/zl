@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react";
 import { PoeticModeProvider } from './contexts/PoeticModeContext'
 import {TagProvider} from './contexts/TagContext'
+import { LayoutProvider } from './contexts/LayoutContext'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
         <Navbar pathname={pathname} />
         <Rightbar className="rightbar" />
         <TagProvider>
+        <LayoutProvider>
         <main style={{
           position: 'relative',
           minHeight: '100vh',
@@ -83,6 +85,7 @@ export default function RootLayout({ children }) {
             </>
           
         </main>
+        </LayoutProvider>
         </TagProvider>
         </PoeticModeProvider>
       </body>

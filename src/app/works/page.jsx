@@ -3,6 +3,10 @@ import styles from './works.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTag } from '../contexts/TagContext'
+import { useLayout } from '../contexts/LayoutContext'
+
+import { useState } from 'react';
+
 
 const works = [
     {
@@ -74,6 +78,10 @@ const works = [
 
 const workPage = () => {
     const { selectedTags } = useTag();
+    const { layout } = useLayout();
+
+   
+
 
     const filteredWorks = selectedTags.length === 0
     ? works
@@ -83,25 +91,30 @@ const workPage = () => {
 
     return (
         <>
-           <div className={styles.pageContainer}>
+        
+           <div className={`${styles.pageContainer} ${layout =='grid3'?styles.grid3:''}`}>
             {filteredWorks.map((work) => (
-                <div key={work.id}>
+                <div key={work.id} className={styles.project}>
                 <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
                     </svg>
-                <div key={work.id} className={styles.projectContainer}>
+                <div key={work.id} className={`${styles.projectContainer} ${layout =='grid3'?styles.flexcolum:''}`}>
                     
                     <div className={styles.projectInfo}>
                     <div>
                     <Link href={work.link} className={styles.porjectTitle}>{work.title}</Link>
                     <div className={styles.tags}>{work.tags.map((tag) => (<span key={tag} className={styles.projectTag}>{tag}</span>))}</div>
                     </div>
+                    {layout !== 'grid3' && (
                     <div className={styles.date}>{work.date}</div>
+                    )}
                     </div>
 
-                <div className={styles.projectDescription}>{work.description}</div>
+                {layout !== 'grid3' && (
+                            <div className={styles.projectDescription}>{work.description}</div>
+                        )}
 
-                <div className={styles.projectImg}>   
+                <div className={`${styles.projectImg} ${layout =='grid3'?styles.largerflex:''}`}>   
                     <Image  className={styles.fitimg} alt={work.title} src={work.image} fill />
                 </div>
 
@@ -113,6 +126,7 @@ const workPage = () => {
                 </div>
             ))}
            </div>
+          
         </>
     )
 }
