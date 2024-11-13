@@ -1,0 +1,46 @@
+
+.pHeader{
+    padding-top: 1vh;
+    display: flex;
+    padding-bottom: 5vh;
+  }
+  
+  .pTitle{
+    flex: 2.5;
+  }
+  
+  .pTag{
+    flex: 3.5;
+    opacity: 50%;
+  }
+  
+  
+  .pDescri{
+    flex: 8;
+  }
+  
+  .pDate{
+    flex: 2;
+    text-align: right;
+  }
+
+  .abstract{
+    padding: 50px 20vw 50px 20vw;
+}
+
+
+.chapterContent{
+    display: flex;
+}
+
+.projectTag{
+    padding: 0 3px 0 3px;
+    border: #0b0b0b 1px solid;
+    margin: 3px;
+    line-height: 1.2em;
+    border-radius: 0px;
+    display: inline-flex;
+    font-size: 14px;
+    
+  }
+  

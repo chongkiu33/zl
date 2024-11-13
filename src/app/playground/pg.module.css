@@ -16,6 +16,23 @@
     
 }
 
+.imgCover{
+    width: 55vw;
+    height: 35vw;
+    background-color: black;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.fitimg{
+    object-fit:contain;
+    width: 100%; /* 让图片宽度填满容器 */
+    height: 100%; 
+  }
+
+
+
+
 
 /* side project */
 .spTitle{

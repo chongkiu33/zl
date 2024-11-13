@@ -95,34 +95,49 @@ const WorkPage = () => {
            <div className={`${styles.pageContainer} ${layout =='grid3'?styles.grid3:''}`}>
             {filteredWorks.map((work) => (
                 <div key={work.id} className={styles.project}>
-                <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
+                    <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
                     </svg>
-                <div key={work.id} className={`${styles.projectContainer} ${layout =='grid3'?styles.flexcolum:''}`}>
+
+
+                <div key={work.id} className={`${styles.projectContainer} ${layout =='grid3'?styles.flexcolum:''} ${layout =='bigimg'?styles.bigimg:''}`}>
                     
-                    <div className={styles.projectInfo}>
+                    <div className={`${styles.projectInfo} ${layout =='bigimg'?styles.flexrow:''}`}>
                     <div>
                     <Link href={work.link} className={styles.porjectTitle}>{work.title}</Link>
+
+                    {layout !== 'bigimg' && (
                     <div className={styles.tags}>{work.tags.map((tag) => (<span key={tag} className={styles.projectTag}>{tag}</span>))}</div>
+                )}
                     </div>
+                    {layout === 'bigimg' && (
+                        
+                    <div className={styles.pTag}>{work.tags.map((tag) => (<span key={tag} className={styles.projectTag}>{tag}</span>))}</div>
+                   
+                )}
+
+{layout === 'bigimg' && (
+                        
+                        <div className={styles.pDescri}>{work.description}</div>
+                    )}
                     {layout !== 'grid3' && (
                     <div className={styles.date}>{work.date}</div>
                     )}
                     </div>
 
-                {layout !== 'grid3' && (
-                            <div className={styles.projectDescription}>{work.description}</div>
-                        )}
+                    {layout !== 'grid3'&& layout !== 'bigimg'  && (
+                                <div className={styles.projectDescription}>{work.description}</div>
+                    )}
 
-                <div className={`${styles.projectImg} ${layout =='grid3'?styles.largerflex:''}`}>   
-                    <Image  className={styles.fitimg} alt={work.title} src={work.image} fill />
-                </div>
-
-
-
-
+                    <div className={`${styles.projectImg} ${layout =='grid3'|| layout =='bigimg'?styles.largerflex:''}`}>   
+                        <Image  className={styles.fitimg} alt={work.title} src={work.image} fill />
+                    </div>
 
                 </div>
+                   
+                
+
+
                 </div>
             ))}
            </div>

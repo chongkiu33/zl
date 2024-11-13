@@ -34,7 +34,7 @@ const WorkLayout = ({ children }) => {
             <div className={styles.header}>
             <ul className={styles.workIndex}>
                 {projects
-                    .filter(project => project.work) // 仅保留 work: true 的项目
+                    .filter(project => project.work) 
                     .map(project => (
                         <li key={project.id}>
                             <Link href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
@@ -49,11 +49,7 @@ const WorkLayout = ({ children }) => {
                         <button 
                         key={tag}
                         onClick={() => toggleTag(tag)}  
-                        className={styles.tag}
-                        style={{
-                            backgroundColor: selectedTags.includes(tag) ? 'black' : 'transparent' ,
-                            color: selectedTags.includes(tag) ? 'white' : 'black'
-                        }}
+                        className={`${styles.tag} ${selectedTags.includes(tag) ? styles.selectedTag : ''}`}
                         >{tag}</button>
                     ))}
                 </div>
