@@ -22,7 +22,7 @@ const page = () => {
                 <div>It asks: Since we use facial technology so frequently, will we share a “standard face” based on facial detection (AI) technology in the future?</div>
             </div>
             
-        </div>
+     </div>
 
     <div className='bottomspace'></div>
 
