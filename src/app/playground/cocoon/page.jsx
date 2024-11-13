@@ -9,7 +9,7 @@ const Page = () => {
         
 
         <div className={styles.imgCover}>   
-            <Image  className={styles.fitimg} alt='Cocoon'  src="/Cocoon/Animation_3.gif" fill />
+            <Image  className={styles.fitimg} alt='Cocoon'  src="/cocoon/Animation_3.gif" fill />
         </div>
 
         <div className={styles.spAbstract}><TextSplitter text={` 
@@ -56,7 +56,7 @@ const Page = () => {
             `}/>
 
             <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/1.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/1.png" layout="responsive" width={100} height={100} />
             </div>
 
             <TextSplitter text={`
@@ -69,7 +69,7 @@ const Page = () => {
             `}/>
 
             <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/2.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/2.png" layout="responsive" width={100} height={100} />
             </div>
 
             <TextSplitter text={`
@@ -77,7 +77,7 @@ const Page = () => {
             `}/>
 
             <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/3.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/3.png" layout="responsive" width={100} height={100} />
             </div>
 
             <TextSplitter text={`
@@ -85,7 +85,7 @@ const Page = () => {
             `}/>
 
             <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/4.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/4.png" layout="responsive" width={100} height={100} />
             </div>
 
             
@@ -121,7 +121,7 @@ const Page = () => {
           <div className={styles.spChapterTitle}>Sculpture’s Finalization</div>
           <div className={styles.spChapterText}>
           <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/Animation_3.gif" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/Animation_3.gif" layout="responsive" width={100} height={100} />
         </div>
           
 
@@ -133,7 +133,7 @@ const Page = () => {
           <div className={styles.spChapterTitle}>Sketches of Cloth Version</div>
           <div className={styles.spChapterText}>
           <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/5.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/5.png" layout="responsive" width={100} height={100} />
             </div>
           
 
@@ -159,7 +159,7 @@ const Page = () => {
           <div className={styles.spChapterTitle}>Moodboard</div>
           <div className={styles.spChapterText}>
           <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='cocoon' src="/Cocoon/6.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='cocoon' src="/cocoon/6.png" layout="responsive" width={100} height={100} />
             </div>
           
 
