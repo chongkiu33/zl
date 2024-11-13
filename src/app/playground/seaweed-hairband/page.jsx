@@ -7,15 +7,16 @@ const Page = () => {
   return (
     <div> 
         <div className={styles.spTitle}>Seaweed hairband</div>
-        <div className="video-container">
-            <video
-                src="/hairband/BioInstru.mp4"
-                controls
-                autoPlay
-                loop
-                className="responsive-video"
-            ></video>
+        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' ,marginBottom: '20px'}}>
+            <iframe
+                src={`https://www.youtube.com/embed/WOdQQSyRof4`}
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            />
         </div>
+        
 
         <div className={styles.spAbstract}><TextSplitter text={` 
             “Biomaterial Hair Ties” uses Bio-materials to DIY recyclable hair ties. It provides a medium-elastic force that creates less friction and protects your hair compared to traditional hair ties. After it breaks, it could be degraded and reused as a natural fertilizer or re-DIY become a bioplastic/ hair tie again.
