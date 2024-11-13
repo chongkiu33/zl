@@ -6,8 +6,9 @@
     flex-direction: column;
     gap: 50px;
     width: 80vw;
-    z-index: -1;
-    /* background-image: url('/bg.jpg'); */
+    z-index: 0;
+  
+
 }
 
 
@@ -39,12 +40,7 @@
 
 
 
-/* .content{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 1.3rem;
-} */
+
 
 .line{
     width: 100%;
@@ -66,6 +62,7 @@
   
   .experience {
     margin-bottom: 20px;
+    font-size: 18px;
   }
   
   .header {
@@ -101,10 +98,12 @@
 }
 
 .header:hover {
-    background-color: aqua;
+    
 }
 
-  
+.link{
+    text-decoration: underline;
+}
 
 
 @media (max-width: 1430px) {

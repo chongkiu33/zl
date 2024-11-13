@@ -88,6 +88,9 @@
     width: 100%;
 }
 
+.link{
+    text-decoration: underline;
+}
 
 @media (max-width: 1430px) {
 

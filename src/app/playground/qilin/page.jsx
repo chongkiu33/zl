@@ -75,7 +75,7 @@ const Page = () => {
                 <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='background' src="/qilin/background.png" layout="responsive" width={100} height={100} />
                 <Image  className={styles.img} alt='background' src="/qilin/background_2.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='background' src="/qilin/background3.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='background' src="/qilin/background 3.jpeg" layout="responsive" width={100} height={100} />
                 <Image  className={styles.img} alt='background' src="/qilin/background 4.png" layout="responsive" width={100} height={100} />
                 </div>
                
@@ -88,11 +88,31 @@ const Page = () => {
             <div className={styles.spChapterText}>
                 <ul>
                 <strong> 引龍人(Qilin Tamer)</strong>
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/qilin tamer.png" layout="responsive" width={100} height={100} />
+                
+                </div>
                 <li>Qilin Adult</li>
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Adult-768x332.png" layout="responsive" width={100} height={100} />
+                </div>
                 <li>Qilin Teenager</li>
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Teenager-768x384.png" layout="responsive" width={100} height={100} />
+                </div>
                 <li>Qilin Ball</li>
+
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Ball.png" layout="responsive" width={100} height={100} />
+                </div>
                 <li>Qilin Crop</li>
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/qilin_crop.png" layout="responsive" width={100} height={100} />
+                </div>
                 <li>Qilin Crop (After “Enlightened”)</li>
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/qilin/qilin crop after enlightment.png" layout="responsive" width={100} height={100} />
+                </div>
                 </ul>
             </div>
             

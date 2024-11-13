@@ -62,8 +62,8 @@ const Page = () => {
           
           <div className={styles.spChapterTitle}>Similar Projects</div>
           <div className={styles.spChapterText}>
-            <Link href="https://kooshoo.com/pages/about">KooShoo </Link>
-            <Link href="https://alexanderclementine.com/products/seaweed-scrunchie?variant=37378936701090">Seaweed Scrunchie</Link>
+            <Link className={styles.link} href="https://kooshoo.com/pages/about">KooShoo </Link>
+            <Link className={styles.link} href="https://alexanderclementine.com/products/seaweed-scrunchie?variant=37378936701090">Seaweed Scrunchie</Link>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ const Page = () => {
           <div className={styles.spChapterTitle}>Reference</div>
           <div className={styles.spChapterText}>
          
-                <Link href="https://www.healthline.com/health/ponytail-headache#What-causes-a-ponytail-headache?">Ponytail Headache: Why It Happens and How to Get Relief</Link>
+                <Link className={styles.link} href="https://www.healthline.com/health/ponytail-headache#What-causes-a-ponytail-headache?">Ponytail Headache: Why It Happens and How to Get Relief</Link>
           </div>
         </div>
 
@@ -158,9 +158,9 @@ However, it is expensive as the 6 hair ties cost $39.
         `}/>
         <ul>
         <div>Reference</div>
-        <li><Link href="https://www.purewow.com/beauty/best-hair-ties">We Tried Every Single Hair Tie and Ranked Them from “Best” to “Get Off My Wrist”</Link></li>
-        <li><Link href="https://burlybands.com/blogs/news/scrunchies-vs-elastic-hair-ties-choosing-the-best-hair-accessory-for-thick-hair">Scrunchies vs Elastic Hair Ties: Choosing the Best Hair Accessory for Thick Hair</Link></li>
-        <li><Link href="https://soulvationsociety.com/blogs/soulvation-society/understanding-hair-ties-your-top-questions-answered">Understanding Hair Ties: Your Top Questions Answered</Link></li>
+        <li><Link className={styles.link} href="https://www.purewow.com/beauty/best-hair-ties">We Tried Every Single Hair Tie and Ranked Them from “Best” to “Get Off My Wrist”</Link></li>
+        <li><Link className={styles.link} href="https://burlybands.com/blogs/news/scrunchies-vs-elastic-hair-ties-choosing-the-best-hair-accessory-for-thick-hair">Scrunchies vs Elastic Hair Ties: Choosing the Best Hair Accessory for Thick Hair</Link></li>
+        <li><Link className={styles.link} href="https://soulvationsociety.com/blogs/soulvation-society/understanding-hair-ties-your-top-questions-answered">Understanding Hair Ties: Your Top Questions Answered</Link></li>
         </ul>
 
 
@@ -192,35 +192,35 @@ However, it is expensive as the 6 hair ties cost $39.
             <ul>
             <strong>Agar Agar</strong>
             <TextSplitter text={`(adding more glycerin will increase the softness/flexibility)`} />
-            <li><Link href="https://pubmed.ncbi.nlm.nih.gov/22340685/">Scientific research for properties of agar agar</Link></li>
-            <li><Link href="https://www.youtube.com/watch?v=Ty0O2VmbNeE">Video tutorial for making biomaterial with agar agar</Link></li>
+            <li><Link className={styles.link} href="https://pubmed.ncbi.nlm.nih.gov/22340685/">Scientific research for properties of agar agar</Link></li>
+            <li><Link className={styles.link} href="https://www.youtube.com/watch?v=Ty0O2VmbNeE">Video tutorial for making biomaterial with agar agar</Link></li>
             </ul>
 
 
             <ul>
             <strong>Gelatin</strong>
             <TextSplitter text={`(more elastic/ rubber-like than agar)- rubber-like DIY recipe`} />
-            <li><Link href="https://www.youtube.com/watch?v=FE_ps20YHro">Video tutorial for making biomaterial with gelatin</Link></li>
+            <li><Link className={styles.link} href="https://www.youtube.com/watch?v=FE_ps20YHro">Video tutorial for making biomaterial with gelatin</Link></li>
           
             </ul>
 
 
             <ul>
             <strong>Stretchable Hydrogels</strong>
-            <li><Link href="https://www.youtube.com/watch?v=_sz0KkT603E">Video tutorial for making stretchable biomaterial with hydrogels</Link></li>
+            <li><Link className={styles.link} href="https://www.youtube.com/watch?v=_sz0KkT603E">Video tutorial for making stretchable biomaterial with hydrogels</Link></li>
             
             </ul>
 
          
             
             
-           <Link href="https://www.toufood.com/product/agar-elastic-powdered-agar-and-gellan/?lang=en#:~:text=It%20is%20a%20combination%20of%20agar%20and%20gellan%20and%2C%20therefore,meat%20or%20100%20g%20vegetables."><strong>Agar Elastic</strong>(Powered agar and gelatine (to mend the problem that agar agar is not that elastic))</Link>
+           <Link className={styles.link} href="https://www.toufood.com/product/agar-elastic-powdered-agar-and-gellan/?lang=en#:~:text=It%20is%20a%20combination%20of%20agar%20and%20gellan%20and%2C%20therefore,meat%20or%20100%20g%20vegetables."><strong>Agar Elastic</strong>(Powered agar and gelatine (to mend the problem that agar agar is not that elastic))</Link>
           
             
 
 
             <ul>
-            <Link href="(https://spark.iop.org/stretching-truth)"><strong>Super stretchy seaweed</strong></Link>
+            <Link className={styles.link} href="(https://spark.iop.org/stretching-truth)"><strong>Super stretchy seaweed</strong></Link>
             <TextSplitter text={`By adding a seaweed extract to a hydrogel, Harvard scientists have developed a substance that can stretch to 20 times its original length. The material is being considered as a replacement for cartilage and for covering wounds.`} />
             </ul>
 
@@ -236,9 +236,9 @@ However, it is expensive as the 6 hair ties cost $39.
             <div className={styles.spChapterTitle}>Research on Seaweed</div>
             <div className={styles.spChapterText}>
             
-            <Link href="https://www.youtube.com/watch?v=TqXSFckqLhU">How to press and dry seaweed</Link>
-            <Link href="https://www.verywellfit.com/seaweeds-health-claims-2223487">Seaweed nutrition</Link>
-            <Link href="https://www.gearpatrol.com/fitness/a37779347/satisfy-running-seaweed-sustainable-performance-fabric/">A sustainable Seaweed Material</Link>
+            <Link className={styles.link} href="https://www.youtube.com/watch?v=TqXSFckqLhU">How to press and dry seaweed</Link>
+            <Link className={styles.link} href="https://www.verywellfit.com/seaweeds-health-claims-2223487">Seaweed nutrition</Link>
+            <Link className={styles.link} href="https://www.gearpatrol.com/fitness/a37779347/satisfy-running-seaweed-sustainable-performance-fabric/">A sustainable Seaweed Material</Link>
             </div>
         </div>
 
@@ -248,9 +248,9 @@ However, it is expensive as the 6 hair ties cost $39.
             <div className={styles.spChapterTitle}>Research on Similar Product</div>
             <div className={styles.spChapterText}>
             
-            <Link href="https://alexanderclementine.com/products/seaweed-scrunchie?variant=37378936701090">seaweed scrunchie</Link>
-            <Link href="https://www.amazon.com/Biodegradable-Elastic-Hair-Ties-Women/dp/B07QFYGZ48">Biodegradable Elastic Hair Ties Women</Link>
-            <Link href="https://kooshoo.com/pages/about">Kooshoo</Link>
+            <Link className={styles.link} href="https://alexanderclementine.com/products/seaweed-scrunchie?variant=37378936701090">seaweed scrunchie</Link>
+            <Link className={styles.link} href="https://www.amazon.com/Biodegradable-Elastic-Hair-Ties-Women/dp/B07QFYGZ48">Biodegradable Elastic Hair Ties Women</Link>
+            <Link className={styles.link} href="https://kooshoo.com/pages/about">Kooshoo</Link>
             </div>
         </div>
 
@@ -267,7 +267,7 @@ However, it is expensive as the 6 hair ties cost $39.
                 <Image  className={styles.img} alt='seaweedhairband' src="/hairband/2.png" layout="responsive" width={100} height={100} />
             </div>
 
-            <strong>Library Documentation <Link href="https://drive.google.com/drive/folders/16Ha6X4m-CIMJqm7W_my_uEsIBLyoAOGN">whole process</Link>
+            <strong>Library Documentation <Link className={styles.link} href="https://drive.google.com/drive/folders/16Ha6X4m-CIMJqm7W_my_uEsIBLyoAOGN">whole process</Link>
             <br/>Material Preparation
             </strong>
             <div className={styles.imgContainer}>   
@@ -277,7 +277,7 @@ However, it is expensive as the 6 hair ties cost $39.
 
             <ul>
                 <strong>Experiment Steps for Agar Agar</strong>
-                <li>500ml Water and 5 ml Glycerin following this video<Link href="https://www.youtube.com/watch?v=Ty0O2VmbNeE">Homemade Bioplastic: agar vs. gelatin recipe</Link></li>
+                <li>500ml Water and 5 ml Glycerin following this video<Link className={styles.link} href="https://www.youtube.com/watch?v=Ty0O2VmbNeE">Homemade Bioplastic: agar vs. gelatin recipe</Link></li>
                 <li>1 oz AgarAgar<br/><Image  src='/hairband/4.png' width={230} height={300} alt='1 oz AgarAgar' /></li>
                 <li>Cooking<br/><Image  src='/hairband/5.png' width={230} height={300} alt='Cooking' /></li>
                 <li>GetBubbleOut& Put on Molds</li>
@@ -288,7 +288,7 @@ However, it is expensive as the 6 hair ties cost $39.
 
             <ul>
                 <strong>Experiment Steps for Gelatine</strong>
-                <li>0.3g Gelatine, Water and Glycerin, ratio following this video<Link href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DFE_ps20YHro&sa=D&source=editors&ust=1731500723347333&usg=AOvVaw02sJsh56ME7HOGCKJIZzDq">0.3g Gelatine, Water and Glycerin, ratio following this video</Link>
+                <li>0.3g Gelatine, Water and Glycerin, ratio following this video<Link className={styles.link} href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DFE_ps20YHro&sa=D&source=editors&ust=1731500723347333&usg=AOvVaw02sJsh56ME7HOGCKJIZzDq">0.3g Gelatine, Water and Glycerin, ratio following this video</Link>
                 <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='seaweedhairband' src="/hairband/6.png" layout="responsive" width={100} height={100} />
                 </div>
@@ -364,8 +364,8 @@ However, it is expensive as the 6 hair ties cost $39.
           
           <div className={styles.spChapterTitle}>DIY Materials</div>
           <div className={styles.spChapterText}>
-            <Link href="https://nyu.libcal.com/event/11611622?f=h">Algae knitting workshop</Link>
-            <Link href="https://www.youtube.com/watch?v=UmcthQRWGUY">How to DIY a hair tie</Link>
+            <Link className={styles.link} href="https://nyu.libcal.com/event/11611622?f=h">Algae knitting workshop</Link>
+            <Link className={styles.link} href="https://www.youtube.com/watch?v=UmcthQRWGUY">How to DIY a hair tie</Link>
             <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='seaweedhairband' src="/hairband/material.jpg" layout="responsive" width={100} height={100} />
                
@@ -397,12 +397,12 @@ However, it is expensive as the 6 hair ties cost $39.
           How Degradations Happens</div>
           <div className={styles.spChapterText}>
             <div>
-            <Link href="https://www.google.com/url?q=https://www.google.com/search?client%3Dsafari%26rls%3Den%26q%3Dmicroorganisms%2Bhave%2Bagarases%26ie%3DUTF-8%26oe%3DUTF-8&sa=D&source=editors&ust=1731500723352319&usg=AOvVaw2A1KsArNKK2MABSnQRvsC2">microorganisms have agarases</Link>
+            <Link className={styles.link} href="https://www.google.com/url?q=https://www.google.com/search?client%3Dsafari%26rls%3Den%26q%3Dmicroorganisms%2Bhave%2Bagarases%26ie%3DUTF-8%26oe%3DUTF-8&sa=D&source=editors&ust=1731500723352319&usg=AOvVaw2A1KsArNKK2MABSnQRvsC2">microorganisms have agarases</Link>
             <TextSplitter  text={`Degrade in the seawater and marine sediments.`} />
             </div>
             
             <div>
-            <Link href="https://www.google.com/url?q=https://www.tandfonline.com/doi/pdf/10.1080/00021369.1983.10865852&sa=D&source=editors&ust=1731503323368912&usg=AOvVaw1yfDBx1LOD4r7qXXlvV-kK">Gelation of Gelatin Solution</Link>
+            <Link className={styles.link} href="https://www.google.com/url?q=https://www.tandfonline.com/doi/pdf/10.1080/00021369.1983.10865852&sa=D&source=editors&ust=1731503323368912&usg=AOvVaw1yfDBx1LOD4r7qXXlvV-kK">Gelation of Gelatin Solution</Link>
             <TextSplitter  text={`Degrade under temperature above 40 Celsius`} />
             </div>
             
@@ -419,7 +419,7 @@ However, it is expensive as the 6 hair ties cost $39.
             <ul>
                 <li><strong>How to add elastic properties stably - research the other hair tie ingredients from Kooshoo</strong>
                 <TextSplitter  text={`Rubber!`} />
-                <Link href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DaEIAYBGRyYY&sa=D&source=editors&ust=1731503323369557&usg=AOvVaw3yKGhkyT6-n0l7e5SXRg9e">How Rubber bands are made</Link>
+                <Link className={styles.link} href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DaEIAYBGRyYY&sa=D&source=editors&ust=1731503323369557&usg=AOvVaw3yKGhkyT6-n0l7e5SXRg9e">How Rubber bands are made</Link>
 
                 </li>
                 <li><strong>Experiment with Seaweed/hydrogel</strong></li>

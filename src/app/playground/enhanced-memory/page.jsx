@@ -1,6 +1,7 @@
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
+import Link from 'next/link';
 
 const Page = () => {
   return (
@@ -32,8 +33,10 @@ const Page = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-      <TextSplitter text={`The GitHub Page for historyVisitedItems is an extension for past browser history.`}/>
-            <TextSplitter text={`The GitHub Page displays the history of a website in URL form and the website is being developed. `}/>
+
+<div><Link href="https://github.com/B2xx/chrome-extensions-visitedItems">The GitHub Page</Link>for historyVisitedItems is an extension for past browser history.</div>
+      
+        <TextSplitter text={`The GitHub Page displays the history of a website in URL form and the website is being developed. `}/>
     
             
             </div>

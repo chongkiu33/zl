@@ -7,7 +7,15 @@ const page = () => {
     <div>   
         <div className={styles.spTitle}>ChatGPT as Tarot Reader </div>
 
-        
+                <div className="video-container">
+            <video
+                src="/chatGPT/963_1730551912_raw.mp4"
+                controls
+                autoPlay
+                loop
+                className="responsive-video"
+            ></video>
+            </div>
 
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Brief</div>

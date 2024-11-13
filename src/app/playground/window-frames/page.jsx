@@ -18,8 +18,8 @@ const Page = () => {
 
             <TextSplitter text={`This project remodel the window frames design in Ming Dynasty based on The Craft of Gardens(園治). This is part of Zhuolin Li’s dedication for digitalizing the cultural heritages. `}/>
             <TextSplitter text={`One of the illustrations from the book The Craft of Gardens(園治)`}/>
-            <Link href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf">Yuanzi</Link>
-            <Link href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf">The digital archive</Link>
+            <Link className={styles.link} href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf">Yuanzi</Link>
+            <Link className={styles.link} href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf">The digital archive</Link>
             </div>     
     </div>
 

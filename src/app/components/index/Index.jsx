@@ -69,7 +69,7 @@ const Index = ({pathname}) => {
                         <ProjectGroup 
                             pathname={pathname}
                             title="Bio Material Research" 
-                            projects={["Bubble Procelain", "Seaweed hairband", "Cocoon"]} 
+                            projects={[ "Seaweed hairband", "Cocoon"]} 
 
                         />
 
