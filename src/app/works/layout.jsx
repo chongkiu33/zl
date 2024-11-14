@@ -17,7 +17,7 @@ const projects = [
     { id:10 , title: 'Listen! Pied Piper is playing',work:false},
 ]
 
-const allTags = ["robotics","interactive installation","critical technology","webpage","material","serious game","folklore","animation","fashion","graphic design","3D modeling","film","creative coding"];
+const allTags = ["robotics","interactive installation","critical technology","serious game","creative coding"];
 
 
 const WorkLayout = ({ children }) => {

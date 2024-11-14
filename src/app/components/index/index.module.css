@@ -218,8 +218,8 @@
         44% 52%,
         43% 54%,
         43% 56%,
-        43% 58%,
-        42% 60%,
+        45% 58%,
+        45% 60%,
         36% 64%,
         33% 68%,
         31% 70%, 
@@ -249,15 +249,25 @@
     .poeticContainer{
         width: 41vw;
     }
+
+    .projectLink{
+        font-size: 16px;
+    }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 928px) {
     .line{
-        transform: scaleX(0.7) translateX(-50px) ;
+        transform: scaleX(0.7) translateX(-70px) ;
     }
 
     .linkgroup{
-        transform: translateX(20px) ;
+        transform: translateX(0px) ;
+    }
+
+    .index{
+    
+        font-size: 15px;
+          
     }
    
 
