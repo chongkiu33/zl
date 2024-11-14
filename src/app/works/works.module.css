@@ -68,6 +68,10 @@
   width: 100%;
   
 }
+.activeLink{
+  font-weight: 650;
+}
+
 
 
 /* home page */
@@ -102,7 +106,7 @@
 
 .flexcolum{
   flex-direction: column;
-  height: 26vh;
+  height: 30vh;
 }
 
 .bigimg{
@@ -212,12 +216,12 @@
 
 .pChapterTitle{
   font-family: "Cormorant Unicase", system-ui;
-  /* font-family: 'Ogg'; */
+  font-weight: 500;
   font-size: 25px;
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 10px 25vw 20px 25vw;
+  padding: 10px 15vw 10px 15vw;
 
 }
 
@@ -254,6 +258,12 @@
   
   gap: 10px;
 }
+
+.pChapterContent div{
+  padding-bottom: 5px;
+}
+
+
 
 
 /*  AF  */

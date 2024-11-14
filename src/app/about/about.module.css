@@ -34,7 +34,7 @@
 .introimage{
     flex: 3;
     height: 40vh;
-    background-color: rgb(147, 133, 115);
+    
 }
 
 
@@ -92,7 +92,7 @@
     background-color: #eeeeee;
 }
 .collapsible.header {
-    background-color: #dddddd;
+    
     padding: 6px;
     cursor: pointer;
 }
@@ -101,6 +101,11 @@
     
 }
 
+.img{
+    object-fit:cover;
+    width: 100%; /* 让图片宽度填满容器 */
+    height: 100%; 
+}
 .link{
     text-decoration: underline;
 }

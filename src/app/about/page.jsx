@@ -37,7 +37,9 @@ const AboutPage = () => {
                 </div>
 
                 </div>
-                <div className={styles.introimage}>XXXX</div>
+                <div className={styles.introimage}>
+                    <img className={styles.img} src="/photo.jpg" alt="Zhuolin Li" />
+                </div>
             </div>
 
             </div>

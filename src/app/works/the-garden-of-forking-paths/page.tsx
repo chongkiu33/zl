@@ -11,7 +11,11 @@ const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), 
 const Page = () => {
   return (
     <div className={styles.pContainer}>
+      <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
+        </svg>
         <div className={styles.pHeader}>
+        
             <div className={styles.pTitle}>The Garden of Forking Paths</div>
             <div className={styles.pTag}>
               <div className={styles.projectTag}>Serious Game</div>

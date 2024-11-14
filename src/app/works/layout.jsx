@@ -8,13 +8,14 @@ import { Tag } from 'lucide-react';
 import { useState } from 'react';
 import React from 'react';
 import { useLayout } from '../contexts/LayoutContext';
+import { usePathname } from 'next/navigation';
 
 
 
 const projects = [
     { id:1 , title: 'Artificial Friend',work:true},
     { id:2 , title: 'The Garden of Forking Paths',work:true},
-    { id:10 , title: 'Listen! Pied Piper is playing',work:false},
+    { id:3 , title: 'Graphic Theory Approach to Maze',work:true},
 ]
 
 const allTags = ["robotics","interactive installation","critical technology","serious game","creative coding"];
@@ -23,6 +24,15 @@ const allTags = ["robotics","interactive installation","critical technology","se
 const WorkLayout = ({ children }) => {
     const {selectedTags, toggleTag} = useTag();
     const { layout, toggleLayout } = useLayout();
+    
+    const pathname = usePathname();
+
+    // 提前生成每个项目的路径
+    const isActive = (projectTitle) => {
+        const projectSlug = projectTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        return pathname === `/works/${projectSlug}`;
+    };
+    
 
    
 
@@ -38,7 +48,7 @@ const WorkLayout = ({ children }) => {
                     .map(project => (
                         <li key={project.id}>
                             <Link href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
-                                {project.title}
+                                <span className={isActive(project.title) ? styles.activeLink : ''} >{project.title}</span>
                             </Link>
                         </li>
                     ))}

@@ -26,6 +26,16 @@ const works = [
         link: '/works/the-garden-of-forking-paths',
         tags: ["serious game", "creative coding"],
         date:"2023"
+    },
+
+    {
+        id: 3,
+        title: 'Graphic Theory Approach to Maze',
+        description: 'Hi visitor, this is Beatrix, who did an independent study this semester to research on the graphic theory approach to maze, which is an interdisciplinary research focus both on mathematical language for graphs and its relationship with algorithms and other life-experiences with maze. ',
+        image: '/Maze.jpg',
+        link: '/works/graphic-theory-approach-to-maze',
+        tags: ["serious game", "creative coding"],
+        date:"2023"
     }
     
 
