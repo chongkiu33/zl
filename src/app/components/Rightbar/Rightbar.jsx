@@ -83,10 +83,10 @@ const Rightbar = () => {
         { date: "2023-10-16", link: "/playground/enhanced-memory", title: "Enhanced Memory"},
         { date: "2023-10-26", link: "/playground/yong", title: "Yong"},
         { date: "2023-12-12", link: "/playground/cocoon", title: "Cocoon"},
-        { date: "2024-04-16", link: "/works/listen-pied-piper-is-playing", title: "“Listen! Pied Piper is playing”"},
+        { date: "2024-04-16", link: "/playground/listen-pied-piper-is-playing", title: "“Listen! Pied Piper is playing”"},
         { date: "2024-04-23", link: "/playground/am-i-too-much", title: "Am I too much?"},
         { date: "2024-04-26", link: "/playground/catchers-curation", title: "Catcher’s Curation"},
-        { date: "2024-04-28", link: "/playground/the-garden-of-forking-paths", title: "The Garden of Forking Paths"},
+        { date: "2024-04-28", link: "//works/the-garden-of-forking-paths", title: "The Garden of Forking Paths"},
         { date: "2024-08-31", link: "/playground/bubble-procelain", title: "Bubble Procelain"},
         { date: "2024-10-31", link: "/playground/natural-material-lab", title: "Natural Material Lab"},
         { date: "2024-11-05", link: "/playground/seaweed-hairband", title: "Seaweed hairband"}    
