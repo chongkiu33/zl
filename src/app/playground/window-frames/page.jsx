@@ -2,11 +2,12 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
-
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return <div>
     <div className={styles.spTitle}>Window Frames For Ancient China Pavilion</div>
+    <ProjectTags projectName="Window Frames For Ancient China Pavilion" />
     <div className={styles.imgCover}>   
             <Image style={{objectFit: 'cover'}}  className={styles.fitimg} alt='mayan'  src="/window/window.png" fill />
     </div>

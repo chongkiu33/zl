@@ -1,10 +1,12 @@
 import styles from '../pg.module.css';
 import Link from 'next/link';
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const page = () => {
   return (
   <div>
     <div className={styles.spTitle}>Mirror</div>
+    <ProjectTags projectName="Mirror" />
     <div className="video-container">
       <video
         src="/Mirror/Mirror.mp4"

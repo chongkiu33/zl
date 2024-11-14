@@ -1,0 +1,15 @@
+.projectTag{
+    padding: 0 3px 0 3px;
+    border: #0b0b0b 1px solid;
+    margin: 3px;
+    line-height: 1.2em;
+    border-radius: 0px;
+    display: inline-flex;
+    font-size: 14px;
+    
+  }
+  
+  .tags{
+    padding-bottom: 30px;
+    opacity: 50%;
+  }

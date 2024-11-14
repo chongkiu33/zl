@@ -2,12 +2,14 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import Link from 'next/link';
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return (
   <div>
 
         <div className={styles.spTitle}>Enhanced Memory </div>
+        <ProjectTags projectName="Enhanced Memory" />
         <div className={styles.spAbstract}><TextSplitter text={` This project is an -omancy about “predicting” your visited websites and constructing an identity based on your browser history.`}/></div>
 
         <div className={styles.spChapter}>

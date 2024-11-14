@@ -2,12 +2,12 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
-
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return <div>
     <div className={styles.spTitle}>Solidarity</div>
-    
+    <ProjectTags projectName="Solidarity" />
     <div className="video-container">
       <video
         src="/Solidarity/solidarity.mp4"

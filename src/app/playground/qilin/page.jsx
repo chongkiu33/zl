@@ -2,12 +2,13 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 
 const Page = () => {
   return <div>
     <div className={styles.spTitle}>Qilin</div>
-
+    <ProjectTags projectName="Qilin" />
     <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' ,marginBottom: '20px'}}>
             <iframe
                 src={`https://www.youtube.com/embed/1XQoDi44sSk`}

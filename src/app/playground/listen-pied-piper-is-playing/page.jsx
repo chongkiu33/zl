@@ -1,10 +1,12 @@
 import styles from '../pg.module.css';
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const page = () => {
   return (
     <div> 
         <div className={styles.spTitle}>“Listen! Pied Piper is playing”</div>
+        <ProjectTags projectName="“Listen! Pied Piper is playing”" />
         <iframe allow="autoplay" width="100%" height="500" src="https://editor.p5js.org/B2xx/full/V_meYK4fF"></iframe>
         <div className={styles.spAbstract}> WARNING! Open the sketch on Chrome or the sound will not work.</div>
         <div className={styles.spChapter}>

@@ -1,12 +1,13 @@
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const page = () => {
   return (
     <div>   
         <div className={styles.spTitle}>ChatGPT as Tarot Reader </div>
-
+        <ProjectTags projectName="ChatGPT as Tarot Reader" />
                 <div className="video-container">
             <video
                 src="/chatGPT/963_1730551912_raw.mp4"

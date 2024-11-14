@@ -1,6 +1,8 @@
+
 import styles from '../pg.module.css'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import { useWord } from '../../contexts/WordContext'
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
 
@@ -9,7 +11,7 @@ const Page = () => {
   return (
     <div>
         <div className={styles.spTitle}>Am I Too Much?</div>
-        
+        <ProjectTags projectName="Am I Too Much?" />
         <iframe src="/AmItoomuch/amitoomuch.html" width="100%" height="500"></iframe>
         <div className={styles.spChapter}>
           

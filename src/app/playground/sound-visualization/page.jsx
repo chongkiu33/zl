@@ -2,11 +2,12 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
-
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return <div>
     <div className={styles.spTitle}>Sound Visualization</div>
+    <ProjectTags projectName="Sound Visualization" />
     <div className={styles.imgCover}>   
             <Image style={{objectFit: 'cover'}}  className={styles.fitimg} alt='mayan'  src="/sound/cover.png" fill />
     </div>

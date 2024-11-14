@@ -1,13 +1,13 @@
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
-
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 const Page = () => {
   return (
     <div> 
         <div className={styles.spTitle}>Cocoon</div>
         
-
+        <ProjectTags projectName="Cocoon" />
         <div className={styles.imgCover}>   
             <Image  className={styles.fitimg} alt='Cocoon'  src="/cocoon/Animation_3.gif" fill />
         </div>
