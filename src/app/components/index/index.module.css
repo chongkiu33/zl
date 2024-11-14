@@ -3,6 +3,51 @@
   position: fixed;
 }
 
+.line2{
+    position: fixed;
+    width: 1.2px;
+    height: 96vh;
+    background-color: black;
+    margin-left: 35vw;
+    margin-top: 2vh;
+}
+
+.line2 .poeticline{
+    transform: translateX(-100%);
+}
+
+
+.poeticContainer{
+    position: fixed;
+    width: 35vw;
+    height: 100vh;
+    font-family: "Bricolage Grotesque", system-ui;   
+    z-index: 0; 
+    display: none;
+}
+
+.poeticMode{
+    display: block;
+}
+
+
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.poeticContainer span{
+    position: fixed;
+    color: white;
+
+}
+
+.poeticMode{
+    background-color: #0d0d0d;
+    z-index: 998;
+  
+}
+
 .shapeOutside{
     float: left;
     shape-outside: polygon(
@@ -132,7 +177,7 @@
 @media (max-width: 1200px) {
     
     .line2{
-        margin-left: 40vw;
+        margin-left: 37vw;
     }
 
 
@@ -198,7 +243,7 @@
 
 @media (max-width: 1024px) {
     .line2{
-        margin-left: 41vw;
+        margin-left: 38vw;
     }
 
     .poeticContainer{

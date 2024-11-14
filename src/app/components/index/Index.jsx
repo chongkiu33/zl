@@ -7,12 +7,53 @@ import Draggable from "react-draggable";
 import { useWordContext } from '../../contexts/WordContext';
 
 const Index = ({pathname}) => {
+    const { isPoeticMode } = usePoeticMode();
+    const [wordsWithPositions, setWordsWithPositions] = useState([]);
+    const indexGroupRef = useRef(null);
+    const [wordsWithRandomPositions, setWordsWithRandomPositions] = useState([]);
+
+    const Title = [
+        "Am I too much?", 
+        "Enhanced Memory", 
+        "ChatGpt as Tarot Reader", 
+        "“Listen! Pied Piper is playing”", 
+        "Mirror"
+    ];
+
+    useEffect(() => {
+        // 获取每个标题中的单词并为它们生成随机位置
+        const words = Title.flatMap(title => {
+            return title.split(' ').map(word => {
+                // 生成随机的 marginTop 和 marginLeft
+                const randomMarginTop = `${Math.random(0,0.9) * 100}vh`; // 随机的 marginTop（百分比）
+                const randomMarginLeft = `${Math.random(0,0.9) * 35}vw`; // 随机的 marginLeft（百分比）
+                return { word, randomMarginTop, randomMarginLeft };
+            });
+        });
+        setWordsWithRandomPositions(words);
+    }, []);
     
 
 
 
     return (
         <div className={styles.container}>
+            <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
+            {wordsWithRandomPositions.map((item, index) => (
+                <Draggable key={`draggable-${index}`}>
+                <span
+                    key={index}
+                    style={{
+                        marginTop: item.randomMarginTop,
+                        marginLeft: item.randomMarginLeft,
+                    }}
+                >
+                    {item.word}
+                </span>
+                </Draggable>
+            ))}
+        </div>
+            <div className={`${isPoeticMode ? styles.poeticline : styles.line2}`}></div>
             <div >
                 <div className={styles.shapeOutside}>
                     <svg className={styles.line} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253 1126">
