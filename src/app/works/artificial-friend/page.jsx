@@ -20,8 +20,8 @@ const Page = () => {
             <div className={styles.projectTag}>critical technology</div>
            
               </div>
-            <div className={styles.pDescri}>This project aims to create an infinite storyline (narration frame) in Twine based on the novel “El jardín de senderos que se bifurcan” (The Garden of Forking Paths) by Jorge Luis Borges. That is, a narration either loops (and grows), or includes all the possibilities at the same time (i.e., the player presumably could choose all the branches). Those different storylines will converge, diverge, and parallel, co-exist in the story.</div>
-            <div className={styles.pDate}>2024</div>
+            <div className={styles.pDescri}>Have you imagined an “artificial friend” that could recognize your emotion and support you? Now she comes from the website to reality. Jane’s writable hand and face enable the users to have more tangible interaction with her, and reflect on what we need in the intimate relationship if what we need could all be satisfied by a considerate “machine”.</div>
+            <div className={styles.pDate}>2023</div>
     </div>
 
     <div className={styles.imgContainer}>   
@@ -60,10 +60,51 @@ const Page = () => {
       <div className={styles.chapterTitle}>Visual Documentation</div>
       <div className={styles.chapterContent}>
         <div className={styles.chaptertext}>
-          <Link href="Documentation: Writeable Hand">Documentation: Writeable Hand</Link>
+          
           <strong>Separate it as 2 parts accordingly, physical installation and digital model & animation**
 
-      **Continue physical installation part:</strong>
+       Continue physical installation part:</strong>
+          <div>
+          <h3>Physical Installation</h3>
+          <h4>All Materials</h4>
+          <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/Allmaterial.png" layout="responsive" width={100} height={100} />
+          </div>
+          <div className={styles.imgContainer3} >   
+                <div className={styles.img3}>
+                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Aruino.png" layout="responsive" width={100} height={100} />
+                  <p className={styles.cation}>Arduino and Pen Holder</p>
+                </div>
+
+                <div className={styles.img3}>
+                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Motor.png" layout="responsive" width={100} height={100} />
+                  <p className={styles.cation}>Motor</p>
+                </div>
+
+                <div className={styles.img3}>
+                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Hub.png" layout="responsive" width={100} height={100} />
+                  <p className={styles.cation}>Hubs (For Poles)</p>
+                </div>
+
+                <div className={styles.img3}>
+                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts.png" layout="responsive" width={100} height={100} />
+                  
+                  <p className={styles.cation}>Prepared Parts</p>
+                </div>
+                <div className={styles.img3}>
+                  
+                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics.png" layout="responsive" width={100} height={100} />
+                  <p className={styles.cation}>Prepared Parts</p>
+                </div>
+               
+                
+            </div>
+
+            <h3>User Testing</h3>
+
+
+          </div>
+
 
           <div>
           <h3>Description of the components:</h3>

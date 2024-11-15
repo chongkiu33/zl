@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import TextSplitter from '../components/TextSplitter/TextSplitter'
+import ProjectTags from '../components/ProjectTag/ProjectTag'
 
 
 

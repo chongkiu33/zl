@@ -18,7 +18,7 @@ const projects = [
     { id:3 , title: 'Graphic Theory Approach to Maze',work:true},
 ]
 
-const allTags = ["robotics","interactive installation","critical technology","serious game","creative coding"];
+const allTags = ["robotics","interactive installation","critical technology","serious game","creative coding","mathematic", "algorithm"];
 
 
 const WorkLayout = ({ children }) => {

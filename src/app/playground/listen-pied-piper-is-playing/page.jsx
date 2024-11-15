@@ -18,7 +18,7 @@ const page = () => {
                 <div><TextSplitter text={`I used three different versions of The Pied Piper of Hameln to construct the main plots of the story. The beginning is about “hearing the story”, the middle is what happened, and the end is about the general impact of the story. I set branches in the middle based on whether the mayor breaks the deal. If the mayor pays the money, the money is gone; if the mayor does not, the children are gone. `}/></div>
                 <div><TextSplitter text={`For the sound part, I use Tone.js so you could actually hear the pied piper playing along the way.
 
-Overall, I think this sketch has a lot of potentials and possibly could be made into a larger story when I finish reading all the variations of ***The Pied Piper of Hameln***.`}/></div>
+Overall, I think this sketch has a lot of potentials and possibly could be made into a larger story when I finish reading all the variations of The Pied Piper of Hameln.`}/></div>
                 
             </div>
         </div>
