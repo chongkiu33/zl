@@ -10,17 +10,7 @@ import { PoeticModeProvider } from './contexts/PoeticModeContext'
 import {TagProvider} from './contexts/TagContext'
 import { LayoutProvider } from './contexts/LayoutContext'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 const PageContent = ({ pathname, children }) => {
   const [screenHeight, setScreenHeight] = useState(900);
