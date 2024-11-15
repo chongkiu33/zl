@@ -33,7 +33,7 @@ const Page = () => {
         </div>
 
         <div className={styles.iframeContainer}>
-            <iframe src={isEasyMode ? "/path/EasyMode.html" : "/path/HardMode2.html"}  width="100%" height="600"></iframe>
+            <iframe src={isEasyMode ? "/path/EasyMode.html" : "/path/hardMode2.html"}  width="100%" height="600"></iframe>
             <button className={styles.modeButton} onClick={toggleMode} >{isEasyMode ? "Switch to Hard Mode" : "Switch to Easy Mode"}</button>
             
         </div>
