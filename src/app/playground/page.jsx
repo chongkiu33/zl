@@ -9,7 +9,7 @@ import { useState } from'react';
 
 
 
-const plagroundPage = () => {
+const PlagroundPage = () => {
     const [isShow, setIsShow] = useState(false);
 
   const toggleShow = () => {
@@ -29,6 +29,7 @@ const plagroundPage = () => {
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Introduction</div>
             <div className={styles.spChapterText}>
+
             <TextSplitter text={`This project is a reflexive diary about my confusion of wether the language is a suitable medium to describe the embodied feelings. It involves several loops, so remember to play it for at least three times before you open the spoiler. `}/>
             
             <botton className={styles.link}  onClick={toggleShow}>Spoiler (Click on it after you finish the game)</botton>
@@ -56,6 +57,6 @@ const plagroundPage = () => {
     )
 }
 
-export default plagroundPage;
+export default PlagroundPage;
 
 
