@@ -15,7 +15,7 @@ const plagroundPage = () => {
     return (
 
     
-        <div >    
+        <div className={styles.mainContainer}>    
         
 
         <div className={styles.spTitle}>Am I Too Much?</div>

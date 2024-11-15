@@ -13,7 +13,7 @@ const PlaygroundLayout = ({ children}) => {
     return(
         <div >
            <WordProvider>
-            <Index pathname={pathname}/>
+            <Index className={styles.index} pathname={pathname}/>
             
             <div className={styles.container}>
             {children}

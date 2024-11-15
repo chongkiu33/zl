@@ -49,6 +49,7 @@
     font-family: "Cormorant Unicase", system-ui;
   /* font-family: 'Ogg'; */
   font-size: 25px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -152,4 +153,33 @@
     flex: 0 0 50%; /* 每个媒体项占据容器宽度的 50% */
     max-width: 50%; /* 确保宽度不会超过 50% */
     box-sizing: border-box;
+  }
+
+
+
+  @media (max-width: 768px) {
+
+  .pHeader{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .pDate{
+  
+    text-align: left;
+  }
+
+  
+
+  .chapterC,
+  .chapter{
+    padding: 100px 1vw 0 1vw;
+}
+
+.chapterContent{
+    flex-direction: column;
+}
+
+
+  
+
   }

@@ -143,6 +143,15 @@
     margin-top: 30px;
 }
 
+.mobileContainer{
+    position: absolute;
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
 
 
 
@@ -281,6 +290,27 @@
         display: none;
      }
 
+     .mobileContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        font-family: "Bricolage Grotesque", system-ui; 
+        z-index: 999;
+        
+     }
+
+     .projectgroup{
+        text-align: center;
+     }
+
+     .index{
+    
+        font-size: 25px;
+          
+    }
     
     
 }

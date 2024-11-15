@@ -2,7 +2,7 @@
   
   font-family: "Cormorant", system-ui;
     font-size: calc(5.7vh + 6vw);
-    font-weight: 300;
+    font-weight: 200;
     width: 90%;
     line-height: 0.90;
     /* text-shadow: -5px 5px 10px #bebdbd; */
@@ -30,7 +30,7 @@
     font-family: "Bricolage Grotesque", system-ui;
     font-size: calc(1vh + 1vw);
     font-weight: 250;
-    translate: 0.3vw 12vh;
+    translate: 0.3vw calc(10vh);
   }
 
   .subbup{
@@ -38,7 +38,7 @@
     font-family: "Bricolage Grotesque", system-ui;
     font-size: calc(1vh + 1vw);
     font-weight: 250;
-    translate: 0.3vw 3vh;
+    translate: 0.3vw calc(1vh + 1vw);
   }
 
   .text{
@@ -52,9 +52,9 @@
   }
 
   .svgpath2{
-    width: 400px;
-    margin-left: 10vw;
-    margin-top: 68vh;
+    width: 600px;
+    margin-left: 0vw;
+    margin-top: 65vh;
     position: absolute;
   }
 
@@ -70,7 +70,7 @@
     fill: none;
     stroke: #000;
     stroke-miterlimit: 10;
-    stroke-width: 3px;
+    stroke-width: 2px;
     width: 100%;
     
   }
@@ -116,7 +116,7 @@
   .svgpath2{
     width: 400px;
     margin-left: -10vw;
-    margin-top: 68vh;
+    margin-top: 65vh;
     position: absolute;
   }
 

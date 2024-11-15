@@ -101,7 +101,48 @@ const Page = () => {
             </div>
 
             <h3>User Testing</h3>
+            <div>
+            <video
+                      src="/ArtificialFriend/visualdocument/Success.mov"
+                      controls
+                      loop
+                      width={"100%"}
+                    ></video>
+            </div>
+            <div>1.Test Arduino’s functions</div>
+            <div>2.Upload GRBL </div>
+            <div>3.Open Universal Gcode Sender and Use ”Machine-Setup Wizard” to test the stepper motors</div>
+            <div style={{color: "red",fontWeight: "light",opacity: "0.6"}} >Error Find: Part of My Arduino (CNC Sheild) is broken, that’s why the stepper motor did not move when I follow the instruction.  I also burnt it once</div>
+          </div>
 
+          <div>
+            <h3>Software</h3>
+            <Link href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">Learning GRBL and Universal G code Sender</Link>
+
+            <h4>Another Video’s with Tutorials for Writing Machine</h4>
+            <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino Writing/ Drawing Machine - 2D Pen Plotter</Link>
+            <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino CNC Drawing Machine</Link>
+
+            <h4>Trouble Shooting: Different Cable for Z-axis motor</h4>
+            <Link href="https://github.com/bdring/Grbl_Pen_Servo/tree/master/grbl">bdring/Grbl_Pen_Servo</Link>
+            <div>This GRBL library use the difference of frequency to control the Z-axis</div>
+          </div>
+
+
+          <div>
+            <h3>Final Product (be able to move X,Y ans Z axis)</h3>
+            <div><iframe title="vimeo-player" src="https://player.vimeo.com/video/805846071?h=a700ec972a" width="100%" height="360" frameborder="0"    allowfullscreen></iframe></div>
+            
+            <h4>Coding (Send to serial port and wait for Arduino say“OK”)</h4>
+            <div></div>
+            <Link href="https://editor.p5js.org/gohai/sketches/UZZcwpZ6o">Text to G-Code</Link>
+            <Link href="https://editor.p5js.org/gohai/sketches/zo2qyIy-Y">G-Code Flow Control</Link>
+
+            <div></div>
+            <Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi"> test1combination copy</Link>
+
+            <h4>Final Configration and Modification</h4>
+            <div>A new version of GRBL library in oder to not write in 45 degree</div>
 
           </div>
 
@@ -115,8 +156,8 @@ const Page = () => {
             <div className={styles.videoWrapper}>
             <iframe
               src="https://drive.google.com/file/d/1lGrErK2YQh33vMMKw52CvUHj945o9guj/preview"
-              width="400"
-              height="300"
+              width="100%"
+                  height="300"
               allow="autoplay"
               className={styles.video}
             ></iframe>
@@ -335,10 +376,60 @@ const Page = () => {
               <div style={{color: "red"}}>Add a black pedestal for the display</div>
               <div style={{color: "red"}}>Add a light for the hand</div>
          
-              <h4>Final</h4>
+              <h3>Final</h3>
               <div >   
                           <Image  className={styles.img} alt='old' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />  
               </div>
+
+
+              <h3>Digital Model</h3>
+              <h4>Hand Model </h4>
+              <Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">File</Link>
+              <h4>Sketches</h4>
+              <div >   
+                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/holdpen_1.png" layout="responsive" width={100} height={100} />  
+              </div>
+
+              <h4>Animation:</h4>
+              <ul>
+                1.3D animation:
+                <li>Modeling the hand:<Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">Folder</Link>
+                <div >   
+                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Bot.png" layout="responsive" width={100} height={100} />  
+                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Top.png" layout="responsive" width={100} height={100} />  
+              </div>
+                </li>
+                <li>Rigging
+                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Rigging.png" layout="responsive" width={100} height={100} />   </div>
+                </li>
+                <li>Paint Skin Weight for each Joints<br/>
+                Trouble Shooting: Put UV first then do the rigging or else the UV will get distorted so that when the finger bends it will become more nature
+                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Skinweight2.png" layout="responsive" width={100} height={100} />   </div>
+                </li>
+                <li>Unfold UV and paint UV 
+                  <div>   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/UV.png" layout="responsive" width={100} height={100} /> 
+                  <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Full.png" layout="responsive" width={100} height={100} />
+                  <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Sub.png" layout="responsive" width={100} height={100} />
+                    </div>
+                </li>
+                <li>Rerigging and repaint the skin weight
+                Adobe Substance Painte</li>
+                <li>Light and Shade:Arnold Rendere and its Light</li>
+                <li>Camera Work: Set Perspective Camera and Keys
+                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Light.png" layout="responsive" width={100} height={100} />   </div>
+                </li>
+                <li>Render Animation:
+                Render Settings
+                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Render Settings.png" layout="responsive" width={100} height={100} />   </div>
+                </li>
+              </ul>
+              <ul>
+              2.AE complement:
+                <li>Typewriter Effects</li>
+                <li>Blink Expression</li>
+              </ul>
+
+
 
         </div>
 

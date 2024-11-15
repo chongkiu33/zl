@@ -5,8 +5,7 @@
   
   font-family: "Bricolage Grotesque", system-ui;
   font-weight: 350;
-  
- 
+
 }
 
 
@@ -33,10 +32,11 @@
 
 .tag{
   border: 1px solid #0b0b0b;
-  padding: 2px;
+  padding: 1px;
   margin: 2px;
   border-radius: 3px;
   display: inline-flex;
+  font-size: 16px;
   
 }
 
@@ -216,7 +216,7 @@
 
 .pChapterTitle{
   font-family: "Cormorant Unicase", system-ui;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -278,8 +278,8 @@
   .container{
     width: 80vw;
     height: 100vh;
-    margin-left: 10vw;
-    padding: 0 2.5vw 0 2.5vw;
+    margin-left: 15vw;
+    padding: 0 5vw 0 0vw;
   }
     
 
@@ -305,11 +305,77 @@
     margin-left: 0vw;
     padding: 70px 5vw 0 5vw;
   }
+
+  .icons{
+    display: none;
+  }
+
+  .tagContainer{
+    flex: 4;
+    text-align: right;
+    
+  }
+
+  .tag{
+    display: inline-block;
+  }
+
+  .projectContainer{
+    flex-direction: column;
+    height: 60vh;
+    gap: 5px;
+  }
+
+  .projectDescription{
+    flex: 4;
+  }
+  
+  .projectImg{
+    flex: 9;
+    position: relative;
+  }
+
+  .projectInfo{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+
+
+  .pHeader{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .pDate{
+  
+    text-align: left;
+  }
+
+  .pChapter{
+    padding: 100px 1vw 0 1vw;
  
+  }
+
+ 
+  
+
+
 }
 
 
 @media (max-width: 600px) {
+
+  .header{
+    flex-direction: column;
+  }
+
+  .tagContainer{
+  
+    text-align: left;
+    
+  }
 
 }
 

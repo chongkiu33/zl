@@ -37,6 +37,8 @@ const Index = ({pathname}) => {
 
 
     return (
+
+        <>
         <div className={styles.container}>
             <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
             {wordsWithRandomPositions.map((item, index) => (
@@ -107,7 +109,52 @@ const Index = ({pathname}) => {
                         />
                     </div>
             </div>
+
+
+            
         </div>
+
+        {pathname === '/playground' && (
+        <div className={styles.mobileContainer}>
+        <ProjectGroup 
+                            pathname={pathname}
+                            title="Computational Narratives" 
+                            projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
+                        />
+
+                    
+
+                        <ProjectGroup 
+                            pathname={pathname}
+                            title="Bio Material Research" 
+                            projects={[ "Seaweed hairband", "Cocoon"]} 
+
+                        />
+
+                        <ProjectGroup 
+                            pathname={pathname}
+                            title="Typography Experiment" 
+                            projects={["Yong", "Gui", "Mayan Language", "Sound Visualization"]} 
+
+                        />
+
+                        <ProjectGroup 
+                            pathname={pathname}
+                            title="Digital Heritage" 
+                            projects={["Stupa", "window frames"]} 
+   
+                        />
+
+                        <ProjectGroup 
+                            pathname={pathname}
+                            title="Film and Animation" 
+                            projects={["Solidarity", "Qilin"]} 
+   
+                        />
+
+        </div>)}
+
+        </>
     );
 };
 
@@ -123,6 +170,7 @@ const ProjectGroup = ({ title, projects, getWordsWithPositions ,pathname}) => {
     };
 
     return (
+      
         <div className={styles.projectgroup}>
         <div className={styles.projectLink}>
           {title} <div className={styles.point}></div>
@@ -137,5 +185,10 @@ const ProjectGroup = ({ title, projects, getWordsWithPositions ,pathname}) => {
           </Link>
         ))}
       </div>
+
+    
+
+
+     
     );
 };
