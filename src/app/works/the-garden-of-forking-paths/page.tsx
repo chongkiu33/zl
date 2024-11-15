@@ -1,4 +1,4 @@
-
+"use client"
 import styles from '../works.module.css'
 import Image from 'next/image'
 import { useEffect } from 'react';
@@ -6,9 +6,16 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
+import {useState} from "react";
 
 
 const Page = () => {
+  const [isEasyMode, setIsEasyMode] = useState(true);
+
+  const toggleMode = () => {
+    setIsEasyMode(!isEasyMode); // toggle between true and false
+  };
+
   return (
     <div className={styles.pContainer}>
       <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -26,8 +33,9 @@ const Page = () => {
         </div>
 
         <div className={styles.iframeContainer}>
-            <iframe src="/path/EasyMode.html" width="100%" height="400"></iframe>
-            <iframe src="/path/HardMode.html" width="100%" height="400"></iframe>
+            <iframe src={isEasyMode ? "/path/EasyMode.html" : "/path/HardMode2.html"}  width="100%" height="600"></iframe>
+            <button className={styles.modeButton} onClick={toggleMode} >{isEasyMode ? "Switch to Hard Mode" : "Switch to Easy Mode"}</button>
+            
         </div>
 
         

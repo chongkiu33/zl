@@ -21,22 +21,22 @@
   .sub{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: calc(1vh + 1vw);
+    font-size: calc(1vh + 0.8vw);
     font-weight: 250;
   }
 
   .subb{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: calc(1vh + 1vw);
+    font-size: calc(1vh + 0.8vw);
     font-weight: 250;
-    translate: 0.3vw calc(10vh);
+    translate: 0.3vw calc(4.7vh + 5vw);
   }
 
   .subbup{
     position: absolute;
     font-family: "Bricolage Grotesque", system-ui;
-    font-size: calc(1vh + 1vw);
+    font-size: calc(1vh + 0.8vw);
     font-weight: 250;
     translate: 0.3vw calc(1vh + 1vw);
   }
@@ -46,14 +46,15 @@
   }
 
   .svgpath1{
-    width: 500px;
-    top: 12vh;
+    width: 600px;
+    top: -1vh;
     position: absolute;
+    margin-left: 10vw;
   }
 
   .svgpath2{
     width: 600px;
-    margin-left: 0vw;
+    margin-left: -5vw;
     margin-top: 65vh;
     position: absolute;
   }

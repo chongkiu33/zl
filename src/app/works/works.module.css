@@ -255,12 +255,26 @@
 
 .iframeContainer{
   display: flex;
-  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
 .pChapterContent div{
   padding-bottom: 5px;
+}
+
+.modeButton{
+  border: #0b0b0b 1px solid;
+  background-color: #0b0b0b;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.modeButton:hover{
+  scale: 1.05;
+  background-color: #565555;
 }
 
 
