@@ -47,7 +47,7 @@ const WorkLayout = ({ children }) => {
                     .filter(project => project.work) 
                     .map(project => (
                         <li key={project.id}>
-                            <Link href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
+                            <Link className={styles.workLink} href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
                                 <span className={isActive(project.title) ? styles.activeLink : ''} >{project.title}</span>
                             </Link>
                         </li>

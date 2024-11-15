@@ -24,6 +24,14 @@
   list-style-type: none; 
 }
 
+.workLink{
+  transition: all 0.3s ease;
+}
+
+.workLink:hover{
+  font-weight: 600;
+}
+
 .tagContainer{
   flex:6 ;
   
