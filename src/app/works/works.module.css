@@ -87,7 +87,7 @@
 .pageContainer{
   height: 79vh;
   width: 100%;
-  
+  padding-top: 10px;
   font-weight: 100;
   
 }

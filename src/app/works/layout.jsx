@@ -40,7 +40,7 @@ const WorkLayout = ({ children }) => {
     return(
         
         <div className={styles.container}>
-         
+{/*          
             <div className={styles.header}>
             <ul className={styles.workIndex}>
                 {projects
@@ -69,7 +69,7 @@ const WorkLayout = ({ children }) => {
                     <Image src="/icon/2.png" onClick={() => toggleLayout('grid3')}  width={40} height={24} />
                     <Image src="/icon/3.png" onClick={() => toggleLayout('bigimg')} width={40} height={24} />
                 </div>
-            </div>
+            </div> */}
 
           
             <div >
