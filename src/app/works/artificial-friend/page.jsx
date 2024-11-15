@@ -68,7 +68,7 @@ const Page = () => {
           <h3>Physical Installation</h3>
           <h4>All Materials</h4>
           <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/Allmaterial.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/AllMaterial.png" layout="responsive" width={100} height={100} />
           </div>
           <div className={styles.imgContainer3} >   
                 <div className={styles.img3}>
