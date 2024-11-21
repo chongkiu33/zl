@@ -11,8 +11,8 @@ const Page = () => {
         <div className={styles.pHeader}>
             <div className={styles.pTitle}>Graphic Theory Approach to Maze</div>
             <div className={styles.pTag}>
-              <div className={styles.projectTag}>Serious Game</div>
-              <div className={styles.projectTag}>Creative Coding</div>
+              <div className={styles.projectTag}>mathmematics</div>
+              <div className={styles.projectTag}>algorithm</div>
               </div>
             <div className={styles.pDescri}>Hi visitor, this is Beatrix, who did an independent study this semester to research on the graphic theory approach to maze, which is an interdisciplinary research focus both on mathematical language for graphs and its relationship with algorithms and other life-experiences with maze.</div>
             <div className={styles.pDate}>2024</div>

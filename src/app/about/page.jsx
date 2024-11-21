@@ -149,7 +149,7 @@ const AboutPage = () => {
                                 <span className={styles.date}>Fall 2022 – Spring 2023</span>
                                 </div>
                                 <ul className={styles.description}>
-                                <li>Exhibited at the First China Beijing Animation Festival, and received over 100,000 visitors(<Link className={styles.link} href="http://www.china.org.cn/china/2023-07/25/content_94956536.htm">Report</Link>&<Link className={styles.link} href="https://github.com/B2xx/Artificial-Friend_Beijing-Exhibition">github</Link>)</li>
+                                <li>Exhibited at the First China Beijing Animation Festival, and received over 1.1 Billion visitors(<Link className={styles.link} href="http://www.china.org.cn/china/2023-07/25/content_94956536.htm">Report</Link>&<Link className={styles.link} href="https://github.com/B2xx/Artificial-Friend_Beijing-Exhibition">github</Link>)</li>
                                 <li>Developed an artificial companion that responds to clients' emotions and writes responses using robotic arms</li>
                                 </ul>
                 </div> 

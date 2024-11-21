@@ -12,72 +12,60 @@ import { LayoutProvider } from './contexts/LayoutContext'
 
 
 
-const PageContent = ({ pathname, children }) => {
-  const [screenHeight, setScreenHeight] = useState(900);
-
-  useEffect(() => {
-    setScreenHeight(window.innerHeight);
-    const handleResize = () => setScreenHeight(window.innerHeight);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
+const PageContent = ({ children }) => {
   return (
-    <AnimatePresence mode="wait">
     <motion.div
-      key={pathname}
-      initial={{ 
-        opacity: 0, y: screenHeight }}
-      animate={{ 
-        opacity: 1, 
-        y: 0 
-      }}
-      exit={{ 
-        opacity: 0,
-        y: -screenHeight
-      }}
+      initial={{ opacity: 0, y: '100%' }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: '-100%' }}
       transition={{
-        duration: 0.8,
-        ease: [0.645, 0.045, 0.355, 1.000]
+        type: "tween",
+        duration: 1
       }}
       style={{
         position: 'absolute',
         width: '100%',
-        minHeight: '100vh'
+        height: '100%'
       }}
     >
       {children}
     </motion.div>
-    </AnimatePresence>
   );
 };
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
  
-
   return (
     <html lang="en">
       <body>
-      <PoeticModeProvider>
-        <Navbar pathname={pathname} />
-        <Rightbar className="rightbar" />
-        <TagProvider>
-        <LayoutProvider>
-        <main style={{
-          position: 'relative',
-          minHeight: '100vh',
-          overflowX: 'hidden'
-        }}>
-          
-            <>
-              {children}
-            </>
-          
-        </main>
-        </LayoutProvider>
-        </TagProvider>
+      
+        <PoeticModeProvider>
+          <Navbar pathname={pathname} />
+          <Rightbar className="rightbar" />
+          <TagProvider>
+            <LayoutProvider>
+             
+                <motion.main 
+            style={{
+              position: 'relative',
+              minHeight: '100vh',
+              overflowX: 'hidden'
+            }}
+          >
+            <AnimatePresence mode="popLayout">
+              
+                
+                  <PageContent pathname={pathname} key={pathname}>
+                    {children}
+                  </PageContent>
+                  </AnimatePresence>
+                  </motion.main>
+                  
+            </LayoutProvider>
+          </TagProvider>
         </PoeticModeProvider>
+        
       </body>
     </html>
   );
