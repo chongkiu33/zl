@@ -22,11 +22,11 @@ function Scene({ objPath, position, scale, rotation, color = "grey" }) {
   });
 
   // 添加旋转动画
-  useFrame(() => {
-    if (objRef.current) {
-      objRef.current.rotation.y += 0.01; // 每帧绕 Y 轴旋转
-    }
-  });
+//   useFrame(() => {
+//     if (objRef.current) {
+//       objRef.current.rotation.y += 0.01; // 每帧绕 Y 轴旋转
+//     }
+//   });
 
   return (
     <group ref={objRef} position={position} scale={scale} rotation={rotation}>
@@ -79,14 +79,14 @@ const Page = () => {
       <div className={styles.spChapter}>
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
-          <Canvas camera={{ position: [0, 0, 5] }} style={{ height: "500px" }}>
+          <Canvas camera={{ position: [0, 0, 10] }} style={{ height: "500px" }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 10]} />
 
             {/* 模型 1 */}
             <Scene
               objPath="/window/138.obj"
-              position={[0, 0, -4]}
+              position={[0, 0, 0]}
               scale={[0.4, 0.4, 0.4]}
               rotation={[0, Math.PI / 2, 0]}
             />
@@ -94,7 +94,7 @@ const Page = () => {
             {/* 模型 2 */}
             <Scene
               objPath="/window/139.obj"
-              position={[-4, 0, -4]}
+              position={[-4, 0, 0]}
               scale={[0.4, 0.4, 0.4]}
               rotation={[0, -Math.PI / 2, 0]}
             />
