@@ -11,20 +11,7 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { useRef } from "react";
 
 const Page = () => {
-  const objects = [
-    {
-      objPath: "/window/138.obj",
-      position: [2, 0, 0],
-      scale: [0.4, 0.4, 0.4],
-      rotation: [0, Math.PI / 2, 0],
-    },
-    {
-      objPath: "/window/139.obj",
-      position: [-2, 0, 0],
-      scale: [0.4, 0.4, 0.4],
-      rotation: [0, -Math.PI / 2, 0],
-    },
-  ];
+  
 
   return (
     <div>
@@ -51,7 +38,7 @@ const Page = () => {
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 10]} />
 
-            <Scene objects={objects} />
+            <Scene />
 
             <OrbitControls />
           </Canvas>
@@ -63,8 +50,23 @@ const Page = () => {
   );
 };
 
-function Scene({ objects, color = "grey" }) {
+function Scene() {
   const groupRef = useRef();
+
+  const objects = [
+        {
+          objPath: "/window/138.obj",
+          position: [2, 0, 0],
+          scale: [0.4, 0.4, 0.4],
+          rotation: [0, Math.PI / 2, 0],
+        },
+        {
+          objPath: "/window/139.obj",
+          position: [-2, 0, 0],
+          scale: [0.4, 0.4, 0.4],
+          rotation: [0, -Math.PI / 2, 0],
+        },
+      ];
 
   useFrame(() => {
     if (groupRef.current) {
@@ -75,7 +77,7 @@ function Scene({ objects, color = "grey" }) {
   return (
     <group ref={groupRef}>
       {objects.map((objData, index) => {
-        // 使用 useLoader 在这里加载每个对象
+        
         const obj = useLoader(OBJLoader, objData.objPath);
 
         // 为每个模型添加颜色
