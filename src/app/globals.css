@@ -4,13 +4,14 @@
 *{
   margin: 0;
   padding: 0;
+  
 }
 
 
 html, body {
  
   
-  
+  background-image: url('/bg.jpg');
   background-position: center; 
   
 }
@@ -34,6 +35,7 @@ a{
   align-items: center;
   position: relative;
   isolation: isolate;
+ 
   
 }
 
@@ -42,6 +44,7 @@ a{
 body {
   margin: 0;
   padding: 0;
+  
  
 }
 

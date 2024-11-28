@@ -9,6 +9,7 @@ import { useState } from 'react';
 import React from 'react';
 import { useLayout } from '../contexts/LayoutContext';
 import { usePathname } from 'next/navigation';
+import { AnimatePresence, motion } from "framer-motion";
 
 
 
@@ -40,38 +41,6 @@ const WorkLayout = ({ children }) => {
     return(
         
         <div className={styles.container}>
-{/*          
-            <div className={styles.header}>
-            <ul className={styles.workIndex}>
-                {projects
-                    .filter(project => project.work) 
-                    .map(project => (
-                        <li key={project.id}>
-                            <Link className={styles.workLink} href={`/works/${project.title.replace(/\s+/g,'-').toLowerCase()}`}>
-                                <span className={isActive(project.title) ? styles.activeLink : ''} >{project.title}</span>
-                            </Link>
-                        </li>
-                    ))}
-            </ul>
-
-                <div className={styles.tagContainer}>
-                    {allTags.map(tag => (
-                        <button 
-                        key={tag}
-                        onClick={() => toggleTag(tag)}  
-                        className={`${styles.tag} ${selectedTags.includes(tag) ? styles.selectedTag : ''}`}
-                        >{tag}</button>
-                    ))}
-                </div>
-
-                <div className={styles.icons}>
-                    <Image src="/icon/1.png"  onClick={() => toggleLayout('default')} width={40} height={24} />
-                    <Image src="/icon/2.png" onClick={() => toggleLayout('grid3')}  width={40} height={24} />
-                    <Image src="/icon/3.png" onClick={() => toggleLayout('bigimg')} width={40} height={24} />
-                </div>
-            </div> */}
-
-          
             <div >
             {React.cloneElement(children, { layout })}
             </div>

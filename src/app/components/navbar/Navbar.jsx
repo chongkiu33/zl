@@ -8,23 +8,27 @@ import {usePoeticMode} from '../../contexts/PoeticModeContext'
 
 
 
+
 const Navbar = ({pathname}) => {
     const {isPoeticMode, setIsPoeticMode} = usePoeticMode();
     
     const isPlaygroundPath = pathname.startsWith("/playground");
 
-   
+    const isActive = (project) => {
+      const isactive = pathname.startsWith(`/${project}`);
+      return isactive;
+  };
 
     
     return (
         <>
-        <div className={`${styles.container} ${isPoeticMode? styles.checked : ''}`}>
-            <div><Link className={styles.nav} href="/">Zhuolin Li</Link></div>
+        <div className={`${styles.container} ${isPoeticMode? styles.checked : ''}`} >
+            <div><Link className={`${styles.nav} ${isActive("")? styles.active : ''}`} href="/">Zhuolin Li</Link></div>
             <div className={styles.wAndp}>
             
-                <Link className={styles.nav} href="/works">Works</Link>
+                <Link className={`${styles.nav} ${isActive("works")? styles.active : ''}`}  href="/works">Works</Link>
                 <div className={styles.playground}>
-                <Link className={styles.nav}  href="/playground">Playground</Link>
+                <Link className={`${styles.nav} ${isActive("playground")? styles.active : ''}`}   href="/playground">Playground</Link>
                 {isPlaygroundPath && (
               <div className={styles.switchContainer}>
                 <div className={styles.side}>Side Projects</div>
@@ -47,10 +51,10 @@ const Navbar = ({pathname}) => {
               </div>
             )}
                 </div>
-                <Link className={`${styles.about2} ${styles.nav}`} href="/about">About</Link>
+                <Link className={`${styles.about2} ${styles.nav} ${isActive("about")?styles.active : ''}`} href="/about">About</Link>
             </div>
             
-            <div className={`${styles.about1} ${styles.nav}`}><Link href="/about">About</Link></div>
+            <div className={`${styles.about1} ${styles.nav}  ${isActive("about")?styles.active : ''}`}><Link href="/about">About</Link></div>
         </div>
 
         <div className={`${styles.side2} ${isPoeticMode? styles.checked : ''}`}>Poetic Mode

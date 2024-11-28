@@ -12,13 +12,26 @@
     z-index: 999;
     padding:1.5vh 0 0 1.5vh;
     
+    
+    
 }
 .nav{
+   
     transition: all 0.3s ease;
+    mix-blend-mode: difference;
+    color: black;
+    
+   
+    
+    
 }
 .nav:hover{
     font-weight: 1000;
     transition: all 0.3s ease;
+}
+
+.active{
+    font-weight: 1000;
 }
 
 .container.checked{

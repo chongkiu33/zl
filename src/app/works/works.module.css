@@ -20,7 +20,7 @@
 .header{
   display: flex;
   height: 15vh;
-  padding-top: 1vh;
+  padding-top: 2vh;
   padding-bottom: 8vh;
 }
 
@@ -92,7 +92,7 @@
 .pageContainer{
   height: 79vh;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 2vh;
   font-weight: 100;
   
 }
@@ -194,9 +194,12 @@
 
 
 /* project page */
+.pContainer{
+  padding-top: 1.5vh;
+}
 
 .pHeader{
-  padding-top: 1vh;
+  padding-top: calc(1vh-10px);
   display: flex;
   padding-bottom: 5vh;
 }
