@@ -12,7 +12,7 @@ import { useRef } from "react";
 
 
 const Page = () => {
-        const groupRef = useRef();
+        
 
         const objects = [
                 {
@@ -30,6 +30,7 @@ const Page = () => {
               ];
 
         function Scene({ objects, color = "grey"  }) {
+                const groupRef = useRef();
 
                 useFrame(() => {
                         if (groupRef.current) {
