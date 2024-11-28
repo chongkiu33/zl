@@ -1,12 +1,12 @@
-"use client";
-import styles from '../pg.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import TextSplitter from '../../components/TextSplitter/TextSplitter';
-import ProjectTags from '../../components/ProjectTag/ProjectTag';
+"use client"
+import styles from '../pg.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+import TextSplitter from '../../components/TextSplitter/TextSplitter'
+import ProjectTags from '../../components/ProjectTag/ProjectTag'
 import * as THREE from 'three';
 import { OrbitControls } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas , useFrame , useLoader } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { useRef } from "react";
 
