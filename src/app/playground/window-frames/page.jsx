@@ -36,6 +36,16 @@ function Scene({ objPath, position, scale, rotation, color = "grey" }) {
 }
 
 const Page = () => {
+
+const groupRef = useRef();
+
+useFrame(() => {
+        if (groupRef.current) {
+          groupRef.current.rotation.y += 0.01; // Rotate the entire group around the world Y-axis
+        }
+});
+
+
   return (
     <div>
       <div className={styles.spTitle}>Window Frames For Ancient China Pavilion</div>
@@ -84,6 +94,8 @@ const Page = () => {
             <directionalLight position={[10, 10, 10]} />
 
             {/* 模型 1 */}
+
+            <group ref={groupRef}>
             <Scene
               objPath="/window/138.obj"
               position={[0, 0, 0]}
@@ -98,6 +110,7 @@ const Page = () => {
               scale={[0.4, 0.4, 0.4]}
               rotation={[0, -Math.PI / 2, 0]}
             />
+            </group>
 
             <OrbitControls />
           </Canvas>
