@@ -19,12 +19,12 @@ const Navbar = ({pathname}) => {
     return (
         <>
         <div className={`${styles.container} ${isPoeticMode? styles.checked : ''}`}>
-            <div><Link href="/">Zhuolin Li</Link></div>
+            <div><Link className={styles.nav} href="/">Zhuolin Li</Link></div>
             <div className={styles.wAndp}>
             
-                <Link href="/works">Works</Link>
+                <Link className={styles.nav} href="/works">Works</Link>
                 <div className={styles.playground}>
-                <Link  href="/playground">Playground</Link>
+                <Link className={styles.nav}  href="/playground">Playground</Link>
                 {isPlaygroundPath && (
               <div className={styles.switchContainer}>
                 <div className={styles.side}>Side Projects</div>
@@ -47,10 +47,10 @@ const Navbar = ({pathname}) => {
               </div>
             )}
                 </div>
-                <Link className={styles.about2} href="/about">About</Link>
+                <Link className={`${styles.about2} ${styles.nav}`} href="/about">About</Link>
             </div>
             
-            <div className={styles.about1}><Link href="/about">About</Link></div>
+            <div className={`${styles.about1} ${styles.nav}`}><Link href="/about">About</Link></div>
         </div>
 
         <div className={`${styles.side2} ${isPoeticMode? styles.checked : ''}`}>Poetic Mode

@@ -4,14 +4,21 @@
     flex-direction: column;
     align-items: left;
     justify-content: space-between;
-    height: 98vh;
+    height: 97vh;
     position:fixed;
     font-family: "Cormorant Unicase", system-ui;
     font-weight: 450;
     font-size: 1.4rem;
     z-index: 999;
-    padding:1vh 0 0 1vh;
+    padding:1.5vh 0 0 1.5vh;
     
+}
+.nav{
+    transition: all 0.3s ease;
+}
+.nav:hover{
+    font-weight: 1000;
+    transition: all 0.3s ease;
 }
 
 .container.checked{

@@ -32,39 +32,7 @@ const Page = () => {
     return { ...objData, obj }; // 将模型对象与其他数据结合
   });
 
-  function Scene({ objects, color = "grey" }) {
-    const groupRef = useRef();
-
-    useFrame(() => {
-      if (groupRef.current) {
-        groupRef.current.rotation.y += 0.01; // 每帧绕 Y 轴旋转
-      }
-    });
-
-    return (
-      <group ref={groupRef}>
-        {objects.map((objData, index) => {
-          // 为每个模型添加颜色
-          objData.obj.traverse((child) => {
-            if (child.isMesh) {
-              child.material = new THREE.MeshStandardMaterial({ color });
-            }
-          });
-
-          return (
-            <group
-              key={index}
-              position={objData.position}
-              scale={objData.scale}
-              rotation={objData.rotation}
-            >
-              <primitive object={objData.obj} />
-            </group>
-          );
-        })}
-      </group>
-    );
-  }
+  
 
   return (
     <div>
@@ -102,5 +70,39 @@ const Page = () => {
     </div>
   );
 };
+
+function Scene({ objects, color = "grey" }) {
+        const groupRef = useRef();
+    
+        useFrame(() => {
+          if (groupRef.current) {
+            groupRef.current.rotation.y += 0.01; // 每帧绕 Y 轴旋转
+          }
+        });
+    
+        return (
+          <group ref={groupRef}>
+            {objects.map((objData, index) => {
+              // 为每个模型添加颜色
+              objData.obj.traverse((child) => {
+                if (child.isMesh) {
+                  child.material = new THREE.MeshStandardMaterial({ color });
+                }
+              });
+    
+              return (
+                <group
+                  key={index}
+                  position={objData.position}
+                  scale={objData.scale}
+                  rotation={objData.rotation}
+                >
+                  <primitive object={objData.obj} />
+                </group>
+              );
+            })}
+          </group>
+        );
+      }
 
 export default Page;
