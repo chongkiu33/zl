@@ -7,6 +7,7 @@ import 'highlight.js/styles/github.css';
 import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 import {useState} from "react";
+import Link from 'next/link';
 
 
 const Page = () => {
@@ -404,17 +405,27 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Other Links</div>
-            <div><strong>Twine Demos</strong>:Easy Mode: https://b2xx.itch.io/easymode-garden-demoHard Mode: [https://itch.io/game/edit/2673879#published](https://b2xx.itch.io/hardmode-garden-demo)</div>
+            <div><strong>Twine Demos</strong>:
+            <br/>Easy Mode: <Link className={styles.link} target="_blank" href="https://b2xx.itch.io/easymode-garden-demo">Easy Mode: https://b2xx.itch.io/easymode-garden-demo </Link><br/>
+            Hard Mode: <Link className={styles.link} target="_blank" href="https://itch.io/game/edit/2673879#published">Hard Mode: [https://itch.io/game/edit/2673879#published]</Link>
+            (https://b2xx.itch.io/hardmode-garden-demo)</div>
 
-            <div><strong>Presentation Slides</strong>: https://docs.google.com/presentation/d/1Mw7vax5O5SxaeuSGWet5iaas_gaw8X52oodZqI7i21A/edit?usp=sharing</div>
+            <div><strong>Presentation Slides</strong>:<br/>
+            <Link className={styles.link} target="_blank" href="https://docs.google.com/presentation/d/1Mw7vax5O5SxaeuSGWet5iaas_gaw8X52oodZqI7i21A/edit?usp=sharing">https://docs.google.com/presentation/d/1Mw7vax5O5SxaeuSGWet5iaas_gaw8X52oodZqI7i21A/edit?usp=sharing</Link></div>
 
-            <div><strong>p5 Links</strong>:Time Cave + Gauntlet: https://editor.p5js.org/B2xx/sketches/BKuuzfkEtTime Cave + Gauntlet + Branch and BottleNeck: https://editor.p5js.org/B2xx/sketches/pltbr8YFKQuest: https://editor.p5js.org/B2xx/sketches/vp3egvtrgCombination: https://editor.p5js.org/B2xx/sketches/b3AjUFh8H</div>
+            <div><strong>p5 Links</strong>:
+            <br/>Time Cave + Gauntlet:<Link className={styles.link} target="_blank" href="https://editor.p5js.org/B2xx/sketches/BKuuzfkEt"> https://editor.p5js.org/B2xx/sketches/BKuuzfkEt</Link>
+            <br/> Time Cave + Gauntlet + Branch and BottleNeck:<Link className={styles.link} target="_blank" href="https://editor.p5js.org/B2xx/sketches/pltbr8YFK "> https://editor.p5js.org/B2xx/sketches/pltbr8YFK </Link>
+            <br/>Quest: <Link className={styles.link} target="_blank" href="https://editor.p5js.org/B2xx/sketches/vp3egvtrg"> https://editor.p5js.org/B2xx/sketches/vp3egvtrg </Link>
+            <br/>Combination: <Link className={styles.link} target="_blank" href="https://editor.p5js.org/B2xx/sketches/b3AjUFh8H"> https://editor.p5js.org/B2xx/sketches/b3AjUFh8H</Link></div>
             
         </div> 
 
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Reference</div>
-            Standard Patterns in Choice-Based Games
+            <Link className={styles.link} target="_blank" href="https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/">
+            1. Standard Patterns in Choice-Based Games
+            </Link>
         </div>
 
     <div className='bottomspace'></div>

@@ -83,7 +83,7 @@ const AboutPage = () => {
                             <span className={styles.date}>Mar. 2024 – present</span>
                             </div>
                             <ul className={styles.description}>
-                            <li>Designed and developed <Link className={styles.link} href="http://167.99.230.214:406">15 webpages for the Natural Material Lab</Link> in Interactive Media Arts department</li>
+                            <li>Designed and developed <Link className={styles.link} target="_blank" href="http://167.99.230.214:406">15 webpages for the Natural Material Lab</Link> in Interactive Media Arts department</li>
                             </ul>
                         </div>  
 
@@ -100,7 +100,7 @@ const AboutPage = () => {
 
                         <div className={styles.experience}>
                             <div className={styles.header}>
-                            <div>Software Engineer, <strong><Link className={styles.link} href="https://ml5js.org">ml5.js</Link></strong>, hybrid</div>
+                            <div>Software Engineer, <strong><Link className={styles.link} target="_blank" href="https://ml5js.org">ml5.js</Link></strong>, hybrid</div>
                             <span className={styles.date}>Mar. 2023– Aug. 2023</span>
                             </div>
                             <ul className={styles.description}>
@@ -149,7 +149,7 @@ const AboutPage = () => {
                                 <span className={styles.date}>Fall 2022 – Spring 2023</span>
                                 </div>
                                 <ul className={styles.description}>
-                                <li>Exhibited at the First China Beijing Animation Festival, and received over 1.1 Billion visitors(<Link className={styles.link} href="http://www.china.org.cn/china/2023-07/25/content_94956536.htm">Report</Link>&<Link className={styles.link} href="https://github.com/B2xx/Artificial-Friend_Beijing-Exhibition">github</Link>)</li>
+                                <li>Exhibited at the First China Beijing Animation Festival, and received over 1.1 Billion visitors(<Link className={styles.link} target="_blank" href="http://www.china.org.cn/china/2023-07/25/content_94956536.htm">Report</Link>&<Link className={styles.link} target="_blank" href="https://github.com/B2xx/Artificial-Friend_Beijing-Exhibition">github</Link>)</li>
                                 <li>Developed an artificial companion that responds to clients' emotions and writes responses using robotic arms</li>
                                 </ul>
                 </div> 
@@ -164,7 +164,7 @@ const AboutPage = () => {
             </svg>
                 <div className={styles.experience}>
                                 <div className={styles.header}>
-                                <div>Video Editor,<strong> <Link className={styles.link} href="https://afreebird.org">A Free Bird Organization</Link></strong><Link className={styles.link} href="https://www.instagram.com/afreebirdorganization/">(Social Media)</Link> </div>
+                                <div>Video Editor,<strong> <Link className={styles.link}  target="_blank" href="https://afreebird.org">A Free Bird Organization</Link></strong><Link className={styles.link} target="_blank" href="https://www.instagram.com/afreebirdorganization/">(Social Media)</Link> </div>
                                 <span className={styles.date}>May. 2024 – Aug. 2024</span>
                                 </div>
                                 <ul className={styles.description}>
@@ -175,7 +175,7 @@ const AboutPage = () => {
                 </div> 
                 <div className={styles.experience}>
                                 <div className={styles.header}>
-                                <div>Curatorial Team Leader, <strong><Link className={styles.link} href="http://167.99.230.214:1104">Catcher’s Curation</Link></strong>(<Link className={styles.link} href="https://www.uaad.art/post/tale-of-the-abandoned-salvaged-works-from-art-school-waste">Report</Link>&<Link className={styles.link} href="https://www.instagram.com/catchers_curation/">Social Media</Link>)</div>
+                                <div>Curatorial Team Leader, <strong><Link className={styles.link} target="_blank" href="http://167.99.230.214:1104">Catcher’s Curation</Link></strong>(<Link className={styles.link} target="_blank" href="https://www.uaad.art/post/tale-of-the-abandoned-salvaged-works-from-art-school-waste">Report</Link>&<Link className={styles.link} target="_blank" href="https://www.instagram.com/catchers_curation/">Social Media</Link>)</div>
                                 <span className={styles.date}>Mar. 2023– Nov. 2023</span>
                                 </div>
                                 <ul className={styles.description}>
@@ -218,12 +218,12 @@ const AboutPage = () => {
             </svg>
                 <div className={styles.experience}>
                                 <div className={styles.header}>
-                                <div>Temple University Minatare Stupa Design Contest, <strong><Link className={styles.link} href="/playground/stupa">Temple University</Link></strong>, 3rd Winner</div>
+                                <div>Temple University Minatare Stupa Design Contest, <strong>Temple University</strong>, 3rd Winner</div>
                                 <span className={styles.date}></span>
                                 </div>
                                 <ul className={styles.description}>
                                 
-                                <li>Designed, 3D modeled the stupa, and wrote an essay based on “without relying on anything” in Diamond Sutra</li>
+                                <li>Designed, 3D modeled the stupa, and wrote an essay based on “without relying on anything” in Diamond Sutra (Documentation:<Link className={styles.link} style={{wordBreak: 'break-all'}} href="/playground/stupa"> /playground/stupa </Link>)</li>
                            
                                 </ul>
                 </div> 

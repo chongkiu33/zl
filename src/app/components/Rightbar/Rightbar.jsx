@@ -74,7 +74,7 @@ const Rightbar = () => {
         { date: "2021-11-17", link: "/playground/solidarity", title: "solidarity"},
         { date: "2021-12-06", link: "/playground/mayan-language", title: "mayan-language"},
         { date: "2022-03-24", link: "/playground/stupa", title: "Stupa"},
-        { date: "2022-07-13", link: "/playground/a-serious-window-frames-for-pavilion", title: "A Serious Window Frames For Pavilion"},
+        { date: "2022-07-13", link: "/playground/window-frames", title: "Window Frames For Ancient China Pavilion"},
         { date: "2022-09-11", link: "/playground/gui", title: "back"},
         { date: "2022-12-15", link: "/playground/qilin", title: "Qilin"},
         { date: "2022-12-16", link: "/playground/mirror", title: "Mirror"},
@@ -86,10 +86,11 @@ const Rightbar = () => {
         { date: "2024-04-16", link: "/playground/listen-pied-piper-is-playing", title: "“Listen! Pied Piper is playing”"},
         { date: "2024-04-23", link: "/playground/am-i-too-much", title: "Am I too much?"},
         { date: "2024-04-26", link: "/playground/catchers-curation", title: "Catcher’s Curation"},
-        { date: "2024-04-28", link: "//works/the-garden-of-forking-paths", title: "The Garden of Forking Paths"},
-        { date: "2024-08-31", link: "/playground/bubble-procelain", title: "Bubble Procelain"},
-        { date: "2024-10-31", link: "/playground/natural-material-lab", title: "Natural Material Lab"},
-        { date: "2024-11-05", link: "/playground/seaweed-hairband", title: "Seaweed hairband"}    
+        { date: "2024-04-28", link: "/works/the-garden-of-forking-paths", title: "The Garden of Forking Paths"},
+        // { date: "2024-08-31", link: "/playground/bubble-procelain", title: "Bubble Procelain"},
+        // { date: "2024-10-31", link: "/playground/natural-material-lab", title: "Natural Material Lab"},
+        { date: "2024-11-05", link: "/playground/seaweed-hairband", title: "Seaweed hairband"},
+        { date: "2024-11-26", link: "/works/graphic-theory-approach-to-maze", title: "Graphic Theory Approach to Maze"}   
     ];
 
     const handleMouseEnter = (event, title) => {

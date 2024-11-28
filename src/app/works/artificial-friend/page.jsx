@@ -1,12 +1,20 @@
+'use client'
 import styles from './af.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import 'highlight.js/styles/github.css';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 
 
 const Page = () => {
+  const [overview, setOverview] = useState(true);
+
+  const toggleMode = (mode) => {
+    setOverview(mode); // toggle between true and false
+  };
+
   return <div>
     <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
@@ -28,8 +36,408 @@ const Page = () => {
         <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />
      </div>
 
-     <div className={styles.abstract}>Have you imagined an “artificial friend” that could recognize your emotion and support you? Now she comes from the website to reality. Jane’s writable hand and face enable the users to have more tangible interaction with her, and reflect on what we need in the intimate relationship if what we need could all be satisfied by a considerate “machine”.</div>
 
+    <div>
+      <div style={{display:'flex', justifyContent:'center',marginTop:'50px'}}>
+      <button className={`${styles.sectionButton} ${overview ? styles.active : ''}`} onClick={() => toggleMode(true)}>
+        Overview
+        </button>
+      <button  className={`${styles.sectionButton} ${overview ? '' : styles.active}`} onClick={() => toggleMode(false)}>Visual Documentation</button>
+      </div>
+      <svg style={{transform:'translateY(-15px)',zIndex:'-1'}}   height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <line  x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1" />
+      </svg>
+    </div>
+
+    {!overview && (
+
+    <div className={styles.chapterC}>
+    <div className={styles.chapterTitle}>Visual Documentation</div>
+    <div className={styles.chapterContent}>
+      <div className={styles.chaptertext}>
+        
+        <strong>Separate it as 2 parts accordingly, physical installation and digital model & animation**
+
+     Continue physical installation part:</strong>
+        <div>
+        <h3>Physical Installation</h3>
+        <h4>All Materials</h4>
+        <div className={styles.imgContainer}>   
+              <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/AllMaterial.png" layout="responsive" width={100} height={100} />
+        </div>
+        <div className={styles.imgContainer3} >   
+              <div className={styles.img3}>
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Aruino.png" layout="responsive" width={100} height={100} />
+                <p className={styles.cation}>Arduino and Pen Holder</p>
+              </div>
+
+              <div className={styles.img3}>
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Motor.png" layout="responsive" width={100} height={100} />
+                <p className={styles.cation}>Motor</p>
+              </div>
+
+              <div className={styles.img3}>
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Hub.png" layout="responsive" width={100} height={100} />
+                <p className={styles.cation}>Hubs (For Poles)</p>
+              </div>
+
+              <div className={styles.img3}>
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts.png" layout="responsive" width={100} height={100} />
+                
+                <p className={styles.cation}>Prepared Parts</p>
+              </div>
+              <div className={styles.img3}>
+                
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics.png" layout="responsive" width={100} height={100} />
+                <p className={styles.cation}>Prepared Parts</p>
+              </div>
+             
+              
+          </div>
+
+          <h3>User Testing</h3>
+          <div>
+          <video
+                    src="/ArtificialFriend/visualdocument/Success.mov"
+                    controls
+                    loop
+                    width={"100%"}
+                  ></video>
+          </div>
+          <div>1.Test Arduino’s functions</div>
+          <div>2.Upload GRBL </div>
+          <div>3.Open Universal Gcode Sender and Use ”Machine-Setup Wizard” to test the stepper motors</div>
+          <div style={{color: "red",fontWeight: "light",opacity: "0.6"}} >Error Find: Part of My Arduino (CNC Sheild) is broken, that’s why the stepper motor did not move when I follow the instruction.  I also burnt it once</div>
+        </div>
+
+        <div>
+          <h3>Software</h3>
+          <Link href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">Learning GRBL and Universal G code Sender</Link>
+
+          <h4>Another Video’s with Tutorials for Writing Machine</h4>
+          <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino Writing/ Drawing Machine - 2D Pen Plotter</Link>
+          <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino CNC Drawing Machine</Link>
+
+          <h4>Trouble Shooting: Different Cable for Z-axis motor</h4>
+          <Link href="https://github.com/bdring/Grbl_Pen_Servo/tree/master/grbl">bdring/Grbl_Pen_Servo</Link>
+          <div>This GRBL library use the difference of frequency to control the Z-axis</div>
+        </div>
+
+
+        <div>
+          <h3>Final Product (be able to move X,Y ans Z axis)</h3>
+          <div><iframe title="vimeo-player" src="https://player.vimeo.com/video/805846071?h=a700ec972a" width="100%" height="360" frameborder="0"    allowfullscreen></iframe></div>
+          
+          <h4>Coding (Send to serial port and wait for Arduino say“OK”)</h4>
+          <div></div>
+          <Link href="https://editor.p5js.org/gohai/sketches/UZZcwpZ6o">Text to G-Code</Link>
+          <Link href="https://editor.p5js.org/gohai/sketches/zo2qyIy-Y">G-Code Flow Control</Link>
+
+          <div></div>
+          <Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi"> test1combination copy</Link>
+
+          <h4>Final Configration and Modification</h4>
+          <div>A new version of GRBL library in oder to not write in 45 degree</div>
+
+        </div>
+
+
+        <div>
+        <h3>Description of the components:</h3>
+        <div className={styles.documentContainer}>
+          <div className={styles.imgWrapper}>   
+                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/robotics display Large.png" layout="responsive" width={100} height={100} />
+          </div>
+          <div className={styles.videoWrapper}>
+          <iframe
+            src="https://drive.google.com/file/d/1lGrErK2YQh33vMMKw52CvUHj945o9guj/preview"
+            width="100%"
+                height="300"
+            allow="autoplay"
+            className={styles.video}
+          ></iframe>
+          <p className={styles.cation}>The video that shows how it works:</p>
+        </div>
+        
+        </div>
+        </div>
+
+
+        <div>
+          <h3>Deal with the 45angle problem:</h3>
+          <div>Grbl 0.9i(45) and 1.1f</div>
+          <div>Check the grbl uploading with Arduino and universal g code sender. There are problem that the Arduino said upload successfully, yet the universal g code sender might not updated.</div>
+          <div className={styles.solution}>Sol: before writing, check the grbl is 1.1f</div>
+        </div>
+
+
+        <div>
+          <h3>Deal With Trembling Problem</h3>
+          <h4>Discover_1:</h4>
+          <div>The reason why it has annoyed sound or move like a pile driver machine is because its restrictor has restricted the movement of circles(Look into the description above). A high z_up or z_down command will make the control pole collide with the restricter strongly thus create the noise.</div>
+          <div className={styles.solution}>Sol: To deal with a strong collision, set z_up to low.</div>
+          <div>Comparison</div>
+
+         
+
+           <div className={styles.documentContainer}>
+
+          
+              <div className={styles.videoWrapper}>
+              <iframe
+                src="https://drive.google.com/file/d/1lzlrTFztp0zMxWYPqyU930cdVO-eDepH/preview"
+                width="100%"
+                height="300"
+                allow="autoplay"
+                className={styles.video}
+              ></iframe>
+              <p className={styles.cation}>Large Z_up and huge noise</p>
+            </div>
+
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://drive.google.com/file/d/1lzlrTFztp0zMxWYPqyU930cdVO-eDepH/preview"
+                width="100%"
+                height="300"
+                allow="autoplay"
+                className={styles.video}
+              ></iframe>
+              <p className={styles.cation}>Small Z_up and small noise | </p>
+            </div>
+
+            </div> 
+
+            <h4>Discover_2:</h4>
+          <div>The reason why it is tremble is because the stepper motor do not have power when it do not receive z command.</div>
+          <div className={styles.solution}>Sol: Still finding ways to deal with this problem. (better perform withour the spring)</div>
+          <h4>Discover_3:</h4>
+          <div>The spring is useless, it could not help to maintain the status of the pen.</div>
+          <div>Comparison</div>
+                 <div className={styles.documentContainer}>
+                  
+                      <div className={styles.videoWrapper}>
+                      <iframe
+                        src="https://drive.google.com/file/d/1nzZ9Bt_p3pZY5-sT-ZSkb3knf-CXCkCU/preview"
+                        width="100%"
+                        height="300"
+                        allow="autoplay"
+                        className={styles.video}
+                      ></iframe>
+                      <p className={styles.cation}>Move with Spring</p>
+                    </div>
+
+                    <div className={styles.videoWrapper}>
+                      <iframe
+                        src="https://drive.google.com/file/d/1RFFhXJtsvDjkNSsvAC0syzJwsg9NrAxf/preview"
+                        width="100%"
+                        height="300"
+                        allow="autoplay"
+                        className={styles.video}
+                      ></iframe>
+                      <p className={styles.cation}>Move without Spring </p>
+                    </div>
+
+                  </div> 
+
+                    <div className={styles.solution}>Sol: Remove the spring</div>
+
+                    <div>Documentation of what happened without the spring: Works smoother and do not have the risk of colliding springs when writing</div>
+
+        </div>
+
+
+        <div>
+          <h3>Deal with the speed</h3>
+          <div>Use single-line font to mimic human writing and save time. </div>
+        </div>
+
+        <div>
+          <h3>Testing Single Letter Fonts</h3>
+                  <div className={styles.documentContainer}>
+                  <div className={styles.imgWrapper}>   
+                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/test.png" layout="responsive" width={100} height={100} />
+                        <p className={styles.cation}>Testing different single line fonts and record how many command it send to the Arduino</p>
+                  </div>
+                  <div className={styles.videoWrapper}>
+                  <iframe
+                    src="https://drive.google.com/file/d/1WgMCOCGQn-KT-hIs92aXY2me3gANPzYa/preview"
+                    width="100%"
+                    height="300"
+                    allow="autoplay"
+                    className={styles.video}
+                  ></iframe>
+                  <p className={styles.cation}>Discover:
+
+                  The Feasible Single-line has the smallest amount of the command;
+
+                  The Feasible Single-line font has repetitive movement (see the video below)</p>
+                </div>
+                </div> 
+
+            <h4>Testing and compare with the previous fonts (Wondering if the curve and the other elements will affect its writing speed)</h4>
+            <div className={styles.documentContainer}>
+                  <div className={styles.imgWrapper}>   
+                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/1.png" layout="responsive" width={100} height={100} />
+                        
+                  </div>
+                  <div className={styles.imgWrapper}>   
+                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/2.png" layout="responsive" width={100} height={100} />
+                        
+                  </div>
+              
+                </div>
+
+
+        </div>
+
+
+        <div>
+          <h3>Solve the problem of Speed and Flip writing</h3>
+          <div>Universal Gcode Sender</div><Link href="https://github.com/gnea/grbl/blob/master/doc/markdown/settings.md">gnea/grbl/settings.md</Link>
+          <div>Speed: (<strong>[X,Y,Z] Acceleration, mm/sec^2</strong>) $120,$121, $122 = 250</div>
+          <div>Flip writing: $3 =1 </div>
+        </div>
+
+
+        <div>
+          <h3>Implement the 3D -printed hand model</h3>
+          <h3>User-Testing with hand model</h3>
+          <h4>Re-design the machine</h4>
+
+          <div className={styles.imgContainer2} >   
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/3_1.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/4.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/5.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/6.png" layout="responsive" width={100} height={100} />
+              
+          </div>
+
+          <div>Use this pen-holder and 3D printed hand model instead</div>
+          <h4>ssembly the pen to the hand </h4>
+          
+          <div className={styles.imgContainer2} >   
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a1.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a2.png" layout="responsive" width={100} height={100} />
+             
+              <Image className={styles.img2}  alt='visualdocument' src="/ArtificialFriend/visualdocument/a3.png" layout="responsive" width={100} height={100} />
+              
+              
+              </div>
+         
+          <p className={styles.cation}>Design an Angle so that the pen could touch the paper</p>
+
+
+          <h4>The Final Hand for a continuous aesthetic</h4>
+          <div className={styles.documentContainer} >
+                  <div >   
+                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/finalhand.png" layout="responsive" width={100} height={100} />  
+                  </div>
+                  <div >
+                 
+                  <video
+                    src="/ArtificialFriend/visualdocument/Success.mov"
+                    controls
+                    loop
+                    width={"100%"}
+                  ></video>
+              
+                </div>
+            </div>
+
+          
+
+        </div>
+
+        <h4>Continuesly User-Testing with Screen & Webcam</h4>
+        <div className={styles.documentContainer} >
+        <div >
+                 
+                 <video
+                   src="/ArtificialFriend/visualdocument/Old Display.mov"
+                   controls
+                   loop
+                   width={"100%"}
+                 ></video>
+             <p className={styles.cation}>Old display</p>
+               </div>
+                  <div >   
+                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/olddisplay.png" layout="responsive" width={100} height={100} />  
+                  </div>
+                  
+            </div>
+
+            <div>Final Decision: The modern screen would be more suitable for the concept of “Artificial Friend.”o l</div>
+            <div>Add a Bluetooth Speaker</div>
+            <div style={{color: "red"}}>Add a black pedestal for the display</div>
+            <div style={{color: "red"}}>Add a light for the hand</div>
+       
+            <h3>Final</h3>
+            <div >   
+                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />  
+            </div>
+
+
+            <h3>Digital Model</h3>
+            <h4>Hand Model </h4>
+            <Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">File</Link>
+            <h4>Sketches</h4>
+            <div >   
+                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/holdpen_1.png" layout="responsive" width={100} height={100} />  
+            </div>
+
+            <h4>Animation:</h4>
+            <ul>
+              1.3D animation:
+              <li>Modeling the hand:<Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">Folder</Link>
+              <div >   
+                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Bot.png" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Top.png" layout="responsive" width={100} height={100} />  
+            </div>
+              </li>
+              <li>Rigging
+              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Rigging.png" layout="responsive" width={100} height={100} />   </div>
+              </li>
+              <li>Paint Skin Weight for each Joints<br/>
+              Trouble Shooting: Put UV first then do the rigging or else the UV will get distorted so that when the finger bends it will become more nature
+              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Skinweight2.png" layout="responsive" width={100} height={100} />   </div>
+              </li>
+              <li>Unfold UV and paint UV 
+                <div>   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/UV.png" layout="responsive" width={100} height={100} /> 
+                <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Full.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Sub.png" layout="responsive" width={100} height={100} />
+                  </div>
+              </li>
+              <li>Rerigging and repaint the skin weight
+              Adobe Substance Painte</li>
+              <li>Light and Shade:Arnold Rendere and its Light</li>
+              <li>Camera Work: Set Perspective Camera and Keys
+              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Light.png" layout="responsive" width={100} height={100} />   </div>
+              </li>
+              <li>Render Animation:
+              Render Settings
+              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Render Settings.png" layout="responsive" width={100} height={100} />   </div>
+              </li>
+            </ul>
+            <ul>
+            2.AE complement:
+              <li>Typewriter Effects</li>
+              <li>Blink Expression</li>
+            </ul>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+    )}
+
+
+    {overview &&(
+
+    <>
+     <div className={styles.abstract}>Have you imagined an “artificial friend” that could recognize your emotion and support you? Now she comes from the website to reality. Jane’s writable hand and face enable the users to have more tangible interaction with her, and reflect on what we need in the intimate relationship if what we need could all be satisfied by a considerate “machine”.</div>
     <div className={styles.chapter}>
       <div className={styles.chapterTitle}>Project Description</div>
       <div className={styles.chapterContent}>
@@ -56,386 +464,6 @@ const Page = () => {
     </div>
 
 
-    <div className={styles.chapterC}>
-      <div className={styles.chapterTitle}>Visual Documentation</div>
-      <div className={styles.chapterContent}>
-        <div className={styles.chaptertext}>
-          
-          <strong>Separate it as 2 parts accordingly, physical installation and digital model & animation**
-
-       Continue physical installation part:</strong>
-          <div>
-          <h3>Physical Installation</h3>
-          <h4>All Materials</h4>
-          <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/AllMaterial.png" layout="responsive" width={100} height={100} />
-          </div>
-          <div className={styles.imgContainer3} >   
-                <div className={styles.img3}>
-                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Aruino.png" layout="responsive" width={100} height={100} />
-                  <p className={styles.cation}>Arduino and Pen Holder</p>
-                </div>
-
-                <div className={styles.img3}>
-                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Motor.png" layout="responsive" width={100} height={100} />
-                  <p className={styles.cation}>Motor</p>
-                </div>
-
-                <div className={styles.img3}>
-                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Hub.png" layout="responsive" width={100} height={100} />
-                  <p className={styles.cation}>Hubs (For Poles)</p>
-                </div>
-
-                <div className={styles.img3}>
-                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts.png" layout="responsive" width={100} height={100} />
-                  
-                  <p className={styles.cation}>Prepared Parts</p>
-                </div>
-                <div className={styles.img3}>
-                  
-                  <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics.png" layout="responsive" width={100} height={100} />
-                  <p className={styles.cation}>Prepared Parts</p>
-                </div>
-               
-                
-            </div>
-
-            <h3>User Testing</h3>
-            <div>
-            <video
-                      src="/ArtificialFriend/visualdocument/Success.mov"
-                      controls
-                      loop
-                      width={"100%"}
-                    ></video>
-            </div>
-            <div>1.Test Arduino’s functions</div>
-            <div>2.Upload GRBL </div>
-            <div>3.Open Universal Gcode Sender and Use ”Machine-Setup Wizard” to test the stepper motors</div>
-            <div style={{color: "red",fontWeight: "light",opacity: "0.6"}} >Error Find: Part of My Arduino (CNC Sheild) is broken, that’s why the stepper motor did not move when I follow the instruction.  I also burnt it once</div>
-          </div>
-
-          <div>
-            <h3>Software</h3>
-            <Link href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">Learning GRBL and Universal G code Sender</Link>
-
-            <h4>Another Video’s with Tutorials for Writing Machine</h4>
-            <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino Writing/ Drawing Machine - 2D Pen Plotter</Link>
-            <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino CNC Drawing Machine</Link>
-
-            <h4>Trouble Shooting: Different Cable for Z-axis motor</h4>
-            <Link href="https://github.com/bdring/Grbl_Pen_Servo/tree/master/grbl">bdring/Grbl_Pen_Servo</Link>
-            <div>This GRBL library use the difference of frequency to control the Z-axis</div>
-          </div>
-
-
-          <div>
-            <h3>Final Product (be able to move X,Y ans Z axis)</h3>
-            <div><iframe title="vimeo-player" src="https://player.vimeo.com/video/805846071?h=a700ec972a" width="100%" height="360" frameborder="0"    allowfullscreen></iframe></div>
-            
-            <h4>Coding (Send to serial port and wait for Arduino say“OK”)</h4>
-            <div></div>
-            <Link href="https://editor.p5js.org/gohai/sketches/UZZcwpZ6o">Text to G-Code</Link>
-            <Link href="https://editor.p5js.org/gohai/sketches/zo2qyIy-Y">G-Code Flow Control</Link>
-
-            <div></div>
-            <Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi"> test1combination copy</Link>
-
-            <h4>Final Configration and Modification</h4>
-            <div>A new version of GRBL library in oder to not write in 45 degree</div>
-
-          </div>
-
-
-          <div>
-          <h3>Description of the components:</h3>
-          <div className={styles.documentContainer}>
-            <div className={styles.imgWrapper}>   
-                  <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/robotics display Large.png" layout="responsive" width={100} height={100} />
-            </div>
-            <div className={styles.videoWrapper}>
-            <iframe
-              src="https://drive.google.com/file/d/1lGrErK2YQh33vMMKw52CvUHj945o9guj/preview"
-              width="100%"
-                  height="300"
-              allow="autoplay"
-              className={styles.video}
-            ></iframe>
-            <p className={styles.cation}>The video that shows how it works:</p>
-          </div>
-          
-          </div>
-          </div>
-
-
-          <div>
-            <h3>Deal with the 45angle problem:</h3>
-            <div>Grbl 0.9i(45) and 1.1f</div>
-            <div>Check the grbl uploading with Arduino and universal g code sender. There are problem that the Arduino said upload successfully, yet the universal g code sender might not updated.</div>
-            <div className={styles.solution}>Sol: before writing, check the grbl is 1.1f</div>
-          </div>
-
-
-          <div>
-            <h3>Deal With Trembling Problem</h3>
-            <h4>Discover_1:</h4>
-            <div>The reason why it has annoyed sound or move like a pile driver machine is because its restrictor has restricted the movement of circles(Look into the description above). A high z_up or z_down command will make the control pole collide with the restricter strongly thus create the noise.</div>
-            <div className={styles.solution}>Sol: To deal with a strong collision, set z_up to low.</div>
-            <div>Comparison</div>
-
-           
-
-             <div className={styles.documentContainer}>
-
-            
-                <div className={styles.videoWrapper}>
-                <iframe
-                  src="https://drive.google.com/file/d/1lzlrTFztp0zMxWYPqyU930cdVO-eDepH/preview"
-                  width="100%"
-                  height="300"
-                  allow="autoplay"
-                  className={styles.video}
-                ></iframe>
-                <p className={styles.cation}>Large Z_up and huge noise</p>
-              </div>
-
-              <div className={styles.videoWrapper}>
-                <iframe
-                  src="https://drive.google.com/file/d/1lzlrTFztp0zMxWYPqyU930cdVO-eDepH/preview"
-                  width="100%"
-                  height="300"
-                  allow="autoplay"
-                  className={styles.video}
-                ></iframe>
-                <p className={styles.cation}>Small Z_up and small noise | </p>
-              </div>
-
-              </div> 
-
-              <h4>Discover_2:</h4>
-            <div>The reason why it is tremble is because the stepper motor do not have power when it do not receive z command.</div>
-            <div className={styles.solution}>Sol: Still finding ways to deal with this problem. (better perform withour the spring)</div>
-            <h4>Discover_3:</h4>
-            <div>The spring is useless, it could not help to maintain the status of the pen.</div>
-            <div>Comparison</div>
-                   <div className={styles.documentContainer}>
-                    
-                        <div className={styles.videoWrapper}>
-                        <iframe
-                          src="https://drive.google.com/file/d/1nzZ9Bt_p3pZY5-sT-ZSkb3knf-CXCkCU/preview"
-                          width="100%"
-                          height="300"
-                          allow="autoplay"
-                          className={styles.video}
-                        ></iframe>
-                        <p className={styles.cation}>Move with Spring</p>
-                      </div>
-
-                      <div className={styles.videoWrapper}>
-                        <iframe
-                          src="https://drive.google.com/file/d/1RFFhXJtsvDjkNSsvAC0syzJwsg9NrAxf/preview"
-                          width="100%"
-                          height="300"
-                          allow="autoplay"
-                          className={styles.video}
-                        ></iframe>
-                        <p className={styles.cation}>Move without Spring </p>
-                      </div>
-
-                    </div> 
-
-                      <div className={styles.solution}>Sol: Remove the spring</div>
-
-                      <div>Documentation of what happened without the spring: Works smoother and do not have the risk of colliding springs when writing</div>
-
-          </div>
-
-
-          <div>
-            <h3>Deal with the speed</h3>
-            <div>Use single-line font to mimic human writing and save time. </div>
-          </div>
-
-          <div>
-            <h3>Testing Single Letter Fonts</h3>
-                    <div className={styles.documentContainer}>
-                    <div className={styles.imgWrapper}>   
-                          <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/test.png" layout="responsive" width={100} height={100} />
-                          <p className={styles.cation}>Testing different single line fonts and record how many command it send to the Arduino</p>
-                    </div>
-                    <div className={styles.videoWrapper}>
-                    <iframe
-                      src="https://drive.google.com/file/d/1WgMCOCGQn-KT-hIs92aXY2me3gANPzYa/preview"
-                      width="100%"
-                      height="300"
-                      allow="autoplay"
-                      className={styles.video}
-                    ></iframe>
-                    <p className={styles.cation}>Discover:
-
-                    The Feasible Single-line has the smallest amount of the command;
-
-                    The Feasible Single-line font has repetitive movement (see the video below)</p>
-                  </div>
-                  </div> 
-
-              <h4>Testing and compare with the previous fonts (Wondering if the curve and the other elements will affect its writing speed)</h4>
-              <div className={styles.documentContainer}>
-                    <div className={styles.imgWrapper}>   
-                          <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/1.png" layout="responsive" width={100} height={100} />
-                          
-                    </div>
-                    <div className={styles.imgWrapper}>   
-                          <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/2.png" layout="responsive" width={100} height={100} />
-                          
-                    </div>
-                
-                  </div>
-
-
-          </div>
-
-
-          <div>
-            <h3>Solve the problem of Speed and Flip writing</h3>
-            <div>Universal Gcode Sender</div><Link href="https://github.com/gnea/grbl/blob/master/doc/markdown/settings.md">gnea/grbl/settings.md</Link>
-            <div>Speed: (<strong>[X,Y,Z] Acceleration, mm/sec^2</strong>) $120,$121, $122 = 250</div>
-            <div>Flip writing: $3 =1 </div>
-          </div>
-
-
-          <div>
-            <h3>Implement the 3D -printed hand model</h3>
-            <h3>User-Testing with hand model</h3>
-            <h4>Re-design the machine</h4>
-
-            <div className={styles.imgContainer2} >   
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/3_1.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/4.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/5.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/6.png" layout="responsive" width={100} height={100} />
-                
-            </div>
-
-            <div>Use this pen-holder and 3D printed hand model instead</div>
-            <h4>ssembly the pen to the hand </h4>
-            
-            <div className={styles.imgContainer2} >   
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a1.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a2.png" layout="responsive" width={100} height={100} />
-               
-                <Image className={styles.img2}  alt='visualdocument' src="/ArtificialFriend/visualdocument/a3.png" layout="responsive" width={100} height={100} />
-                
-                
-                </div>
-           
-            <p className={styles.cation}>Design an Angle so that the pen could touch the paper</p>
-
-
-            <h4>The Final Hand for a continuous aesthetic</h4>
-            <div className={styles.documentContainer} >
-                    <div >   
-                          <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/finalhand.png" layout="responsive" width={100} height={100} />  
-                    </div>
-                    <div >
-                   
-                    <video
-                      src="/ArtificialFriend/visualdocument/Success.mov"
-                      controls
-                      loop
-                      width={"100%"}
-                    ></video>
-                
-                  </div>
-              </div>
-
-            
-
-          </div>
-
-          <h4>Continuesly User-Testing with Screen & Webcam</h4>
-          <div className={styles.documentContainer} >
-          <div >
-                   
-                   <video
-                     src="/ArtificialFriend/visualdocument/Old Display.mov"
-                     controls
-                     loop
-                     width={"100%"}
-                   ></video>
-               <p className={styles.cation}>Old display</p>
-                 </div>
-                    <div >   
-                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/olddisplay.png" layout="responsive" width={100} height={100} />  
-                    </div>
-                    
-              </div>
-
-              <div>Final Decision: The modern screen would be more suitable for the concept of “Artificial Friend.”o l</div>
-              <div>Add a Bluetooth Speaker</div>
-              <div style={{color: "red"}}>Add a black pedestal for the display</div>
-              <div style={{color: "red"}}>Add a light for the hand</div>
-         
-              <h3>Final</h3>
-              <div >   
-                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />  
-              </div>
-
-
-              <h3>Digital Model</h3>
-              <h4>Hand Model </h4>
-              <Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">File</Link>
-              <h4>Sketches</h4>
-              <div >   
-                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/holdpen_1.png" layout="responsive" width={100} height={100} />  
-              </div>
-
-              <h4>Animation:</h4>
-              <ul>
-                1.3D animation:
-                <li>Modeling the hand:<Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">Folder</Link>
-                <div >   
-                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Bot.png" layout="responsive" width={100} height={100} />  
-                          <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Top.png" layout="responsive" width={100} height={100} />  
-              </div>
-                </li>
-                <li>Rigging
-                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Rigging.png" layout="responsive" width={100} height={100} />   </div>
-                </li>
-                <li>Paint Skin Weight for each Joints<br/>
-                Trouble Shooting: Put UV first then do the rigging or else the UV will get distorted so that when the finger bends it will become more nature
-                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Skinweight2.png" layout="responsive" width={100} height={100} />   </div>
-                </li>
-                <li>Unfold UV and paint UV 
-                  <div>   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/UV.png" layout="responsive" width={100} height={100} /> 
-                  <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Full.png" layout="responsive" width={100} height={100} />
-                  <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Sub.png" layout="responsive" width={100} height={100} />
-                    </div>
-                </li>
-                <li>Rerigging and repaint the skin weight
-                Adobe Substance Painte</li>
-                <li>Light and Shade:Arnold Rendere and its Light</li>
-                <li>Camera Work: Set Perspective Camera and Keys
-                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Light.png" layout="responsive" width={100} height={100} />   </div>
-                </li>
-                <li>Render Animation:
-                Render Settings
-                <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Render Settings.png" layout="responsive" width={100} height={100} />   </div>
-                </li>
-              </ul>
-              <ul>
-              2.AE complement:
-                <li>Typewriter Effects</li>
-                <li>Blink Expression</li>
-              </ul>
-
-
-
-        </div>
-
-      </div>
-
-    </div>
 
 
     <div className={styles.chapterC}>
@@ -638,8 +666,10 @@ Testing Method: Connect to computer and testing with softwares (Arduino & Univer
       </div>
 
     </div>
+    
+    </>
 
-
+    )}
 
     <div className='bottomspace'></div>
 

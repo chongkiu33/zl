@@ -2,6 +2,7 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -122,14 +123,14 @@ const page = () => {
                 <strong>Interface</strong>
                 <ul>
                     <li><TextSplitter text={`Make an appointment with the Design Lab to learn more about the basics of design principles and design software`}/></li>
-                    <li><TextSplitter text={`Continuously developing the prototypes in Figma (as displayed in videos) Tutorial| https://www.youtube.com/watch?v=HZuk6Wkx_Eg `}/></li>
+                    <li><TextSplitter text={`Continuously developing the prototypes in Figma (as displayed in videos)`}/><Link className={styles.link} target="_blank" href="https://www.youtube.com/watch?v=HZuk6Wkx_Eg"> Tutorial</Link></li>
                     <li><TextSplitter text={`Develop the phone-based interfaces in an interactive way`}/></li>
                 </ul>
                 <strong>Technique</strong>
                 <ul>
                     <li><TextSplitter text={`Develop the user-defined options according to the prototype and adjust the prompt if user uses advanced optionsRead the tarot Cards“Queen of Pentacles” “The Emperor” “Ace of Wands” and form a fable story, (where _ stands for past, _ stands for present, _stands for future. The story should focus on _.`}/></li>
-                    <li><TextSplitter text={`Learning JSON and how to use it in p5 | https://www.youtube.com/watch?v=_NFkzw6oFtQ `}/></li>
-                    <li><TextSplitter text={`Learning how to implement this Tarot JSON with cards pictures into p5| https://github.com/metabismuth/tarot-json/blob/master/README.md`}/></li>
+                    <li><Link className={styles.link} target="_blank" href="https://www.youtube.com/watch?v=_NFkzw6oFtQ">Learning JSON and how to use it in p5</Link></li>
+                    <li><Link className={styles.link} target="_blank" href="https://github.com/metabismuth/tarot-json/blob/master/README.md">Learning how to implement this Tarot JSON with cards pictures into p5</Link></li>
                     <li><TextSplitter text={`Developing a p5 prototype that could display the cards and the picture of cards simultaneously`}/></li>
                     <li><TextSplitter text={`Could invite the “Reversed” card system`}/></li>
                 </ul>

@@ -105,7 +105,7 @@ const Page = () => {
                 <div>BFS Example: </div>
                 <Link href="https://colab.research.google.com/drive/1y10DqvQ_hiEQIwzKNqfuGOAdlWrb6bEW?usp=share_link">Google Colab</Link>
                 <div>Reference: </div>
-                <div>avin Kumar and Sandeep Kaur : A Review of Various Maze Solving Algorithms Based on Graph Theory, IJSRD - International Journal for Scientific Research & Development| Vol. 6, Issue 12, 2019 | ISSN (online): 2321-0613.</div>
+                <div>Navin Kumar and Sandeep Kaur : A Review of Various Maze Solving Algorithms Based on Graph Theory, IJSRD - International Journal for Scientific Research & Development| Vol. 6, Issue 12, 2019 | ISSN (online): 2321-0613.</div>
                 <div>Adil M. J. Sadik, Maruf A. Dhali, Hasib M. A. B. Farid, Tafhim U Rashid, A. Syeed: A Comprehensive and Comparative Study of Maze-Solving Techniques by Implementing Graph Theory. International Conference on Artificial Intelligence and Computational Intelligence (AICI), 2010  Volume: 1 </div>
             </div>
 
@@ -117,7 +117,15 @@ const Page = () => {
             <div className={styles.pChapterTitle}>Week 5 - 6: Symbolic Approach to Graph</div>
             <div className={styles.pChapterContent}>
 
-
+            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' ,marginBottom: '20px',marginTop: '20px'}}>
+                <iframe
+                    src={`https://www.youtube.com/embed/KVtCjwrLNOE`}
+                    title="YouTube video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                />
+                </div>
 
                
                 <div>Reference: </div>

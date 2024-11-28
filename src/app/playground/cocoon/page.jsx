@@ -2,6 +2,8 @@ import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
+import Link from 'next/link'
+
 const Page = () => {
   return (
     <div> 
@@ -147,9 +149,11 @@ const Page = () => {
           <div className={styles.spChapterText}>
           
           <div>
-          https://www.dezeen.com/2020/10/07/erez-nevi-pana-tropical-milan-climate-change/
+
+            <Link className={styles.link} target="_blank" href="https://www.dezeen.com/2020/10/07/erez-nevi-pana-tropical-milan-climate-change/">Erez Nevi Pana designs banana-plant "cocoons" for humans to shelter from climate change</Link>
+          
           </div>
-          https://gentenaar-torley.nl/
+          <Link className={styles.link} target="_blank" href="https://gentenaar-torley.nl/"> gentenaar-torley.nl</Link>
           </div>
       </div>
 

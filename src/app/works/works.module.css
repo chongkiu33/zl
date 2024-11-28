@@ -7,6 +7,11 @@
   font-weight: 350;
 
 }
+.link{
+  text-decoration: underline;
+  word-break: break-all;
+  display: inline-flex;
+}
 
 
 

@@ -20,7 +20,7 @@ const PageContent = ({ children }) => {
       exit={{ opacity: 0, y: '-100%' }}
       transition={{
         type: "tween",
-        duration: 1
+        duration: 0.6
       }}
       style={{
         position: 'absolute',

@@ -155,6 +155,38 @@
     box-sizing: border-box;
   }
 
+  .sectionPage{
+    display: flex;
+  }
+
+  .sectionButton{
+    border: #0b0b0b 1px solid;
+    padding: 4px 10px;
+    /* border-radius: 2px; */
+    font-size: 18px;
+    border-bottom: none;
+    opacity: 0.5;
+    z-index: 2;
+    background-color: white;
+    
+    
+  }
+
+  .sectionButton:hover{
+    background-color: #070707;
+    color: white;
+  }
+
+.active{
+    opacity: 1;
+   
+    
+    
+
+  }
+
+  
+
   @media (max-width: 1430px) {
 
     .chapterC{

@@ -36,7 +36,7 @@ const Page = () => {
         allowFullScreen
       ></iframe>
 
-<div><Link className={styles.link} href="https://github.com/B2xx/chrome-extensions-visitedItems">The GitHub Page</Link>for historyVisitedItems is an extension for past browser history.</div>
+<div><Link className={styles.link} target="_blank" href="https://github.com/B2xx/chrome-extensions-visitedItems">The GitHub Page</Link>for historyVisitedItems is an extension for past browser history.</div>
       
         <TextSplitter text={`The GitHub Page displays the history of a website in URL form and the website is being developed. `}/>
     

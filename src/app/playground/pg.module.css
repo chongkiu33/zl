@@ -91,6 +91,8 @@
 
 .link{
     text-decoration: underline;
+    word-break: break-all;
+    display: inline-flex;
 }
 
 @media (max-width: 1430px) {
