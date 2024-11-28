@@ -10,40 +10,22 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { useRef } from "react";
 
-function Scene({ objPath, position, scale, rotation, color = "grey" }) {
-  const objRef = useRef();
-  const obj = useLoader(OBJLoader, objPath);
-
-  // 为模型添加颜色材质
-  obj.traverse((child) => {
-    if (child.isMesh) {
-      child.material = new THREE.MeshStandardMaterial({ color });
-    }
-  });
-
-  // 添加旋转动画
-//   useFrame(() => {
-//     if (objRef.current) {
-//       objRef.current.rotation.y += 0.01; // 每帧绕 Y 轴旋转
-//     }
-//   });
-
-  return (
-    <group ref={objRef} position={position} scale={scale} rotation={rotation}>
-      <primitive object={obj} />
-    </group>
-  );
+function Scene({ objPath, scale ,position}) {
+        const obj = useLoader(OBJLoader, objPath); // 加载第一个模型
+      
+        return (
+         
+            <group position={position} scale={scale} rotation={[0, Math.PI / 2, 0]}>
+              <primitive object={obj} />
+            </group>
+      
+           
+        );
 }
 
 const Page = () => {
 
-const groupRef = useRef();
 
-useFrame(() => {
-        if (groupRef.current) {
-          groupRef.current.rotation.y += 0.01; // Rotate the entire group around the world Y-axis
-        }
-});
 
 
   return (
@@ -89,30 +71,37 @@ useFrame(() => {
       <div className={styles.spChapter}>
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
-          <Canvas camera={{ position: [0, 0, 10] }} style={{ height: "500px" }}>
+          <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 10]} />
 
             {/* 模型 1 */}
 
-            <group ref={groupRef}>
+            <group >
             <Scene
               objPath="/window/138.obj"
-              position={[0, 0, 0]}
-              scale={[0.4, 0.4, 0.4]}
               rotation={[0, Math.PI / 2, 0]}
-            />
-
-            {/* 模型 2 */}
-            <Scene
-              objPath="/window/139.obj"
-              position={[-4, 0, 0]}
-              scale={[0.4, 0.4, 0.4]}
-              rotation={[0, -Math.PI / 2, 0]}
+              position={[-3, 0, 0]}
             />
             </group>
 
-            <OrbitControls />
+            <OrbitControls enableZoom={false}  />
+          </Canvas>
+
+
+          <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }} >
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 10]} />
+
+            <group >
+            <Scene
+              objPath="/window/139.obj"
+              rotation={[0, Math.PI / 2, 0]}
+              position={[0, 0, 0]}
+            />
+            </group>
+
+            <OrbitControls enableZoom={false}  />
           </Canvas>
         </div>
       </div>
