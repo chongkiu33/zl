@@ -10,6 +10,8 @@ import {useState} from "react";
 import Link from 'next/link';
 
 
+
+
 const Page = () => {
   const [isEasyMode, setIsEasyMode] = useState(true);
 

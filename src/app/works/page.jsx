@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTag } from '../contexts/TagContext'
 import { useLayout } from '../contexts/LayoutContext'
-
+import SlideInFromBtn from '../components/animation/SlideInFromBtn'
 import { useState } from 'react';
 
 
@@ -59,7 +59,8 @@ const WorkPage = () => {
         <>
         
            <div className={`${styles.pageContainer} ${layout =='grid3'?styles.grid3:''}`}>
-            {filteredWorks.map((work) => (
+            {filteredWorks.map((work, index) => (
+                <SlideInFromBtn  delay={index*0.15} >
                 <div key={work.id} className={styles.project}>
                     <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
@@ -105,6 +106,7 @@ const WorkPage = () => {
 
 
                 </div>
+                </SlideInFromBtn>
             ))}
            </div>
           

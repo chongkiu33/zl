@@ -1,6 +1,8 @@
 import styles from './intro.module.css';
 import {useRef} from "react";
 import { motion } from 'framer-motion';
+import SlideInFromBtn from '../animation/SlideInFromBtn'
+import TextAnimation from '../animation/TextAnimation'
 
 const Intro = () => {
     const introRef = useRef(null);
@@ -76,9 +78,17 @@ const Intro = () => {
          className={styles.intro}
          >
           <div className={styles.text} >
-            <span className={styles.block}><p>Zhuolin </p><p className={styles.subb}>Digital Accessibility</p></span>
-            <span> Li is a student who engaged </span>
-            <span className={styles.block}><p> in</p><p className={styles.subb}>Material</p></span> <span className={styles.block}><p>innovative</p><p className={styles.subb}>Open web</p></span> research to seek <span className={styles.block}><p>creative</p><p className={styles.subb}>Artificial</p></span> computational <span className={styles.block}><p>approaches</p><p className={styles.subbup}>Window</p></span> to <span className={styles.block}><p>narration</p><p className={styles.subbup}>language</p></span>.
+            <SlideInFromBtn delay={0.1}>
+            <span className={styles.block}><p>Zhuolin </p><p className={styles.subb}><TextAnimation text="Digital Accessibility" /></p></span>
+            <span> Li is a student who engaged </span></SlideInFromBtn>
+            <SlideInFromBtn delay={0.2}>
+            <span className={styles.block}><p> in</p><p className={styles.subb}><TextAnimation text="Material" /></p></span> 
+            <span className={styles.block}><p>innovative</p><p className={styles.subb}><TextAnimation text="Open web" /></p></span> 
+            research to seek <span className={styles.block}><p>creative</p><p className={styles.subb}><TextAnimation text="Artificial" /></p></span> computational <span className={styles.block}><p>approaches</p>
+            <p className={styles.subbup}><TextAnimation text="Window" /></p></span></SlideInFromBtn>
+            <SlideInFromBtn delay={0.3}>
+             
+             to <span className={styles.block}><p>narration</p><p className={styles.subbup}><TextAnimation text="language" /></p>.</span></SlideInFromBtn>
           </div>
 
 

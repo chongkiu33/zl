@@ -81,14 +81,21 @@ const Page = () => {
             <Scene
               objPath="/window/138.obj"
               rotation={[0, Math.PI / 2, 0]}
-              position={[-3, 0, 0]}
+              position={[0, 0, 0]}
             />
+            <Scene
+              objPath="/window/139.obj"
+              rotation={[0, -Math.PI / 2, 0]}
+              position={[-10, 0, 0]}
+            />
+
+          
             </group>
 
             <OrbitControls enableZoom={false}  />
           </Canvas>
 
-
+{/* 
           <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }} >
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 10]} />
@@ -102,7 +109,7 @@ const Page = () => {
             </group>
 
             <OrbitControls enableZoom={false}  />
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
 

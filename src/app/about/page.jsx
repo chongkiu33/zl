@@ -3,8 +3,9 @@ import styles from './about.module.css'
 import { useEffect, useState } from "react";
 import React from 'react';
 import Link from 'next/link';
-
+import {motion} from 'framer-motion';
 import { useCollapse } from 'react-collapsed';
+import SlideInFromBtn from '../components/animation/SlideInFromBtn'
 
 const AboutPage = () => {
     const [svgWidth, setSvgWidth] = useState(0);
@@ -13,7 +14,7 @@ const AboutPage = () => {
         <>
         <div className={styles.container}>
        
-            
+        <SlideInFromBtn>
              <div>
              <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1.5" />
@@ -43,8 +44,10 @@ const AboutPage = () => {
             </div>
 
             </div>
+            </SlideInFromBtn>
 
 
+            <SlideInFromBtn delay={0.2}>
             <div>
             <button className={styles.titleButton}>Education</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -65,10 +68,10 @@ const AboutPage = () => {
                         </div>  
                 </div>
              </div> 
-
+             </SlideInFromBtn>
            
 
- 
+             <SlideInFromBtn delay={0.4}>
             <div>
             <button className={styles.titleButton}>Work Experience</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -126,7 +129,9 @@ const AboutPage = () => {
 
             </div> 
 
+            </SlideInFromBtn>
 
+            <SlideInFromBtn>
             <div>
             <button className={styles.titleButton}>PROJECTS</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -155,8 +160,10 @@ const AboutPage = () => {
                 </div> 
                 
              </div> 
+             </SlideInFromBtn>
 
 
+             <SlideInFromBtn>
              <div>
             <button className={styles.titleButton}>EXTRACURRICULAR</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -187,8 +194,10 @@ const AboutPage = () => {
                
                 
              </div> 
+             </SlideInFromBtn>
 
 
+             <SlideInFromBtn>
              <div>
             <button className={styles.titleButton}>SKILL</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -208,9 +217,9 @@ const AboutPage = () => {
                
                 
              </div> 
+             </SlideInFromBtn>
 
-
-
+             <SlideInFromBtn>
              <div>
             <button className={styles.titleButton}>AWARDS</button>
             <svg className={styles.line} height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -231,6 +240,8 @@ const AboutPage = () => {
                
                 
              </div> 
+             </SlideInFromBtn>
+
 
              <div className='bottomspace'></div>
 

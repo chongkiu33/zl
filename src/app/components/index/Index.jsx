@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { usePoeticMode } from '../../contexts/PoeticModeContext'
 import Draggable from "react-draggable";
 import { useWordContext } from '../../contexts/WordContext';
+import SlideInFromBtn from '../animation/SlideInFromBtn'
 
 const Index = ({pathname}) => {
     const { isPoeticMode } = usePoeticMode();
@@ -41,8 +42,10 @@ const Index = ({pathname}) => {
         <>
         <div className={styles.container}>
             <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
+            
             {wordsWithRandomPositions.map((item, index) => (
                 <Draggable key={`draggable-${index}`}>
+                    
                 <span
                     key={index}
                     style={{
@@ -50,10 +53,14 @@ const Index = ({pathname}) => {
                         marginLeft: item.randomMarginLeft,
                     }}
                 >
+                    
                     {item.word}
+                    
                 </span>
+                
                 </Draggable>
             ))}
+            
         </div>
             <div className={`${isPoeticMode ? styles.poeticline : styles.line2}`}></div>
             <div >
