@@ -78,21 +78,24 @@ const Index = ({pathname}) => {
                     </svg>
                 </div>
                     <div className={styles.linkgroup}>
-                        
+                        {/* <SlideInFromBtn> */}
                         <ProjectGroup 
                             pathname={pathname}
                             title="Computational Narratives" 
                             projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
                         />
-
+                         {/* </SlideInFromBtn>
                     
-
+                         <SlideInFromBtn delay={0.1}> */}
                         <ProjectGroup 
                             pathname={pathname}
                             title="Bio Material Research" 
                             projects={[ "Seaweed hairband", "Cocoon"]} 
 
                         />
+                        {/* </SlideInFromBtn>
+                    
+                    <SlideInFromBtn delay={0.2}> */}
 
                         <ProjectGroup 
                             pathname={pathname}
@@ -101,6 +104,9 @@ const Index = ({pathname}) => {
 
                         />
 
+                    {/* </SlideInFromBtn>
+                    
+                         <SlideInFromBtn delay={0.3}> */}
                         <ProjectGroup 
                             pathname={pathname}
                             title="Digital Heritage" 
@@ -108,13 +114,18 @@ const Index = ({pathname}) => {
    
                         />
 
+                {/* </SlideInFromBtn>
+                    
+                    <SlideInFromBtn delay={0.4}> */}
                         <ProjectGroup 
                             pathname={pathname}
                             title="Film and Animation" 
                             projects={["Solidarity", "Qilin"]} 
    
                         />
+                         {/* </SlideInFromBtn> */}
                     </div>
+                   
             </div>
 
 

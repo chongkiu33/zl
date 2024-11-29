@@ -82,13 +82,13 @@ const Page = () => {
               </div>
 
               <div className={styles.img3}>
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts_2.png" layout="responsive" width={100} height={100} />
                 
                 <p className={styles.cation}>Prepared Parts</p>
               </div>
               <div className={styles.img3}>
                 
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics_2.png" layout="responsive" width={100} height={100} />
                 <p className={styles.cation}>Prepared Parts</p>
               </div>
              
