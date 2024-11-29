@@ -8,6 +8,7 @@ import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { useRef } from "react";
 
 function Scene({ objPath, scale ,position}) {
@@ -72,22 +73,18 @@ const Page = () => {
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
           <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }}>
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.2} />
             <directionalLight position={[10, 10, 10]} />
 
             {/* 模型 1 */}
 
             <group >
             <Scene
-              objPath="/window/138.obj"
+              objPath="/window/138_2.obj"
               rotation={[0, Math.PI / 2, 0]}
-              position={[0, 0, 0]}
+              position={[-2, 0, 0]}
             />
-            <Scene
-              objPath="/window/139.obj"
-              rotation={[0, -Math.PI / 2, 0]}
-              position={[-10, 0, 0]}
-            />
+           
 
           
             </group>
@@ -95,21 +92,21 @@ const Page = () => {
             <OrbitControls enableZoom={false}  />
           </Canvas>
 
-{/* 
+
           <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }} >
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.2} />
             <directionalLight position={[10, 10, 10]} />
 
             <group >
             <Scene
-              objPath="/window/139.obj"
+              objPath="/window/139_2.obj"
               rotation={[0, Math.PI / 2, 0]}
-              position={[0, 0, 0]}
+              position={[-2, 0, 0]}
             />
             </group>
 
             <OrbitControls enableZoom={false}  />
-          </Canvas> */}
+          </Canvas>
         </div>
       </div>
 
