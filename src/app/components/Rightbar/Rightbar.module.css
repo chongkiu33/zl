@@ -11,8 +11,6 @@
     font-size: 1.1rem;
     z-index: 999;
     align-items: end;
-  mix-blend-mode: difference;
-    
   
    
     
@@ -46,7 +44,7 @@
 
 
 .dateContainer{
-   color: white;
+   
    width: 3vw;
    
    display: flex;
@@ -60,7 +58,7 @@
 .dateLine{
     
     height: 1px;
-    background-color: rgb(213, 211, 211);
+    background-color: rgb(0, 0, 0);
 }
 
 .path{
@@ -73,7 +71,7 @@
 .path:hover{
     /* transform: scaleX(1.2) translateX(-15px); */
     transition: all 0.2s ease-in;
-    stroke: rgb(255, 62, 19);
+    stroke: aqua;
     
     
    
@@ -88,9 +86,7 @@
     font-family: "Bricolage Grotesque", system-ui;
     font-size: 14px;
     font-weight: 350;
-    mix-blend-mode:exclusion;
-    color: rgb(255, 255, 255);
-    
+    color: aqua;
 }
 
 @media (max-width: 768px) {
