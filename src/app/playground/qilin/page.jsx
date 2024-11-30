@@ -5,6 +5,8 @@ import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 
+
+
 const Page = () => {
   return <div>
     <div className={styles.spTitle}>Qilin</div>
@@ -59,11 +61,11 @@ const Page = () => {
             <div className={styles.spChapterText}>
                 <strong> 梯田 (Stepping Field)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='stepping field' src="/qilin/stepping field.png" layout="responsive" width={100} height={100} />
+                <Image placeholder="blur" blurDataURL=" " className={styles.img} alt='stepping field' src="/qilin/stepping field.png" layout="responsive" width={100} height={100} />
                 </div>
                 <strong>吊腳樓(Stilted Building)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Stilt-Building' src="/qilin/Stilt-Building_1-768x432.png" layout="responsive" width={100} height={100} />
+                <Image placeholder="blur" blurDataURL=" " className={styles.img} alt='Stilt-Building' src="/qilin/Stilt-Building_1-768x432.png" layout="responsive" width={100} height={100} />
                 </div>
             </div>
             
@@ -74,7 +76,7 @@ const Page = () => {
             <div className={styles.spChapterText}>
            
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/background.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='background' src="/qilin/background.png"layout="responsive" width={100} height={100} />
                 <Image  className={styles.img} alt='background' src="/qilin/background_2.png" layout="responsive" width={100} height={100} />
                 <Image  className={styles.img} alt='background' src="/qilin/background 3.jpeg" layout="responsive" width={100} height={100} />
                 <Image  className={styles.img} alt='background' src="/qilin/background 4.png" layout="responsive" width={100} height={100} />
