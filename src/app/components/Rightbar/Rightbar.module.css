@@ -11,6 +11,7 @@
     font-size: 1.1rem;
     z-index: 999;
     align-items: end;
+  mix-blend-mode: difference;
     
   
    
@@ -59,7 +60,7 @@
 .dateLine{
     
     height: 1px;
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(213, 211, 211);
 }
 
 .path{
@@ -72,7 +73,7 @@
 .path:hover{
     /* transform: scaleX(1.2) translateX(-15px); */
     transition: all 0.2s ease-in;
-    stroke: rgb(19, 243, 255);
+    stroke: rgb(255, 62, 19);
     
     
    
@@ -88,7 +89,7 @@
     font-size: 14px;
     font-weight: 350;
     mix-blend-mode:exclusion;
-    color: rgb(143, 143, 143);
+    color: rgb(255, 255, 255);
     
 }
 

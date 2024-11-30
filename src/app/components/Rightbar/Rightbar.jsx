@@ -124,7 +124,7 @@ const Rightbar = () => {
                     y={start}
                     width="60"
                     height={height}
-                    fill={hoveredIndex === index ? "rgba(0, 0, 0, 0.1)" : "transparent"}
+                    fill={hoveredIndex === index ? "rgba(255, 255, 255, 0.5)" : "transparent"}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   />
@@ -155,7 +155,7 @@ const Rightbar = () => {
 
                     className={styles.path}
                     d={`M 40 ${cDP} L 100 ${cDP}`}  // 动态应用计算出的位置
-                    stroke="black"
+                    stroke="white"
                     strokeWidth={0.4} // 使用天数作为 strokeWidth
                     onMouseEnter={(e) => handleMouseEnter(e, item)} // 传递事件和数据
                     onMouseLeave={handleMouseLeave}
