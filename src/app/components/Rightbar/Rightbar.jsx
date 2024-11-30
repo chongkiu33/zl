@@ -188,7 +188,7 @@ const Rightbar = () => {
 
                     
                     d={`M 40 2 L 100 2`} 
-                    stroke="black"
+                    stroke="white"
                     strokeWidth={2} 
                   />
             </svg>
