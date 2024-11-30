@@ -1,8 +1,26 @@
+"use client"
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
+import * as THREE from "three";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+
+function Scene({ objPath, scale ,position}) {
+  const obj = useLoader(OBJLoader, objPath); // 加载第一个模型
+
+  return (
+   
+      <group position={position} scale={scale} rotation={[0, Math.PI / 2, 0]}>
+        <primitive object={obj} />
+      </group>
+
+     
+  );
+}
 
 const Page = () => {
   return <div>
@@ -25,6 +43,47 @@ const Page = () => {
             </div>     
     </div>
 
+
+    <div className={styles.spChapter}>
+            <div className={styles.spChapterTitle}>Modeling</div>
+            <div className={styles.spChapterText}>
+          
+                <Canvas camera={{ position: [0, 0, 12] }} style={{ height: "500px",width: "100%" }} >
+                  <ambientLight intensity={0.2} />
+                  <directionalLight position={[10, 10, 10]} />
+
+                  <group >
+                  <Scene
+                    objPath="/stupa/stupa.obj"
+                    scale={[1, 1, 1]}
+                    position={[0, 0, 0]}
+                  />
+                  </group>
+
+                  <OrbitControls enableZoom={false}  />
+                </Canvas>
+
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/stupa/2.jpg" layout="responsive" width={100} height={100} />
+                
+                </div>
+
+                <div className={styles.imgContainer}>   
+                <Image  className={styles.img} alt='background' src="/stupa/3.jpg" layout="responsive" width={100} height={100} />
+                
+                </div>
+            
+            </div>     
+    </div>
+
+  
+
+
+     
+      
+
+
+    <div className='bottomspace'></div>
        
   </div>;
 };

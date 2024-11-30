@@ -6,7 +6,7 @@ import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return <div>
-    <div className={styles.spTitle}>Gui</div>
+    <div className={styles.spTitle}>Gui(Back)</div>
     <ProjectTags projectName="Gui" />
         <div className="video-container">
             <video

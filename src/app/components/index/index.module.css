@@ -93,14 +93,14 @@
 
 .linkgroup{
     font-family: "Bricolage Grotesque", system-ui;
-    padding-top: 8vh;
+    padding-top: calc(2vh + 1vw);
 }
 
 .projectLink{
     display: block;
     transition: all 0.3s ease-in-out;
     opacity: 0.6;
-    font-size: 18px;
+    font-size: 18px ;
     
 }
 
@@ -125,7 +125,7 @@
     stroke-width: 2.5px;
     height: 100vh;
     z-index: -1;
-    margin-left: 3vw;
+    margin-left: calc(1.5vw + 1.5vh);
     position: absolute;
     opacity: 0.6;
 }
@@ -140,7 +140,7 @@
 }
 
 .projectgroup{
-    margin-top: 30px;
+    margin-top: calc(2vh + 1vw);
 }
 
 .mobileContainer{
@@ -156,6 +156,12 @@
 
 
 @media (max-width: 1430px) {
+
+    .projectLink{
+        
+        font-size: calc(0.8vw + 0.8vh) ;
+        
+    }
    
 
    
@@ -195,7 +201,7 @@
      }
 
     .line{
-        transform: scaleX(0.8) translateX(-50px) ;
+        transform: scaleX(0.8) translateX(calc(- 1vw - 2vh - 10px)) ;
     }
 
     .poeticContainer{
@@ -245,7 +251,7 @@
 
     .index{
         flex: 6;
-        font-size: 16px;
+        
           
     }
 }
@@ -259,25 +265,26 @@
         width: 41vw;
     }
 
-    .projectLink{
-        font-size: 16px;
-    }
+
 }
 
 @media (max-width: 928px) {
     .line{
-        transform: scaleX(0.7) translateX(-70px) ;
+        transform: scaleX(0.9) translateX(calc(-2vw - 2vh - 40px)) ;
     }
 
     .linkgroup{
-        transform: translateX(0px) ;
+        transform: translateX(10px) ;
     }
 
-    .index{
-    
-        font-size: 15px;
-          
+
+    .point{
+        width: 10px;
+        height: 10px;
+        translate: 3px 0px;
+        
     }
+    
    
 
     
@@ -306,11 +313,7 @@
         text-align: center;
      }
 
-     .index{
     
-        font-size: 25px;
-          
-    }
     
     
 }

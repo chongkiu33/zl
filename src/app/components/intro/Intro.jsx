@@ -80,10 +80,8 @@ const Intro = () => {
           <div className={styles.text} >
             <SlideInFromBtn delay={0.1}>
             <span className={styles.block}><p>Zhuolin </p><p className={styles.subb}><TextAnimation text="Digital Accessibility" /></p></span>
-            <span> Li is a student who engaged </span></SlideInFromBtn>
-            <SlideInFromBtn delay={0.2}>
-            <span className={styles.block}><p> in</p><p className={styles.subb}><TextAnimation text="Material" /></p></span> 
-            <span className={styles.block}><p>innovative</p><p className={styles.subb}><TextAnimation text="Open web" /></p></span> 
+            <span> Li is a student who engaged </span></SlideInFromBtn><SlideInFromBtn delay={0.2}><span className={styles.block}><p style={{marginRight: "3vw"}}> in </p><p className={styles.subb}><TextAnimation text="Material" /></p></span> 
+            <span className={styles.block}><p style={{marginRight: "3vw"}}> innovative</p><p className={styles.subb}><TextAnimation text="Open web" /></p></span> 
             research to seek <span className={styles.block}><p>creative</p><p className={styles.subb}><TextAnimation text="Artificial" /></p></span> computational <span className={styles.block}><p>approaches</p>
             <p className={styles.subbup}><TextAnimation text="Window" /></p></span></SlideInFromBtn>
             <SlideInFromBtn delay={0.3}>

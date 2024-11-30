@@ -63,7 +63,7 @@ const AboutPage = () => {
                             </div>
                             <ul className={styles.description}>
                             <li>Bachelor of Science in Mathematics and Interactive Media Arts</li>
-                            <li>Overall GPA: 3.91</li>
+                            
                             </ul>
                         </div>  
                 </div>

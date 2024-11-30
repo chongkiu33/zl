@@ -100,7 +100,7 @@ const Index = ({pathname}) => {
                         <ProjectGroup 
                             pathname={pathname}
                             title="Typography Experiment" 
-                            projects={["Yong", "Gui", "Mayan Language", "Sound Visualization"]} 
+                            projects={["Yong(Forever)", "Gui(Back)", "Mayan Language", "Sound Visualization"]} 
 
                         />
 

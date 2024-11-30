@@ -56,9 +56,7 @@ const Page = () => {
     <div className={styles.chapterContent}>
       <div className={styles.chaptertext}>
         
-        <strong>Separate it as 2 parts accordingly, physical installation and digital model & animation**
-
-     Continue physical installation part:</strong>
+        <strong>This visual documentation contains the process of assembling physical installation assembly, and making the of 3D modeling and animation </strong>
         <div>
         <h3>Physical Installation</h3>
         <h4>All Materials</h4>
@@ -640,7 +638,20 @@ Testing Method: Connect to computer and testing with softwares (Arduino & Univer
       <div className={styles.chapterContent}>
         <div className={styles.chaptertext}>
         My presentation includes the experience part and the presentation part. For the experience part, the player could enjoy how the machine working. Then I present the brief, context and perspective, and the techniques part.    
-        </div>  
+        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' ,marginBottom: '20px',marginTop: '20px'}}>
+            <iframe
+                src={`https://www.youtube.com/embed/2jZ6KTySoWY`}
+                title="YouTube video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            />
+        </div>
+        </div> 
+        
+        
+
+        
 
       </div>
 

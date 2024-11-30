@@ -143,7 +143,7 @@ const Page = () => {
                 <video
                     src="/qilin/reel.mp4"
                     controls
-                    autoPlay
+                   
                     loop
                     className="responsive-video"
                 ></video>

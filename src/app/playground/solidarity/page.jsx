@@ -28,7 +28,7 @@ const Page = () => {
  `}/>
  </div>
 
-       
+ <div className='bottomspace'></div>
   </div>;
 };
 

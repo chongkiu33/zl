@@ -9,7 +9,7 @@ const Page = () => {
     <div className={styles.spTitle}>Sound Visualization</div>
     <ProjectTags projectName="Sound Visualization" />
     <div className={styles.imgCover}>   
-            <Image style={{objectFit: 'cover'}}  className={styles.fitimg} alt='mayan'  src="/sound/cover.png" fill />
+            <Image style={{objectFit: 'contain'}}  className={styles.fitimg} alt='mayan'  src="/sound/Artboard.png" fill />
     </div>
 
     <div className={styles.spAbstract}><TextSplitter text={` This project is inspired by Naiwen Yang's song “路痴” (disoriented), and the inverted "Direction" on the picture expresses the lost feeling.`}/></div>
