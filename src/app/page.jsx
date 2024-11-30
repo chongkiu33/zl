@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {motion} from "framer-motion";
-import Intro from "../components/Intro/Intro";
+import Intro from "../components/intro/Intro";
 import { useRouter } from "next/navigation";
 import {useState, useEffect } from "react";
 
