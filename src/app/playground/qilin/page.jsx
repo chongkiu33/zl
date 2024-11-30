@@ -4,10 +4,28 @@ import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
+import img1 from "../../../../public/qilin/stepping field.png";
+import img2 from "../../../../public/qilin/Stilt-Building_1-768x432.png";
+
 import bg1 from "../../../../public/qilin/background.png";
 import bg2 from "../../../../public/qilin/background_2.png";
 import bg3 from "../../../../public/qilin/background 3.jpeg";
 import bg4 from "../../../../public/qilin/background 4.png";
+
+import c1 from "../../../../public/qilin/qilin tamer.png";
+import c2 from "../../../../public/qilin/Qilin-Adult-768x332.png";
+import c3 from "../../../../public/qilin/Qilin-Teenager-768x384.png";
+import c4 from "../../../../public/qilin/Qilin-Ball.png";
+import c5 from "../../../../public/qilin/qilin_crop.png";
+import c6 from "../../../../public/qilin/qilin crop after enlightment.png";
+
+import sb1 from "../../../../public/qilin/storyboard/1.png";
+import sb2 from "../../../../public/qilin/storyboard/2.png";
+import sb3 from "../../../../public/qilin/storyboard/3.png";
+import sb4 from "../../../../public/qilin/storyboard/4.png";
+import sb5 from "../../../../public/qilin/storyboard/5.png";
+
+
 
 
 const Page = () => {
@@ -64,11 +82,11 @@ const Page = () => {
             <div className={styles.spChapterText}>
                 <strong> 梯田 (Stepping Field)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='stepping field' src="/qilin/stepping field.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur' alt='stepping field' src={img1} layout="responsive" width={100} height={100} />
                 </div>
                 <strong>吊腳樓(Stilted Building)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Stilt-Building' src="/qilin/Stilt-Building_1-768x432.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur' alt='Stilt-Building' src={img2} layout="responsive" width={100} height={100} />
                 </div>
             </div>
             
@@ -95,29 +113,29 @@ const Page = () => {
                 <ul>
                 <strong> 引龍人(Qilin Tamer)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin tamer.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c1}layout="responsive" width={100} height={100} />
                 
                 </div>
                 <li>Qilin Adult</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Adult-768x332.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c2} layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Teenager</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Teenager-768x384.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c3} layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Ball</li>
 
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Ball.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c4} layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Crop</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin_crop.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c5} layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Crop (After “Enlightened”)</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin crop after enlightment.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} placeholder='blur'  alt='background' src={c6} layout="responsive" width={100} height={100} />
                 </div>
                 </ul>
             </div>
@@ -129,11 +147,11 @@ const Page = () => {
             <div className={styles.spChapterText}>
            
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/1.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/2.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/3.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/4.png" layout="responsive" width={100} height={100} />   
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/5.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='storyboard' placeholder='blur' src={sb1} layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='storyboard' placeholder='blur' src={sb2} layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='storyboard' placeholder='blur' src={sb3} layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='storyboard' placeholder='blur' src={sb4} layout="responsive" width={100} height={100} />   
+                <Image  className={styles.img} alt='storyboard' placeholder='blur' src={sb5} layout="responsive" width={100} height={100} />
                 </div>
                
             </div>
