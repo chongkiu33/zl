@@ -28,6 +28,7 @@
 
 .poeticMode{
     display: block;
+  
 }
 
 
@@ -205,7 +206,7 @@
     }
 
     .poeticContainer{
-        width: 40vw;
+        width: 37vw;
     }
 
     .element{
@@ -262,7 +263,7 @@
     }
 
     .poeticContainer{
-        width: 41vw;
+        width: 38vw;
     }
 
 
@@ -270,7 +271,7 @@
 
 @media (max-width: 928px) {
     .line{
-        transform: scaleX(0.9) translateX(calc(-2vw - 2vh - 40px)) ;
+        transform: scaleX(0.7) translateX(calc(-2vw - 2vh - 50px)) ;
     }
 
     .linkgroup{
@@ -283,6 +284,10 @@
         height: 10px;
         translate: 3px 0px;
         
+    }
+
+    .poeticContainer{
+        width: 35vw;
     }
     
    
@@ -313,7 +318,14 @@
         text-align: center;
      }
 
+
+     .projectLink{
+        
+        font-size: 16px ;
+        
+    }
     
+     
     
     
 }

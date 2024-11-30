@@ -16,7 +16,16 @@ html, body {
   
 }
 
-
+.titleContainer{
+  position: absolute;
+  
+  transform: translateX(-3.1vw) translateY(-5px);
+  text-align: right;
+  padding-right: 15px;
+  font-family: "Bricolage Grotesque", system-ui;
+  font-size: 14px;
+  font-weight: 350;
+}
 
   
 

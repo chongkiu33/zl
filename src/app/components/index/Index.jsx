@@ -26,8 +26,8 @@ const Index = ({pathname}) => {
         const words = Title.flatMap(title => {
             return title.split(' ').map(word => {
                 // 生成随机的 marginTop 和 marginLeft
-                const randomMarginTop = `${Math.random(0,0.9) * 100}vh`; // 随机的 marginTop（百分比）
-                const randomMarginLeft = `${Math.random(0,0.9) * 35}vw`; // 随机的 marginLeft（百分比）
+                const randomMarginTop = `${Math.random(0,0.8) * 90}vh`; // 随机的 marginTop（百分比）
+                const randomMarginLeft = `${Math.random(0,0.8) * 30}vw`; // 随机的 marginLeft（百分比）
                 return { word, randomMarginTop, randomMarginLeft };
             });
         });

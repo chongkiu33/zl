@@ -75,13 +75,13 @@ const Rightbar = () => {
         { date: "2021-12-06", link: "/playground/mayan-language", title: "mayan-language"},
         { date: "2022-03-24", link: "/playground/stupa", title: "Stupa"},
         { date: "2022-07-13", link: "/playground/window-frames", title: "Window Frames For Ancient China Pavilion"},
-        { date: "2022-09-11", link: "/playground/gui", title: "back"},
+        { date: "2022-09-11", link: "/playground/guiback", title: "Gui(back)"},
         { date: "2022-12-15", link: "/playground/qilin", title: "Qilin"},
         { date: "2022-12-16", link: "/playground/mirror", title: "Mirror"},
         { date: "2023-08-31", link: "/works/artificial-friend", title: "Artificial Friend"},
         { date: "2023-10-02", link: "/playground/chatgpt-as-tarot-reader", title: "ChatGpt as Tarot Reader"},
         { date: "2023-10-16", link: "/playground/enhanced-memory", title: "Enhanced Memory"},
-        { date: "2023-10-26", link: "/playground/yong", title: "Yong"},
+        { date: "2023-10-26", link: "/playground/yongforever", title: "Yong(Forever)"},
         { date: "2023-12-12", link: "/playground/cocoon", title: "Cocoon"},
         { date: "2024-04-16", link: "/playground/listen-pied-piper-is-playing", title: "“Listen! Pied Piper is playing”"},
         { date: "2024-04-23", link: "/playground/am-i-too-much", title: "Am I too much?"},
@@ -96,7 +96,7 @@ const Rightbar = () => {
     const handleMouseEnter = (event, title) => {
         setHoveredDate(title.date);
         setHoveredTitle(title.title);
-        setTitleHeight(event.clientY); // 设置标题容器的高度为鼠标的Y坐标
+        setTitleHeight(event.clientY); 
     };
 
 
