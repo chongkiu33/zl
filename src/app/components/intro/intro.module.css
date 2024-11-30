@@ -140,7 +140,30 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+
+  .svgpath1{
+    width: 350px;
+    top: -1vh;
+    position: absolute;
+    margin-left: 0vw;
+    margin-top: 15vh;
+  }
+
+  .svgpath2{
+    width: 350px;
+    margin-left: -2vw;
+    margin-top: 65vh;
+    position: absolute;
+  }
+
+  .svgpath3{
+    width: 350px;
+    margin-left: 50vw;
+    margin-top: 40vh;
+    position: absolute;
+  }
 
  
 }
