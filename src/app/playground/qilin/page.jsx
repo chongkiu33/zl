@@ -1,13 +1,17 @@
+"use client"
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
+import React from'react'
 
 
 
 
 const Page = () => {
+    const [isImageLoading, setImageLoading] = React.useState(true)
+
   return <div>
     <div className={styles.spTitle}>Qilin</div>
     <ProjectTags projectName="Qilin" />
@@ -61,11 +65,11 @@ const Page = () => {
             <div className={styles.spChapterText}>
                 <strong> 梯田 (Stepping Field)</strong>
                 <div className={styles.imgContainer}>   
-                <Image placeholder="blur" blurDataURL=" " className={styles.img} alt='stepping field' src="/qilin/stepping field.png" layout="responsive" width={100} height={100} />
+                <Image   className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='stepping field' src="/qilin/stepping field.png" layout="responsive" width={100} height={100} />
                 </div>
                 <strong>吊腳樓(Stilted Building)</strong>
                 <div className={styles.imgContainer}>   
-                <Image placeholder="blur" blurDataURL=" " className={styles.img} alt='Stilt-Building' src="/qilin/Stilt-Building_1-768x432.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='Stilt-Building' src="/qilin/Stilt-Building_1-768x432.png" layout="responsive" width={100} height={100} />
                 </div>
             </div>
             
@@ -76,10 +80,10 @@ const Page = () => {
             <div className={styles.spChapterText}>
            
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/background.png"layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='background' src="/qilin/background_2.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='background' src="/qilin/background 3.jpeg" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='background' src="/qilin/background 4.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/background.png"layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/background_2.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/background 3.jpeg" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/background 4.png" layout="responsive" width={100} height={100} />
                 </div>
                
             </div>
@@ -92,29 +96,29 @@ const Page = () => {
                 <ul>
                 <strong> 引龍人(Qilin Tamer)</strong>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin tamer.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/qilin tamer.png" layout="responsive" width={100} height={100} />
                 
                 </div>
                 <li>Qilin Adult</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Adult-768x332.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/Qilin-Adult-768x332.png" layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Teenager</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Teenager-768x384.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/Qilin-Teenager-768x384.png" layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Ball</li>
 
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/Qilin-Ball.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/Qilin-Ball.png" layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Crop</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin_crop.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/qilin_crop.png" layout="responsive" width={100} height={100} />
                 </div>
                 <li>Qilin Crop (After “Enlightened”)</li>
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='background' src="/qilin/qilin crop after enlightment.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='background' src="/qilin/qilin crop after enlightment.png" layout="responsive" width={100} height={100} />
                 </div>
                 </ul>
             </div>
@@ -126,11 +130,11 @@ const Page = () => {
             <div className={styles.spChapterText}>
            
                 <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/1.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/2.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/3.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/4.png" layout="responsive" width={100} height={100} />   
-                <Image  className={styles.img} alt='storyboard' src="/qilin/storyboard/5.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='storyboard' src="/qilin/storyboard/1.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='storyboard' src="/qilin/storyboard/2.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='storyboard' src="/qilin/storyboard/3.png" layout="responsive" width={100} height={100} />
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='storyboard' src="/qilin/storyboard/4.png" layout="responsive" width={100} height={100} />   
+                <Image  className={`${styles.img} ${isImageLoading ? 'blur' : 'remove-blur'}`} onLoad={() => setImageLoading(false)} alt='storyboard' src="/qilin/storyboard/5.png" layout="responsive" width={100} height={100} />
                 </div>
                
             </div>
