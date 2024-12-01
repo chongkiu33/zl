@@ -88,6 +88,7 @@
 .switchContainer{
     margin-top: 10px;
     position: fixed;
+    color: white;
 }
 
 .switch{
