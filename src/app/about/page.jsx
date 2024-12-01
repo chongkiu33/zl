@@ -82,7 +82,7 @@ const AboutPage = () => {
                     
                         <div className={styles.experience}>
                             <div className={styles.header}>
-                            <div>Full Stack Website Developer,<strong>NYU Interactive Media Arts Department</strong> </div>
+                            <div>Full Stack Website Developer,<strong> NYU Interactive Media Arts Department</strong> </div>
                             <span className={styles.date}>Mar. 2024 – present</span>
                             </div>
                             <ul className={styles.description}>

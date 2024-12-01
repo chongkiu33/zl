@@ -7,6 +7,49 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 
+import coverimg from '../../../../public/ArtificialFriend/1.jpg'
+
+import allMaterial from '../../../../public/ArtificialFriend/visualdocument/AllMaterial.png'
+
+import arduino from '../../../../public/ArtificialFriend/visualdocument/Aruino.png'
+import Motor from '../../../../public/ArtificialFriend/visualdocument/Motor.png'
+import Hub from '../../../../public/ArtificialFriend/visualdocument/Hub.png'
+import Preparedparts from '../../../../public/ArtificialFriend/visualdocument/Preparedparts_2.png'
+import Mechanics from '../../../../public/ArtificialFriend/visualdocument/Mechanics_2.png'
+
+
+import desimg  from '../../../../public/ArtificialFriend/visualdocument/robotics display Large.png'
+import test  from '../../../../public/ArtificialFriend/visualdocument/test.png'
+import fonts1  from '../../../../public/ArtificialFriend/visualdocument/1.png'
+import fonts2 from '../../../../public/ArtificialFriend/visualdocument/2.png'
+import vd1 from '../../../../public/ArtificialFriend/visualdocument/3_1.png'
+import vd2 from '../../../../public/ArtificialFriend/visualdocument/4.png'
+import vd3 from '../../../../public/ArtificialFriend/visualdocument/5.png'
+import vd4 from '../../../../public/ArtificialFriend/visualdocument/6.png'
+
+import ssembly1 from '../../../../public/ArtificialFriend/visualdocument/a1.png'
+import ssembly2 from '../../../../public/ArtificialFriend/visualdocument/a2.png'
+import ssembly3 from '../../../../public/ArtificialFriend/visualdocument/a3.png'
+
+import Definition from '../../../../public/ArtificialFriend/visualdocument/finalhand.png'
+import old  from '../../../../public/ArtificialFriend/visualdocument/olddisplay.png'
+
+import img1 from '../../../../public/ArtificialFriend/1.jpg'
+import img2 from '../../../../public/ArtificialFriend/visualdocument/holdpen_1.png'
+
+
+import HandModel_Bot from '../../../../public/ArtificialFriend/visualdocument/HandModel_Bot.png'
+import HandModel_Top from '../../../../public/ArtificialFriend/visualdocument/HandModel_Top.png'
+import Riging from '../../../../public/ArtificialFriend/visualdocument/Rigging.png'
+import Skinweight2 from '../../../../public/ArtificialFriend/visualdocument/Skinweight2.png'
+
+import UV from '../../../../public/ArtificialFriend/visualdocument/UV.png'
+import Full from '../../../../public/ArtificialFriend/visualdocument/Full.png'
+import Sub from '../../../../public/ArtificialFriend/visualdocument/Sub.png'
+
+import Light from '../../../../public/ArtificialFriend/visualdocument/Light.png'
+import Render from '../../../../public/ArtificialFriend/visualdocument/Render Settings.png'
+
 
 const Page = () => {
   const [overview, setOverview] = useState(true);
@@ -33,20 +76,22 @@ const Page = () => {
     </div>
 
     <div className={styles.imgContainer}>   
-        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />
+        <Image  className={styles.img} alt='Definition' placeholder='blur' src={coverimg} layout="responsive" width={100} height={100} />
      </div>
 
 
     <div>
       <div style={{display:'flex', justifyContent:'center',marginTop:'50px'}}>
+        <div style={{flex:'2',borderBottom:'1px solid black'}}></div>
       <button className={`${styles.sectionButton} ${overview ? styles.active : ''}`} onClick={() => toggleMode(true)}>
         Overview
         </button>
       <button  className={`${styles.sectionButton} ${overview ? '' : styles.active}`} onClick={() => toggleMode(false)}>Visual Documentation</button>
+      <div style={{flex:'2',borderBottom:'1px solid black'}}></div>
       </div>
-      <svg style={{transform:'translateY(-15px)',zIndex:'-1'}}   height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
+      {/* <svg style={{transform:'translateY(-15px)',zIndex:'-1'}}   height="2" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <line  x1="0" y1="1" x2="100%" y2="1" stroke="black" strokeWidth="1" />
-      </svg>
+      </svg> */}
     </div>
 
     {!overview && (
@@ -61,32 +106,32 @@ const Page = () => {
         <h3>Physical Installation</h3>
         <h4>All Materials</h4>
         <div className={styles.imgContainer}>   
-              <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/AllMaterial.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img} alt='Definition' placeholder='blur' src={allMaterial} layout="responsive" width={100} height={100} />
         </div>
         <div className={styles.imgContainer3} >   
               <div className={styles.img3}>
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Aruino.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' placeholder='blur'  src={arduino} layout="responsive" width={100} height={100} />
                 <p className={styles.cation}>Arduino and Pen Holder</p>
               </div>
 
               <div className={styles.img3}>
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Motor.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' placeholder='blur' src={Motor} layout="responsive" width={100} height={100} />
                 <p className={styles.cation}>Motor</p>
               </div>
 
               <div className={styles.img3}>
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Hub.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' placeholder='blur' src={Hub} layout="responsive" width={100} height={100} />
                 <p className={styles.cation}>Hubs (For Poles)</p>
               </div>
 
               <div className={styles.img3}>
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Preparedparts_2.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' placeholder='blur' src={Preparedparts} layout="responsive" width={100} height={100} />
                 
                 <p className={styles.cation}>Prepared Parts</p>
               </div>
               <div className={styles.img3}>
                 
-                <Image   alt='visualdocument' src="/ArtificialFriend/visualdocument/Mechanics_2.png" layout="responsive" width={100} height={100} />
+                <Image   alt='visualdocument' placeholder='blur' src={Mechanics} layout="responsive" width={100} height={100} />
                 <p className={styles.cation}>Prepared Parts</p>
               </div>
              
@@ -144,7 +189,7 @@ const Page = () => {
         <h3>Description of the components:</h3>
         <div className={styles.documentContainer}>
           <div className={styles.imgWrapper}>   
-                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/robotics display Large.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='Definition' placeholder='blur' src={desimg} layout="responsive" width={100} height={100} />
           </div>
           <div className={styles.videoWrapper}>
           <iframe
@@ -253,7 +298,7 @@ const Page = () => {
           <h3>Testing Single Letter Fonts</h3>
                   <div className={styles.documentContainer}>
                   <div className={styles.imgWrapper}>   
-                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/test.png" layout="responsive" width={100} height={100} />
+                        <Image  className={styles.img} alt='Definition' placeholder='blur' src={test} layout="responsive" width={100} height={100} />
                         <p className={styles.cation}>Testing different single line fonts and record how many command it send to the Arduino</p>
                   </div>
                   <div className={styles.videoWrapper}>
@@ -275,11 +320,11 @@ const Page = () => {
             <h4>Testing and compare with the previous fonts (Wondering if the curve and the other elements will affect its writing speed)</h4>
             <div className={styles.documentContainer}>
                   <div className={styles.imgWrapper}>   
-                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/1.png" layout="responsive" width={100} height={100} />
+                        <Image  className={styles.img} alt='Definition' placeholder='blur' src={fonts1} layout="responsive" width={100} height={100} />
                         
                   </div>
                   <div className={styles.imgWrapper}>   
-                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/2.png" layout="responsive" width={100} height={100} />
+                        <Image  className={styles.img} alt='Definition'  placeholder='blur' src={fonts2} layout="responsive" width={100} height={100} />
                         
                   </div>
               
@@ -303,10 +348,10 @@ const Page = () => {
           <h4>Re-design the machine</h4>
 
           <div className={styles.imgContainer2} >   
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/3_1.png" layout="responsive" width={100} height={100} />
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/4.png" layout="responsive" width={100} height={100} />
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/5.png" layout="responsive" width={100} height={100} />
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/6.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={vd1} layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={vd2} layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={vd3} layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={vd4} layout="responsive" width={100} height={100} />
               
           </div>
 
@@ -314,10 +359,9 @@ const Page = () => {
           <h4>ssembly the pen to the hand </h4>
           
           <div className={styles.imgContainer2} >   
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a1.png" layout="responsive" width={100} height={100} />
-              <Image  className={styles.img2} alt='visualdocument' src="/ArtificialFriend/visualdocument/a2.png" layout="responsive" width={100} height={100} />
-             
-              <Image className={styles.img2}  alt='visualdocument' src="/ArtificialFriend/visualdocument/a3.png" layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={ssembly1} layout="responsive" width={100} height={100} />
+              <Image  className={styles.img2} alt='visualdocument' placeholder='blur' src={ssembly2} layout="responsive" width={100} height={100} />      
+              <Image className={styles.img2}  alt='visualdocument' placeholder='blur' src={ssembly3} layout="responsive" width={100} height={100} />
               
               
               </div>
@@ -328,7 +372,7 @@ const Page = () => {
           <h4>The Final Hand for a continuous aesthetic</h4>
           <div className={styles.documentContainer} >
                   <div >   
-                        <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/visualdocument/finalhand.png" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='Definition' placeholder='blur' src={Definition} layout="responsive" width={100} height={100} />  
                   </div>
                   <div >
                  
@@ -359,7 +403,7 @@ const Page = () => {
              <p className={styles.cation}>Old display</p>
                </div>
                   <div >   
-                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/olddisplay.png" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old' placeholder='blur' src={old} layout="responsive" width={100} height={100} />  
                   </div>
                   
             </div>
@@ -371,7 +415,7 @@ const Page = () => {
        
             <h3>Final</h3>
             <div >   
-                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/1.jpg" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old' placeholder='blur'  src={img1} layout="responsive" width={100} height={100} />  
             </div>
 
 
@@ -380,7 +424,7 @@ const Page = () => {
             <Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">File</Link>
             <h4>Sketches</h4>
             <div >   
-                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/holdpen_1.png" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old'  placeholder='blur' src={img2} layout="responsive" width={100} height={100} />  
             </div>
 
             <h4>Animation:</h4>
@@ -388,32 +432,32 @@ const Page = () => {
               1.3D animation:
               <li>Modeling the hand:<Link href="https://drive.google.com/drive/u/0/folders/1rnO2sfSMsaKTbDTrUlcJFmCvdnmE_o6m">Folder</Link>
               <div >   
-                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Bot.png" layout="responsive" width={100} height={100} />  
-                        <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/HandModel_Top.png" layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old' placeholder='blur' src={HandModel_Bot} layout="responsive" width={100} height={100} />  
+                        <Image  className={styles.img} alt='old' placeholder='blur' src={HandModel_Top} layout="responsive" width={100} height={100} />  
             </div>
               </li>
               <li>Rigging
-              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Rigging.png" layout="responsive" width={100} height={100} />   </div>
+              <div >   <Image  className={styles.img} alt='old' placeholder='blur' src={Riging} layout="responsive" width={100} height={100} />   </div>
               </li>
               <li>Paint Skin Weight for each Joints<br/>
               Trouble Shooting: Put UV first then do the rigging or else the UV will get distorted so that when the finger bends it will become more nature
-              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Skinweight2.png" layout="responsive" width={100} height={100} />   </div>
+              <div >   <Image  className={styles.img} alt='old' placeholder='blur' src={Skinweight2} layout="responsive" width={100} height={100} />   </div>
               </li>
               <li>Unfold UV and paint UV 
-                <div>   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/UV.png" layout="responsive" width={100} height={100} /> 
-                <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Full.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Sub.png" layout="responsive" width={100} height={100} />
+                <div>   <Image  className={styles.img} alt='old' src={UV} layout="responsive" width={100} height={100} /> 
+                <Image  className={styles.img} alt='old' placeholder='blur' src={Full} layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='old' placeholder='blur' src={Sub} layout="responsive" width={100} height={100} />
                   </div>
               </li>
               <li>Rerigging and repaint the skin weight
               Adobe Substance Painte</li>
               <li>Light and Shade:Arnold Rendere and its Light</li>
               <li>Camera Work: Set Perspective Camera and Keys
-              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Light.png" layout="responsive" width={100} height={100} />   </div>
+              <div >   <Image  className={styles.img} alt='old' placeholder='blur' src={Light}  layout="responsive" width={100} height={100} />   </div>
               </li>
               <li>Render Animation:
               Render Settings
-              <div >   <Image  className={styles.img} alt='old' src="/ArtificialFriend/visualdocument/Render Settings.png" layout="responsive" width={100} height={100} />   </div>
+              <div >   <Image  className={styles.img} alt='old' placeholder='blur' src={Render} layout="responsive" width={100} height={100} />   </div>
               </li>
             </ul>
             <ul>

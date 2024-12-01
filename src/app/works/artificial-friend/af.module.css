@@ -164,10 +164,10 @@
     padding: 4px 10px;
     /* border-radius: 2px; */
     font-size: 18px;
-    border-bottom: none;
-    opacity: 0.5;
+    color: #6e6e6e;
+    
     z-index: 2;
-    background-color: white;
+    
     
     
   }
@@ -180,8 +180,8 @@
 .active{
     opacity: 1;
    
-    
-    
+    color: black;
+    border-bottom: none;
 
   }
 
@@ -217,6 +217,10 @@
   
     text-align: left;
   }
+
+  .abstract{
+    padding: 50px 10vw 50px 10vw;
+}
 
   
 
