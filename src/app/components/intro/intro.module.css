@@ -144,7 +144,7 @@
 
 
   .svgpath1{
-    width: 350px;
+    width: 300px;
     top: -1vh;
     position: absolute;
     margin-left: 0vw;
@@ -152,15 +152,15 @@
   }
 
   .svgpath2{
-    width: 350px;
+    width: 300px;
     margin-left: -2vw;
     margin-top: 65vh;
     position: absolute;
   }
 
   .svgpath3{
-    width: 350px;
-    margin-left: 50vw;
+    width: 300px;
+    margin-left: 55vw;
     margin-top: 40vh;
     position: absolute;
   }
