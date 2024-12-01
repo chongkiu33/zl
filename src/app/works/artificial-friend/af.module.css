@@ -58,6 +58,7 @@
 
   .chapterContent{
     display: flex;
+    line-height: 120%;
     gap: 5vw;
   }
 
@@ -140,6 +141,7 @@
 .solution{
     background-color: rgb(230, 230, 230);
     border-radius: 3px;
+    margin: 3px 0 ;
 }
 
 
@@ -184,6 +186,14 @@
     border-bottom: none;
 
   }
+
+  .link{
+    text-decoration: underline;
+    word-break: break-all;
+    display: inline-flex;
+  }
+
+ 
 
   
 

@@ -1,6 +1,7 @@
 import styles from '../works.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import SlideInFromBtn from '../../components/animation/SlideInFromBtn'
 
 const Page = () => {    
   return (
@@ -22,14 +23,14 @@ const Page = () => {
         <Image  className={styles.img} alt='Definition' src="/Maze.jpg" layout="responsive" width={100} height={100} />
      </div>
 
-
+     
      <div className={styles.abstract}>
         Hi visitor, this is Beatrix, who did an independent study this semester to research on the graphic theory approach to maze, which is an interdisciplinary research focus both on mathematical language for graphs and its relationship with algorithms and other life-experiences with maze. If you are interested, please follow me to look at the materials together!
         <br/>
         <Link href="https://drive.google.com/drive/folders/1myJaiXxAKtMZMfZz7dkSzha-YyBICz_y?usp=share_link">The google drive link with all materials</Link>
      </div>
-
-
+    
+    
      <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Week 1 - 2: Review Graphic Theory</div>
             <div className={styles.pChapterContent}>
@@ -76,7 +77,7 @@ const Page = () => {
                
 
     </div>
-
+    
 
     <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Week 3-4: Maze Solving Algorithm</div>

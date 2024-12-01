@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 import {useState} from "react";
 import Link from 'next/link';
+import SlideInFromBtn from '../../components/animation/SlideInFromBtn'
 
 
 
@@ -42,7 +43,7 @@ const Page = () => {
         </div>
 
         
-
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Concept Demonstration</div>
             <div>
@@ -63,9 +64,9 @@ const Page = () => {
 
             <div>As I want to use Twine as a medium of showing such infinite narration I choose to take reference from narration patterns from “Standard Patterns in Choice-Based Games” to show this narration. Here are some important definitions.</div>
         </div>
+        </SlideInFromBtn>
 
-
-
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Definitions</div>
             <strong>Step</strong>
@@ -101,9 +102,9 @@ function generateTCEnd() {
             </CodeBlock>
 
         </div>
+        </SlideInFromBtn>
 
-       
-
+      
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Development</div>
             <strong>Firstly, I summarize the rules for Time Cave and Gauntlet narration from the article. Then, I draft codes for each step of the Time Cave Narration and Gauntlet Narration.</strong>
@@ -344,8 +345,9 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
         </div>
 
         </div>
+        
 
-
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Comments & Thoughts</div>
             <ul>
@@ -355,7 +357,9 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
                 <li>Will Twine be enough (for an infinite story)?Some researchers claim that Inform7 misleads the concept of space while wandering around the rooms using simply 8 directions.</li>
             </ul>
         </div>
+        </SlideInFromBtn>
 
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Next Steps</div>
             <ul>
@@ -372,7 +376,9 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
             </ul>
             
         </div>
+        </SlideInFromBtn>
 
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>End Notes</div>
             I would like to end this documentation with my favorite part of the novel. Here it goes:
@@ -403,8 +409,9 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
             “The Garden of Forking Paths” 
             
         </div>
+        </SlideInFromBtn>
 
-
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Other Links</div>
             <div><strong>Twine Demos</strong>:
@@ -422,13 +429,16 @@ A sketch for the combination of four narration types: https://editor.p5js.org/B2
             <br/>Combination: <Link className={styles.link} target="_blank" href="https://editor.p5js.org/B2xx/sketches/b3AjUFh8H"> https://editor.p5js.org/B2xx/sketches/b3AjUFh8H</Link></div>
             
         </div> 
+        </SlideInFromBtn>
 
+        <SlideInFromBtn>
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Reference</div>
             <Link className={styles.link} target="_blank" href="https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/">
             1. Standard Patterns in Choice-Based Games
             </Link>
         </div>
+        </SlideInFromBtn>
 
     <div className='bottomspace'></div>
 

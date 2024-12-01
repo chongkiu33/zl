@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import 'highlight.js/styles/github.css';
 import { useState } from 'react';
+import SlideInFromBtn from '../../components/animation/SlideInFromBtn'
 import dynamic from 'next/dynamic';
 const CodeBlock = dynamic(() => import('../../components/codeblock/CodeBlock'), { ssr: false });
 
@@ -100,14 +101,15 @@ const Page = () => {
     </div>
 
     {!overview && (
-
+     
     <div className={styles.chapterC}>
     <div className={styles.chapterTitle}>Visual Documentation</div>
     <div className={styles.chapterContent}>
       <div className={styles.chaptertext}>
         
-        <strong>This visual documentation contains the process of assembling physical installation assembly, and making the of 3D modeling and animation </strong>
+        This visual documentation contains the process of assembling physical installation assembly, and making the of 3D modeling and animation.
         <div>
+        <SlideInFromBtn >
         <h3>Physical Installation</h3>
         <h4>All Materials</h4>
         <div className={styles.imgContainer}>   
@@ -143,6 +145,9 @@ const Page = () => {
               
           </div>
 
+          </SlideInFromBtn>
+         
+          <SlideInFromBtn >
           <h3>User Testing</h3>
           <div>
           <video
@@ -156,40 +161,45 @@ const Page = () => {
           <div>2.Upload GRBL </div>
           <div>3.Open Universal Gcode Sender and Use ”Machine-Setup Wizard” to test the stepper motors</div>
           <div style={{color: "red",fontWeight: "light",opacity: "0.6"}} >Error Find: Part of My Arduino (CNC Sheild) is broken, that’s why the stepper motor did not move when I follow the instruction.  I also burnt it once</div>
+          </SlideInFromBtn>
         </div>
 
+        <SlideInFromBtn >
         <div>
           <h3>Software</h3>
-          <Link href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">Learning GRBL and Universal G code Sender</Link>
+          <Link className={styles.link}  href="https://howtomechatronics.com/tutorials/how-to-setup-grbl-control-cnc-machine-with-arduino/">Learning GRBL and Universal G code Sender</Link>
 
           <h4>Another Video’s with Tutorials for Writing Machine</h4>
-          <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino Writing/ Drawing Machine - 2D Pen Plotter</Link>
-          <Link href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino CNC Drawing Machine</Link>
+          <Link className={styles.link}  href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino Writing/ Drawing Machine - 2D Pen Plotter</Link>
+          <Link className={styles.link}  href="https://www.youtube.com/watch?v=WgsTyhX311E">DIY Arduino CNC Drawing Machine</Link>
 
           <h4>Trouble Shooting: Different Cable for Z-axis motor</h4>
-          <Link href="https://github.com/bdring/Grbl_Pen_Servo/tree/master/grbl">bdring/Grbl_Pen_Servo</Link>
+          <Link className={styles.link}  href="https://github.com/bdring/Grbl_Pen_Servo/tree/master/grbl">bdring/Grbl_Pen_Servo</Link>
           <div>This GRBL library use the difference of frequency to control the Z-axis</div>
         </div>
-
-
+        </SlideInFromBtn>
+        
+        <SlideInFromBtn >
         <div>
           <h3>Final Product (be able to move X,Y ans Z axis)</h3>
           <div><iframe title="vimeo-player" src="https://player.vimeo.com/video/805846071?h=a700ec972a" width="100%" height="360" frameborder="0"    allowfullscreen></iframe></div>
           
           <h4>Coding (Send to serial port and wait for Arduino say“OK”)</h4>
           <div></div>
-          <Link href="https://editor.p5js.org/gohai/sketches/UZZcwpZ6o">Text to G-Code</Link>
-          <Link href="https://editor.p5js.org/gohai/sketches/zo2qyIy-Y">G-Code Flow Control</Link>
+          <Link className={styles.link}  href="https://editor.p5js.org/gohai/sketches/UZZcwpZ6o">Text to G-Code</Link>
+          <Link className={styles.link}  href="https://editor.p5js.org/gohai/sketches/zo2qyIy-Y">G-Code Flow Control</Link>
 
           <div></div>
-          <Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi"> test1combination copy</Link>
+          <Link className={styles.link} href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi"> test1combination copy</Link>
 
           <h4>Final Configration and Modification</h4>
           <div>A new version of GRBL library in oder to not write in 45 degree</div>
 
         </div>
+        </SlideInFromBtn>
 
-
+        
+        <SlideInFromBtn >
         <div>
         <h3>Description of the components:</h3>
         <div className={styles.documentContainer}>
@@ -209,16 +219,19 @@ const Page = () => {
         
         </div>
         </div>
+        </SlideInFromBtn>
 
-
+        <SlideInFromBtn >
         <div>
           <h3>Deal with the 45angle problem:</h3>
           <div>Grbl 0.9i(45) and 1.1f</div>
           <div>Check the grbl uploading with Arduino and universal g code sender. There are problem that the Arduino said upload successfully, yet the universal g code sender might not updated.</div>
           <div className={styles.solution}>Sol: before writing, check the grbl is 1.1f</div>
         </div>
+        </SlideInFromBtn>
 
 
+        <SlideInFromBtn >
         <div>
           <h3>Deal With Trembling Problem</h3>
           <h4>Discover_1:</h4>
@@ -292,8 +305,10 @@ const Page = () => {
                     <div>Documentation of what happened without the spring: Works smoother and do not have the risk of colliding springs when writing</div>
 
         </div>
+        </SlideInFromBtn>
 
 
+        <SlideInFromBtn >
         <div>
           <h3>Deal with the speed</h3>
           <div>Use single-line font to mimic human writing and save time. </div>
@@ -337,7 +352,7 @@ const Page = () => {
 
 
         </div>
-
+        
 
         <div>
           <h3>Solve the problem of Speed and Flip writing</h3>
@@ -345,9 +360,12 @@ const Page = () => {
           <div>Speed: (<strong>[X,Y,Z] Acceleration, mm/sec^2</strong>) $120,$121, $122 = 250</div>
           <div>Flip writing: $3 =1 </div>
         </div>
+        </SlideInFromBtn>
 
+       
 
         <div>
+        <SlideInFromBtn >
           <h3>Implement the 3D -printed hand model</h3>
           <h3>User-Testing with hand model</h3>
           <h4>Re-design the machine</h4>
@@ -372,7 +390,9 @@ const Page = () => {
               </div>
          
           <p className={styles.cation}>Design an Angle so that the pen could touch the paper</p>
+          </SlideInFromBtn>
 
+          <SlideInFromBtn >
 
           <h4>The Final Hand for a continuous aesthetic</h4>
           <div className={styles.documentContainer} >
@@ -390,11 +410,12 @@ const Page = () => {
               
                 </div>
             </div>
-
+            </SlideInFromBtn>
           
 
         </div>
 
+        <SlideInFromBtn>
         <h4>Continuesly User-Testing with Screen & Webcam</h4>
         <div className={styles.documentContainer} >
         <div >
@@ -417,12 +438,16 @@ const Page = () => {
             <div>Add a Bluetooth Speaker</div>
             <div style={{color: "red"}}>Add a black pedestal for the display</div>
             <div style={{color: "red"}}>Add a light for the hand</div>
-       
+            </SlideInFromBtn>
+
+            <SlideInFromBtn>
             <h3>Final</h3>
             <div >   
                         <Image  className={styles.img} alt='old' placeholder='blur'  src={img1} layout="responsive" width={100} height={100} />  
             </div>
+            </SlideInFromBtn>
 
+            
 
             <h3>Digital Model</h3>
             <h4>Hand Model </h4>
@@ -477,14 +502,20 @@ const Page = () => {
 
     </div>
 
-  </div>
+      </div>
+     
     )}
 
 
     {overview &&(
 
     <>
+    <SlideInFromBtn >
      <div className={styles.abstract}>Have you imagined an “artificial friend” that could recognize your emotion and support you? Now she comes from the website to reality. Jane’s writable hand and face enable the users to have more tangible interaction with her, and reflect on what we need in the intimate relationship if what we need could all be satisfied by a considerate “machine”.</div>
+     </SlideInFromBtn>
+
+
+     <SlideInFromBtn delay={0.1}>
     <div className={styles.chapter}>
       <div className={styles.chapterTitle}>Project Description</div>
       <div className={styles.chapterContent}>
@@ -509,10 +540,11 @@ const Page = () => {
       </div>
 
     </div>
+    </SlideInFromBtn>
 
 
 
-
+    <SlideInFromBtn delay={0.1}>
     <div className={styles.chapterC}>
       <div className={styles.chapterTitle}>Context And Perspective </div>
       <div className={styles.chapterContent}>
@@ -563,8 +595,9 @@ const Page = () => {
       </div>
 
     </div>
+    </SlideInFromBtn>
 
-
+    <SlideInFromBtn>
     <div className={styles.chapterC}>
       <div className={styles.chapterTitle}> Implement the Writing Machine</div>
       <div className={styles.chapterContent}>
@@ -588,10 +621,10 @@ const Page = () => {
             <li>Code</li>
             <li>Code implementation:</li>
               <ul>
-                <li><Link href="https://editor.p5js.org/B2xx/sketches/u7XbauSwT"></Link>Develop a web-based eye-tracking program (use ml5.js faceApi)</li>
+                <li><Link className={styles.link}href="https://editor.p5js.org/B2xx/sketches/u7XbauSwT"></Link>Develop a web-based eye-tracking program (use ml5.js faceApi)</li>
                 <li>Test and Develop the Single-line fonts</li>
-                <li><Link href="https://editor.p5js.org/B2xx/sketches/u7XbauSwT">Develop the web-display of Jane’s outlook </Link></li>
-                <li><Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi">Save code for speed up for the machine</Link></li>
+                <li><Link className={styles.link} href="https://editor.p5js.org/B2xx/sketches/u7XbauSwT">Develop the web-display of Jane’s outlook </Link></li>
+                <li><Link className={styles.link} href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi">Save code for speed up for the machine</Link></li>
                 <li>Develop additional close port function
                 <CodeBlock language='javascript' >
             {`closeBtn = createButton('Disconnect to Arduino');
@@ -599,7 +632,7 @@ closeBtn.position(80,100);
 closeBtn.mousePressed(closeBtnClick);`}
             </CodeBlock>
                 </li>
-                <li><Link href="https://idmnyu.github.io/p5.js-speech/#examples"></Link>Match the sound and the writing speed (use speaker Api)</li>
+                <li><Link className={styles.link} href="https://idmnyu.github.io/p5.js-speech/#examples"></Link>Match the sound and the writing speed (use speaker Api)</li>
                 <ul>
                   <li>- Short list of reference that I use for coding<br/>
     
@@ -619,8 +652,9 @@ closeBtn.mousePressed(closeBtnClick);`}
         </div>
       </div>
     </div>
+    </SlideInFromBtn>
 
-
+    <SlideInFromBtn >
     <div className={styles.chapterC}>
       <div className={styles.chapterTitle}>User Testing </div>
       <div className={styles.chapterContent}>
@@ -680,6 +714,9 @@ Testing Method: Connect to computer and testing with softwares (Arduino & Univer
       </div>
 
     </div>
+    </SlideInFromBtn>
+
+    <SlideInFromBtn >
 
 
     <div className={styles.chapterC}>
@@ -705,8 +742,8 @@ Testing Method: Connect to computer and testing with softwares (Arduino & Univer
       </div>
 
     </div>
-
-
+    </SlideInFromBtn>
+    <SlideInFromBtn>
     <div className={styles.chapterC}>
       <div className={styles.chapterTitle}> Conclusion</div>
       <div className={styles.chapterContent}>
@@ -726,7 +763,7 @@ Testing Method: Connect to computer and testing with softwares (Arduino & Univer
       </div>
 
     </div>
-    
+    </SlideInFromBtn>
     </>
 
     )}
