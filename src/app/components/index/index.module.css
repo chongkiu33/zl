@@ -97,12 +97,19 @@
     padding-top: calc(2vh + 1vw);
 }
 
+.title{
+    opacity: 0.9;
+}
+
 .projectLink{
     display: block;
     transition: all 0.3s ease-in-out;
-    opacity: 0.6;
+    
     font-size: 18px ;
     
+}
+.project{
+    opacity: 0.6;
 }
 
 .projectLink:hover{

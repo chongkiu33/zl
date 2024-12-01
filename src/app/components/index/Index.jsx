@@ -190,13 +190,13 @@ const ProjectGroup = ({ title, projects, getWordsWithPositions ,pathname}) => {
     return (
       
         <div className={styles.projectgroup}>
-        <div className={styles.projectLink}>
+        <div className={`${styles.projectLink} ${styles.title}`}>
           {title} <div className={styles.point}></div>
         </div>
         {projects.map((project, index) => (
           <Link
             key={index}
-            className={`${styles.projectLink} ${isActive(project) ? styles.active : ''}`}
+            className={`${styles.projectLink} ${isActive(project) ? styles.active : ''} ${styles.project}`}
             href={`/playground/${project.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
           >
             {project}
