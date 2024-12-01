@@ -50,6 +50,11 @@ import Sub from '../../../../public/ArtificialFriend/visualdocument/Sub.png'
 import Light from '../../../../public/ArtificialFriend/visualdocument/Light.png'
 import Render from '../../../../public/ArtificialFriend/visualdocument/Render Settings.png'
 
+import AF1 from '../../../../public/ArtificialFriend/2.png'
+import AF2 from '../../../../public/ArtificialFriend/3.png'
+
+import Final1 from '../../../../public/ArtificialFriend/Final Design_Mirror.png'
+import Final2 from '../../../../public/ArtificialFriend/Final Design.png'
 
 const Page = () => {
   const [overview, setOverview] = useState(true);
@@ -493,11 +498,11 @@ const Page = () => {
 
         <div className={styles.chapterimg}>
               <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/2.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='Definition' placeholder='blur' src={AF1} layout="responsive" width={100} height={100} />
               </div>
 
               <div className={styles.imgContainer}>   
-                <Image  className={styles.img} alt='Definition' src="/ArtificialFriend/3.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img} alt='Definition' placeholder='blur' src={AF2} layout="responsive" width={100} height={100} />
               </div>
         </div>
 
@@ -546,8 +551,8 @@ const Page = () => {
           I have developed a realistic clown looking in my first phase of designing. However, I believe the “artificial friend” should be “friend” with all kinds of people. Therefore, I develop multiple designs, and finally choose the ideal one, which features both the modern and technological feeling of AF and the design of the hand in the phase 1. (For more information about my previous design, <Link href="https://www.notion.so/a57103d9155f4e34aadd5a711801ae04">click here</Link>)
           </div>
           <div className={styles.imgContainer2}>   
-                <Image  className={styles.img2} alt='Definition' src="/ArtificialFriend/Final Design_Mirror.png" layout="responsive" width={100} height={100} />
-                <Image  className={styles.img2} alt='Definition' src="/ArtificialFriend/Final Design.png" layout="responsive" width={100} height={100} />
+                <Image  className={styles.img2} alt='Definition' placeholder='blur' src={Final1} layout="responsive" width={100} height={100} />
+                <Image  className={styles.img2} alt='Definition' placeholder='blur' src={Final2} layout="responsive" width={100} height={100} />
           </div>
 
           
@@ -588,7 +593,7 @@ const Page = () => {
                 <li><Link href="https://editor.p5js.org/B2xx/sketches/u7XbauSwT">Develop the web-display of Jane’s outlook </Link></li>
                 <li><Link href="https://editor.p5js.org/B2xx/sketches/J6GwyP4Hdi">Save code for speed up for the machine</Link></li>
                 <li>Develop additional close port function
-                <CodeBlock language='javascript'>
+                <CodeBlock language='javascript' >
             {`closeBtn = createButton('Disconnect to Arduino');
 closeBtn.position(80,100);
 closeBtn.mousePressed(closeBtnClick);`}
