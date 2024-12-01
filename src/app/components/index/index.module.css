@@ -312,6 +312,7 @@
         font-family: "Bricolage Grotesque", system-ui; 
         z-index: 999;
         
+        
      }
 
      .projectgroup{
@@ -321,7 +322,7 @@
 
      .projectLink{
         
-        font-size: 20px ;
+        font-size: 18px ;
         
     }
     
