@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { usePoeticMode } from '../../contexts/PoeticModeContext'
 import Draggable from "react-draggable";
-import { useWordContext } from '../../contexts/WordContext';
-import SlideInFromBtn from '../animation/SlideInFromBtn'
+
 
 const Index = ({pathname}) => {
     const { isPoeticMode } = usePoeticMode();
-    const [wordsWithPositions, setWordsWithPositions] = useState([]);
-    const indexGroupRef = useRef(null);
+    
     const [wordsWithRandomPositions, setWordsWithRandomPositions] = useState([]);
 
     const Title = [
@@ -33,6 +31,8 @@ const Index = ({pathname}) => {
         });
         setWordsWithRandomPositions(words);
     }, []);
+    
+
     
 
 
