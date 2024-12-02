@@ -32,7 +32,7 @@ const Navbar = ({pathname}) => {
                 {isPlaygroundPath && (
               <div className={styles.switchContainer}>
                 <div className={styles.side}>Side Projects</div>
-                <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
+                {/* <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
                   Poetic Mode
                   <Switch
                     className={styles.switch}
@@ -47,7 +47,7 @@ const Navbar = ({pathname}) => {
                     handleDiameter={14}
                     borderRadius={20}
                   />
-                </div>
+                </div> */}
               </div>
             )}
                 </div>
@@ -57,7 +57,7 @@ const Navbar = ({pathname}) => {
             <div className={`${styles.about1} ${styles.nav}  ${isActive("about")?styles.active : ''}`}><Link href="/about">About</Link></div>
         </div>
 
-        <div className={`${styles.side2} ${isPoeticMode? styles.checked : ''}`}>Poetic Mode
+        {/* <div className={`${styles.side2} ${isPoeticMode? styles.checked : ''}`}>Poetic Mode
                 <Switch
                     className={styles.switch}
                     checked={isPoeticMode}  // 设置开关的状态
@@ -71,7 +71,7 @@ const Navbar = ({pathname}) => {
                     handleDiameter={14}  // 设置滑块（内圆）的大小
                     borderRadius={20}  // 设置外圆角的大小
                    
-                /></div>
+                /></div> */}
         
         </>
     )

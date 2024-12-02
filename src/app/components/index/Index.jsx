@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { usePoeticMode } from '../../contexts/PoeticModeContext'
 import Draggable from "react-draggable";
+import Switch from "react-switch";
 
 
 const Index = ({pathname}) => {
-    const { isPoeticMode } = usePoeticMode();
+    const {isPoeticMode, setIsPoeticMode} = usePoeticMode();
     
     const [wordsWithRandomPositions, setWordsWithRandomPositions] = useState([]);
 
@@ -41,6 +42,22 @@ const Index = ({pathname}) => {
 
         <>
         <div className={styles.container}>
+        <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
+                  Poetic Mode
+                  <Switch
+                    className={styles.switch}
+                    checked={isPoeticMode}
+                    onChange={setIsPoeticMode}
+                    offColor="#888" 
+                    onColor="#0d6efd"
+                    uncheckedIcon={false}
+                    checkedIcon={false}
+                    height={18}
+                    width={35}
+                    handleDiameter={14}
+                    borderRadius={20}
+                  />
+                </div>
             <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
             
             {wordsWithRandomPositions.map((item, index) => (
