@@ -9,15 +9,16 @@ const page = () => {
     <div>   
         <div className={styles.spTitle}>ChatGPT as Tarot Reader </div>
         <ProjectTags projectName="ChatGPT as Tarot Reader" />
-                <div className="video-container">
-            <video
-                src="/chatGPT/963_1730551912_raw.mp4"
-                controls
-                autoPlay
-                loop
-                className="responsive-video"
-            ></video>
-            </div>
+                
+            <div className="video-container" style={{backgroundColor: 'black'}}>
+                <video
+                    src="/chatGPT/963_1730551912_raw.mp4"
+                    controls
+                    autoPlay
+                    loop
+                    className="responsive-video"
+                ></video>
+                </div>
 
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Brief</div>
