@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { PoeticModeProvider } from './contexts/PoeticModeContext'
 import {TagProvider} from './contexts/TagContext'
 import { LayoutProvider } from './contexts/LayoutContext'
+import { Suspense } from 'react'
 
 
 
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      
+      <Suspense fallback={<div>Loading...</div>}>
         <PoeticModeProvider>
           <Navbar pathname={pathname} />
           <Rightbar className="rightbar" />
@@ -65,7 +66,7 @@ export default function RootLayout({ children }) {
             </LayoutProvider>
           </TagProvider>
         </PoeticModeProvider>
-        
+        </Suspense>
       </body>
     </html>
   );
