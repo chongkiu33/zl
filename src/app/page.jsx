@@ -12,14 +12,12 @@ import { useLoading } from "./contexts/LoadingContext";
 export default function Home() {
   const router = useRouter();
   const [canScroll, setCanScroll] = useState(false);
+  const { isLoading, setIsLoading } = useLoading();
 
 
   useEffect(() => {
   
     let scrollTimer;
-    
-    
-    
 
    scrollTimer = setTimeout(() => {
       setCanScroll(true); // 再等待 3 秒后允许滚动
@@ -29,9 +27,6 @@ export default function Home() {
       clearTimeout(scrollTimer);
     };
   }, []);
-
-  
-   
 
   useEffect(() => {
 
@@ -52,7 +47,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
           
-          <Intro />
+          {!isLoading && <Intro />}
           
     </div>
   );

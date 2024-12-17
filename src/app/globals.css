@@ -161,8 +161,26 @@ h4{
   font-weight: 500;
 }
 
+
+
+
 .loadingContainer{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bricolage Grotesque", system-ui;
+  font-size: 16px;
+  font-weight: 300;
+  z-index: 9999;
+  background-image: url('/bg.jpg');
+  background-position: center; 
   
 }
 
+.loadingText{
+    padding: 20%;
+}
 

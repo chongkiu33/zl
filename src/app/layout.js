@@ -42,15 +42,24 @@ const PageContent = ({ children }) => {
 };
 
 
+const LoadingText = [
+  'I have a notebook about computer-term explanations, like why we use "surfing on" the internet.', 
+  "Always develop a story before bed, for example, how a Mayan priestess governs her people through mazes.", 
+  "I enjoy reading Reddit's NoSleep channel, especially about ritual games, and I have written an essay comparing Chinese and Western Ouija boards.", 
+  "Without altering my appearance, I've been mistaken as a Jewish or Latin in New York.", 
+  "I took 20-credit courses, worked 20 hours a week, and curated an exhibition in my first semester in New York.",
+  "I predicted Makoto Shinkai’s success after seeing his animation in Kindergarten.",
+  "I lost a watch every year after entering high school, some of them are found after months or years, and those watches all ran 2 minutes faster.",
+  "Although nearly drowning at three, swimming become my best sport now."
+];
+
+
 const Mainpage =({children ,pathname}) =>{
   const { isLoading, setIsLoading } = useLoading();
 
 
   useEffect(() => {
     let loadingTimer;
-
-
-   
 
     return () => {
       clearTimeout(loadingTimer); // 清理定时器
@@ -59,7 +68,27 @@ const Mainpage =({children ,pathname}) =>{
 
   return(
     <>
-    {isLoading && <Loading />}
+    {isLoading && <div className='loadingContainer' >
+
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1}}
+      exit={{ opacity: 0 }}
+      transition={{
+        type: "tween",
+        duration: 0.5
+      }}
+      
+    >
+        <div className='loadingText'>
+      Do you know  that... ? <br/>
+     
+      <div style={{fontWeight:"400"}}>{LoadingText[Math.floor(Math.random() * LoadingText.length)]}</div>
+      
+      </div>
+
+      </motion.div>
+    </div>}
     <Navbar pathname={pathname} />
     <Rightbar className="rightbar" />
     <TagProvider>

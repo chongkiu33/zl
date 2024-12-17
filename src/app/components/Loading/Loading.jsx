@@ -17,7 +17,7 @@ const LoadingText = [
 
 
 const Loading = () => {
-    const randomText = LoadingText[Math.floor(Math.random() * LoadingText.length)];
+    
 
 
   return (
@@ -25,7 +25,7 @@ const Loading = () => {
         <div className={styles.loadingText}>
       Do you know  that... ? <br/>
      
-      <div style={{fontWeight:"400"}}>{randomText}</div>
+      <div style={{fontWeight:"400"}}>{LoadingText[Math.floor(Math.random() * LoadingText.length)]}</div>
       
       </div>
     </div>
