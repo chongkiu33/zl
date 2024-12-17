@@ -5,12 +5,14 @@ import { useRouter } from "next/router"
 import { useEffect } from "react";
 import Switch from "react-switch";
 import {usePoeticMode} from '../../contexts/PoeticModeContext'
+import { useLoading } from '../../contexts/LoadingContext';
 
 
 
 
 const Navbar = ({pathname}) => {
     const {isPoeticMode, setIsPoeticMode} = usePoeticMode();
+    const { isLoading, setIsLoading } = useLoading();
     
     const isPlaygroundPath = pathname.startsWith("/playground");
 
@@ -19,10 +21,12 @@ const Navbar = ({pathname}) => {
       return isactive;
   };
 
+
+
     
     return (
         <>
-        <div className={`${styles.container} ${isPoeticMode? styles.checked : ''}`} >
+        {!isLoading && <div className={`${styles.container} ${isPoeticMode? styles.checked : ''}`} >
             <div><Link className={`${styles.nav} ${isActive("")? styles.active : ''}`} href="/">Zhuolin Li</Link></div>
             <div className={styles.wAndp}>
             
@@ -55,7 +59,7 @@ const Navbar = ({pathname}) => {
             </div>
             
             <div className={`${styles.about1} ${styles.nav}  ${isActive("about")?styles.active : ''}`}><Link href="/about">About</Link></div>
-        </div>
+        </div>}
 
         {/* <div className={`${styles.side2} ${isPoeticMode? styles.checked : ''}`}>Poetic Mode
                 <Switch

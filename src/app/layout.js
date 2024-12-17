@@ -7,13 +7,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react";
 import { PoeticModeProvider } from './contexts/PoeticModeContext'
+import { LoadingProvider , useLoading} from "./contexts/LoadingContext"; 
 import {TagProvider} from './contexts/TagContext'
 import { LayoutProvider } from './contexts/LayoutContext'
 import { Suspense } from 'react'
+import Loading from "./components/Loading/Loading"; 
+
 
 
 
 const PageContent = ({ children }) => {
+
+
+
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,37 +41,77 @@ const PageContent = ({ children }) => {
   );
 };
 
+
+const Mainpage =({children ,pathname}) =>{
+  const { isLoading, setIsLoading } = useLoading();
+
+
+  useEffect(() => {
+    let loadingTimer;
+
+    // 如果当前是首页，设置 isLoading=true
+    // if (pathname === "/") {
+    //    const hasVisited = localStorage.getItem("hasVisited");
+    //   setIsLoading(true);
+
+    //   loadingTimer = setTimeout(() => {
+    //     setIsLoading(false);
+    //   }, 3000); // 延迟10秒后结束loading状态
+    // }
+
+   
+
+    return () => {
+      clearTimeout(loadingTimer); // 清理定时器
+    };
+  }, [pathname]);
+
+  return(
+    <>
+    {isLoading && <Loading />}
+    <Navbar pathname={pathname} />
+    <Rightbar className="rightbar" />
+    <TagProvider>
+      <LayoutProvider>
+       
+          <motion.main 
+      style={{
+        position: 'relative',
+        minHeight: '100vh',
+        overflowX: 'hidden'
+      }}
+    >
+      <AnimatePresence mode="popLayout">
+        
+          
+            <PageContent pathname={pathname} key={pathname}>
+              {children}
+            </PageContent>
+
+            </AnimatePresence>
+            </motion.main>
+            
+      </LayoutProvider>
+    </TagProvider>
+    </>
+  )
+
+}
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
+  
+  
  
   return (
     <html lang="en">
       <body>
       <Suspense fallback={<div>Loading...</div>}>
         <PoeticModeProvider>
-          <Navbar pathname={pathname} />
-          <Rightbar className="rightbar" />
-          <TagProvider>
-            <LayoutProvider>
-             
-                <motion.main 
-            style={{
-              position: 'relative',
-              minHeight: '100vh',
-              overflowX: 'hidden'
-            }}
-          >
-            <AnimatePresence mode="popLayout">
-              
-                
-                  <PageContent pathname={pathname} key={pathname}>
-                    {children}
-                  </PageContent>
-                  </AnimatePresence>
-                  </motion.main>
-                  
-            </LayoutProvider>
-          </TagProvider>
+        <LoadingProvider pathname={pathname}>
+            <Mainpage pathname={pathname}>{children}</Mainpage>
+         
+          </LoadingProvider>
         </PoeticModeProvider>
         </Suspense>
       </body>

@@ -9,11 +9,10 @@
     right: 0;
     position: fixed;
     font-size: 1.1rem;
-    z-index: 999;
+  
     align-items: end;
   
-   
-    
+    z-index: 990;
 
     
     

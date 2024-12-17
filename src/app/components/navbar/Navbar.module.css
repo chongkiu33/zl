@@ -9,10 +9,10 @@
     font-family: "Cormorant Unicase", system-ui;
     font-weight: 450;
     font-size: 1.4rem;
-    z-index: 999;
+    
     padding:1.5vh 0 0 1.5vh;
     mix-blend-mode: difference;
-    
+    z-index: 989;
     
     
 }
@@ -21,6 +21,7 @@
     transition: all 0.3s ease;
     mix-blend-mode: difference;
     color: rgb(255, 255, 255);
+    
     
    
     

@@ -5,19 +5,32 @@ import {motion} from "framer-motion";
 import Intro from "./components/intro/Intro";
 import { useRouter } from "next/navigation";
 import {useState, useEffect } from "react";
+import Loading from "./components/Loading/Loading";
+import { useLoading } from "./contexts/LoadingContext";
 
 
 export default function Home() {
   const router = useRouter();
   const [canScroll, setCanScroll] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCanScroll(true);
-    }, 2000);
 
-    return () => clearTimeout(timer);
+  useEffect(() => {
+  
+    let scrollTimer;
+    
+    
+    
+
+   scrollTimer = setTimeout(() => {
+      setCanScroll(true); // 再等待 3 秒后允许滚动
+    }, 2500); 
+
+    return () => {
+      clearTimeout(scrollTimer);
+    };
   }, []);
+
+  
    
 
   useEffect(() => {
@@ -33,6 +46,8 @@ export default function Home() {
 
     return () => window.removeEventListener("wheel", handleScroll);
 }, [canScroll, router]);
+
+
 
   return (
     <div className={styles.container}>

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import styles from "./Rightbar.module.css"
 import { useState } from "react";
+import { useLoading } from '../../contexts/LoadingContext';
 
 function calculateDatePercentage(targetDate) {
     const startDate = new Date("2021-09-01");
@@ -68,6 +69,7 @@ const Rightbar = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [hoveredTitle, setHoveredTitle] = useState("");
     const [titleHeight, setTitleHeight] = useState(0);
+    const { isLoading, setIsLoading } = useLoading();
 
     const data = [
         { date: "2021-09-17", link: "/playground/sound-visualization", title: "Sound Visualization" },
@@ -105,6 +107,10 @@ const Rightbar = () => {
         setHoveredTitle(""); // 隐藏标题
         setTitleHeight(0); // 重置标题容器高度
     };
+
+    if (isLoading) {
+      return null;
+  }
 
 
     
