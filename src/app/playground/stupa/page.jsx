@@ -48,20 +48,20 @@ const Page = () => {
             <div className={styles.spChapterTitle}>Modeling</div>
             <div className={styles.spChapterText}>
           
-                <Canvas camera={{ position: [0, 0, 12] }} style={{ height: "500px",width: "100%" }} >
+                {/* <Canvas camera={{ position: [0, 0, 12] }} style={{ height: "500px",width: "100%" }} >
                   <ambientLight intensity={0.2} />
                   <directionalLight position={[10, 10, 10]} />
 
                   <group >
                   <Scene
-                    objPath="/stupa/stupa.obj"
+                    objPath="/stupa/stupa2.obj"
                     scale={[1, 1, 1]}
                     position={[0, 0, 0]}
                   />
                   </group>
 
                   <OrbitControls enableZoom={false}  />
-                </Canvas>
+                </Canvas> */}
 
                 <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='background' src="/stupa/2.jpg" layout="responsive" width={100} height={100} />
