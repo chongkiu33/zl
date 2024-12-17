@@ -49,15 +49,6 @@ const Mainpage =({children ,pathname}) =>{
   useEffect(() => {
     let loadingTimer;
 
-    // 如果当前是首页，设置 isLoading=true
-    // if (pathname === "/") {
-    //    const hasVisited = localStorage.getItem("hasVisited");
-    //   setIsLoading(true);
-
-    //   loadingTimer = setTimeout(() => {
-    //     setIsLoading(false);
-    //   }, 3000); // 延迟10秒后结束loading状态
-    // }
 
    
 
