@@ -9,8 +9,7 @@ const LoadingText = [
     "Always develop a story before bed, for example, how a Mayan priestess governs her people through mazes.", 
     "I enjoy reading Reddit's NoSleep channel, especially about ritual games, and I have written an essay comparing Chinese and Western Ouija boards.", 
     "Without altering my appearance, I've been mistaken as a Jewish or Latin in New York.", 
-    "I took 20-credit courses, worked 20 hours a week, and curated an exhibition in my first semester in New York.",
-    "I predicted Makoto Shinkai’s success after seeing his animation in Kindergarten.",
+    "I predicted Makoto Shinkai’s success after seeing his animation in Kindergarten",
     "I lost a watch every year after entering high school, some of them are found after months or years, and those watches all ran 2 minutes faster.",
     "Although nearly drowning at three, swimming become my best sport now."
 ];
