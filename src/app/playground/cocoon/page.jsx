@@ -10,8 +10,8 @@ const Page = () => {
         <div className={styles.spTitle}>Cocoon</div>
         
         <ProjectTags projectName="Cocoon" />
-        <div className={styles.imgCover}>   
-            <Image  className={styles.fitimg} alt='Cocoon'  src="/cocoon/Animation_3.gif" fill />
+        <div className={styles.imgCover} style={{backgroundColor: 'black'}}>   
+            <Image  className={styles.fitimg} style={{objectFit: 'contain'}} alt='Cocoon'  src="/cocoon/Animation_3.gif" fill />
         </div>
 
         <div className={styles.spAbstract}><TextSplitter text={` 
