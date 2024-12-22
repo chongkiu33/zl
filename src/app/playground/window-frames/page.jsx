@@ -24,6 +24,31 @@ function Scene({ objPath, scale ,position}) {
         );
 }
 
+
+function Canvas3d(objPath){
+  return(
+    <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }}>
+            <ambientLight intensity={0.2} />
+            <directionalLight position={[10, 10, 10]} />
+
+            {/* 模型 1 */}
+
+            <group >
+            <Scene
+              objPath={objPath}
+              rotation={[0, Math.PI / 2, 0]}
+              position={[-2, 0, 0]}
+            />
+           
+
+          
+            </group>
+
+            <OrbitControls enableZoom={false}  />
+          </Canvas>
+  )
+}
+
 const Page = () => {
 
 
@@ -69,29 +94,11 @@ const Page = () => {
         </div>
       </div>
 
-      <div className={styles.spChapter}>
+      {/* <div className={styles.spChapter}>
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
-          <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }}>
-            <ambientLight intensity={0.2} />
-            <directionalLight position={[10, 10, 10]} />
-
-            {/* 模型 1 */}
-
-            <group >
-            <Scene
-              objPath="/window/138_2.obj"
-              rotation={[0, Math.PI / 2, 0]}
-              position={[-2, 0, 0]}
-            />
-           
-
           
-            </group>
-
-            <OrbitControls enableZoom={false}  />
-          </Canvas>
-
+          <Canvas3d objPath="/window/138_2.obj"/>
 
           <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }} >
             <ambientLight intensity={0.2} />
@@ -108,7 +115,7 @@ const Page = () => {
             <OrbitControls enableZoom={false}  />
           </Canvas>
         </div>
-      </div>
+      </div> */}
 
       <div className="bottomspace"></div>
     </div>
