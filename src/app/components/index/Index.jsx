@@ -42,7 +42,7 @@ const Index = ({pathname}) => {
 
         <>
         <div className={styles.container}>
-        <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
+        {/* <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
                   Poetic Mode
                   <Switch
                     className={styles.switch}
@@ -57,7 +57,7 @@ const Index = ({pathname}) => {
                     handleDiameter={14}
                     borderRadius={20}
                   />
-                </div>
+                </div> */}
             <div className={`${styles.poeticContainer} ${isPoeticMode ? styles.poeticMode : ''}`}>
             
             {wordsWithRandomPositions.map((item, index) => (
