@@ -7,9 +7,10 @@ import ProjectTags from "../../components/ProjectTag/ProjectTag";
 import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
-import { useRef } from "react";
+import React from 'react'
+import Model from "../../components/Model/Model";
+
+
 
 function Scene({ objPath, scale ,position}) {
         const obj = useLoader(OBJLoader, objPath); // 加载第一个模型
@@ -94,28 +95,15 @@ const Page = () => {
         </div>
       </div>
 
-      {/* <div className={styles.spChapter}>
+      <div className={styles.spChapter}>
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
+          <Model />
+         
+
           
-          <Canvas3d objPath="/window/138_2.obj"/>
-
-          <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }} >
-            <ambientLight intensity={0.2} />
-            <directionalLight position={[10, 10, 10]} />
-
-            <group >
-            <Scene
-              objPath="/window/139_2.obj"
-              rotation={[0, Math.PI / 2, 0]}
-              position={[-2, 0, 0]}
-            />
-            </group>
-
-            <OrbitControls enableZoom={false}  />
-          </Canvas>
         </div>
-      </div> */}
+      </div>
 
       <div className="bottomspace"></div>
     </div>
