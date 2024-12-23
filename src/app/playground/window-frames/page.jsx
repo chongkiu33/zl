@@ -5,55 +5,31 @@ import Link from "next/link";
 import TextSplitter from "../../components/TextSplitter/TextSplitter";
 import ProjectTags from "../../components/ProjectTag/ProjectTag";
 import * as THREE from "three";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls , useGLTF } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import React from 'react'
 import Model from "../../components/Model/Model";
+import { Suspense } from "react";
 
-
-
-function Scene({ objPath, scale ,position}) {
-        const obj = useLoader(OBJLoader, objPath); // 加载第一个模型
-      
-        return (
-         
-            <group position={position} scale={scale} rotation={[0, Math.PI / 2, 0]}>
-              <primitive object={obj} />
-            </group>
-      
-           
-        );
-}
-
-
-function Canvas3d(objPath){
-  return(
-    <Canvas camera={{ position: [0, 0, 20] }} style={{ height: "500px",width: "100%" }}>
-            <ambientLight intensity={0.2} />
-            <directionalLight position={[10, 10, 10]} />
-
-            {/* 模型 1 */}
-
-            <group >
-            <Scene
-              objPath={objPath}
-              rotation={[0, Math.PI / 2, 0]}
-              position={[-2, 0, 0]}
-            />
-           
-
-          
-            </group>
-
-            <OrbitControls enableZoom={false}  />
-          </Canvas>
+export function Model139(props) {
+  const { nodes, materials } = useGLTF('/window/139.gltf')
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes['139001'].geometry}
+        material={materials.wood}
+        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+      />
+    </group>
   )
 }
 
+
+
+
 const Page = () => {
-
-
-
 
   return (
     <div>
@@ -98,8 +74,19 @@ const Page = () => {
       <div className={styles.spChapter}>
         <div className={styles.spChapterTitle}>Modeling</div>
         <div className={styles.spChapterText}>
-          <Model />
-         
+          <Model objPath="/window/138.gltf" />
+
+
+         <Canvas camera={{ position: [0, 0, 25] }} style={{ height: "500px",width: "100%" }} >
+            <Suspense fallback={null}>
+            <ambientLight intensity={4} />
+            <directionalLight position={[10, 10, 10]} />
+
+            <Model139 position={[-2, 0, 0]} />
+            
+            <OrbitControls enableZoom={false}  />
+            </Suspense>
+          </Canvas>
 
           
         </div>

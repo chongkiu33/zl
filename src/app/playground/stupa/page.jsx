@@ -8,6 +8,7 @@ import * as THREE from "three";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+import { Suspense } from "react";
 
 function Scene({ objPath, scale ,position}) {
   const obj = useLoader(OBJLoader, objPath); // 加载第一个模型
@@ -48,7 +49,8 @@ const Page = () => {
             <div className={styles.spChapterTitle}>Modeling</div>
             <div className={styles.spChapterText}>
           
-                {/* <Canvas camera={{ position: [0, 0, 12] }} style={{ height: "500px",width: "100%" }} >
+                <Canvas camera={{ position: [0, 0, 12] }} style={{ height: "500px",width: "100%" }} >
+                <Suspense fallback={null}>
                   <ambientLight intensity={0.2} />
                   <directionalLight position={[10, 10, 10]} />
 
@@ -61,7 +63,8 @@ const Page = () => {
                   </group>
 
                   <OrbitControls enableZoom={false}  />
-                </Canvas> */}
+                  </Suspense>
+                </Canvas>
 
                 <div className={styles.imgContainer}>   
                 <Image  className={styles.img} alt='background' src="/stupa/2.jpg" layout="responsive" width={100} height={100} />
