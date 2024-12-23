@@ -11,7 +11,7 @@ import React from 'react'
 import Model from "../../components/Model/Model";
 import { Suspense } from "react";
 
-export function Model139(props) {
+function Model139(props) {
   const { nodes, materials } = useGLTF('/window/139.gltf')
   return (
     <group {...props} dispose={null}>
