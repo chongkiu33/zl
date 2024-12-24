@@ -6,7 +6,7 @@ import SlideInFromBtn from "../animation/SlideInFromBtn";
 
 const LoadingText = [
     'I have a notebook about computer-term explanations, like why we use "surfing on" the internet.', 
-    "Always develop a story before bed, for example, how a Mayan priestess governs her people through mazes.", 
+    "I always develop a story before bed, for example, how a Mayan priestess governs her people through mazes.", 
     "I enjoy reading Reddit's NoSleep channel, especially about ritual games, and I have written an essay comparing Chinese and Western Ouija boards.", 
     "Without altering my appearance, I've been mistaken as a Jewish or Latin in New York.", 
     "I predicted Makoto Shinkai’s success after seeing his animation in Kindergarten",

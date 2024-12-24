@@ -86,7 +86,7 @@ const Intro = () => {
             <p className={styles.subbup}><TextAnimation text="Window" /></p></span></SlideInFromBtn>
             <SlideInFromBtn delay={0.3}>
              
-             to <span className={styles.block}><p>narration</p><p className={styles.subbup}><TextAnimation text="language" /></p>.</span></SlideInFromBtn>
+             to <span className={styles.block}><p>narratives</p><p className={styles.subbup}><TextAnimation text="language" /></p>.</span></SlideInFromBtn>
           </div>
 
 
