@@ -72,7 +72,7 @@ const Rightbar = () => {
     const { isLoading, setIsLoading } = useLoading();
 
     const data = [
-        { date: "2021-09-17", link: "/playground/sound-visualization", title: "Sound Visualization" },
+        { date: "2021-09-17", link: "/playground/disoriented", title: "Disoriented" },
         { date: "2021-11-17", link: "/playground/solidarity", title: "solidarity"},
         { date: "2021-12-06", link: "/playground/mayan-language", title: "mayan-language"},
         { date: "2022-03-24", link: "/playground/stupa", title: "Stupa"},
@@ -91,6 +91,7 @@ const Rightbar = () => {
         { date: "2024-04-28", link: "/works/the-garden-of-forking-paths", title: "The Garden of Forking Paths"},
         // { date: "2024-08-31", link: "/playground/bubble-procelain", title: "Bubble Procelain"},
         // { date: "2024-10-31", link: "/playground/natural-material-lab", title: "Natural Material Lab"},
+        { date: "2024-05-12", link: "/works/The-Murder-in-Crooked-House-as-an-interactive-fiction", title: "The Murder in Crooked House: interactive fiction version"},
         { date: "2024-11-05", link: "/playground/seaweed-hairband", title: "Seaweed hairband"},
         { date: "2024-11-26", link: "/works/graphic-theory-approach-to-maze", title: "Graphic Theory Approach to Maze"}   
     ];

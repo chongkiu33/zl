@@ -99,7 +99,7 @@ const Index = ({pathname}) => {
                         <ProjectGroup 
                             pathname={pathname}
                             title="Computational Narratives" 
-                            projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
+                            projects={["Am I too much?", "Enhanced Memory", "ChatGPT as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
                         />
                          {/* </SlideInFromBtn>
                     
@@ -117,7 +117,7 @@ const Index = ({pathname}) => {
                         <ProjectGroup 
                             pathname={pathname}
                             title="Typography Experiment" 
-                            projects={["Yong(Forever)", "Gui(Back)", "Mayan Language", "Sound Visualization"]} 
+                            projects={["Yong(Forever)", "Gui(Back)", "Mayan Language", "Disoriented"]} 
 
                         />
 
@@ -154,7 +154,7 @@ const Index = ({pathname}) => {
         <ProjectGroup 
                             pathname={pathname}
                             title="Computational Narratives" 
-                            projects={["Am I too much?", "Enhanced Memory", "ChatGpt as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
+                            projects={["Am I too much?", "Enhanced Memory", "ChatGPT as Tarot Reader", "“Listen! Pied Piper is playing”", "Mirror"]} 
                         />
 
                     
@@ -169,7 +169,7 @@ const Index = ({pathname}) => {
                         <ProjectGroup 
                             pathname={pathname}
                             title="Typography Experiment" 
-                            projects={["Yong(Forever)", "Gui(Back)", "Mayan Language", "Sound Visualization"]} 
+                            projects={["Yong(Forever)", "Gui(Back)", "Mayan Language", "Disoriented"]} 
 
                         />
 

@@ -6,7 +6,7 @@ import ProjectTags from '../../components/ProjectTag/ProjectTag'
 
 const Page = () => {
   return <div>
-    <div className={styles.spTitle}>Sound Visualization</div>
+    <div className={styles.spTitle}>Disoriented</div>
     <ProjectTags projectName="Sound Visualization" />
     <div className={styles.imgCover}>   
             <Image style={{objectFit: 'contain'}}  className={styles.fitimg} alt='mayan'  src="/sound/Artboard.png" fill />

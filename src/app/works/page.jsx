@@ -18,6 +18,17 @@ const works = [
         tags: ["interactive installation", "robotics","critical technology","creative coding"],
         date:"2023"
     },
+
+    {
+        id: 4,
+        title:'The Murder in Crooked House: interactive fiction version',
+        description:'I use interactive fiction to reconstruct the experience of a horror murder in a crooked house, which adopted certain setting and storyline from the book The Murder in Crooked House by Soji Shimada. ',
+        image:'/TheMurder/Map_1.png',
+        link:'/works/The-Murder-in-Crooked-House-as-an-interactive-fiction',
+        tags:["creative coding","serous game"],
+        date:"2024"
+
+    },
     {
         id: 2,
         title: 'The Garden of Forking Paths',
@@ -36,18 +47,9 @@ const works = [
         link: '/works/graphic-theory-approach-to-maze',
         tags: ["mathematic", "algorithm"],
         date:"2024"
-    },
-
-    {
-        id: 4,
-        title:'The Murder in Crooked House as an interactive fiction',
-        description:'I use interactive fiction to reconstruct the experience of a horror murder in a crooked house, which adopted certain setting and storyline from the book The Murder in Crooked House by Soji Shimada. ',
-        image:'/TheMurder/Map_1.png',
-        link:'/works/The-Murder-in-Crooked-House-as-an-interactive-fiction',
-        tags:["creative coding","serous game"],
-        date:"2024"
-
     }
+
+    
     
 
 ];

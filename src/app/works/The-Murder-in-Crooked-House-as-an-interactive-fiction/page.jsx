@@ -48,7 +48,7 @@ const Page = () => {
         </svg>
         <div className={styles.pHeader}>
         
-            <div className={styles.pTitle}>The Murder in Crooked House as an interactive fiction</div>
+            <div className={styles.pTitle}>The Murder in Crooked House: interactive fiction version</div>
             <div className={styles.pTag}>
               <div className={styles.projectTag}>Serious Game</div>
               <div className={styles.projectTag}>Creative Coding</div>
@@ -135,7 +135,7 @@ const Page = () => {
             <div className={styles.pChapterTitle}>Character Sheet</div>
             <div>There are lots of characters in the novel, some are only appear for only one or two times, in the interactive novel version, I will delete some of the unnecessary characters to create a more immersive and clear playing experience.</div>
             <div>This is the updated character sheet: </div>
-            <ExpandableList title="Kumi Aikura" items={listItems} />
+            <ExpandableList title="The Residents of the Ice Floe Mansion" items={listItems} />
             <ExpandableList title="The Guests" items={listItems2} />
             <ExpandableList title="The Police" items={listItems3} />
             </div>
