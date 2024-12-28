@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/template.jsx", "src/app/playground/“listen!-pied-piper-is-playing”/page.tsx"  ],
+, "src/app/template.jsx", "src/app/playground/“listen!-pied-piper-is-playing”/page.tsx", "src/app/works/the-garden-of-forking-paths/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
