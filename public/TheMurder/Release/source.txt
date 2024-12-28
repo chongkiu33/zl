@@ -1,0 +1,288 @@
+"Murder" by awawa
+
+Release along with an interpreter and the source text
+
+Figure of Maps is the file "Maps.png".
+Figure of Characters is the file "characters.png".
+Figure of Murder Scene is the file "murder scene.png".
+Figure of bar is the file "bar.png".
+Figure of puts is the file "shotputs.png".
+
+The player is in The Letter from your employer. 
+
+The Letter from your employer is a room.
+"[paragraph break]Dear Friend,
+
+Congratulations! You won the first prize from the company raffle! I am honored to invite you come and spend your Christmas Holiday in my most proud work, The Ice Floe Mansion.
+
+What is the Ice Floe Mansion? You asked yourself. 
+
+(You might encounter lots of confusing moments while solving crimes like this time, and you may use 'search' to find some clues. )
+
+Try search Ice Floe Mansion"
+
+Ice Floe Mansion is in Letter from your employer. " "
+
+Search is an action applying to one touchable thing. Understand "search[something]" as searching. 
+Instead of searching: 
+	If the noun is The Ice Floe Mansion:
+		say "You searched the Ice Floe Mansion on the Internet. [paragraph break]There's a magazine praised it as the Japanese Palais Idéal.[paragraph break]It is located at the top of Japan’s northernmost island, Hokkaido, on the very tip of Cape Soya. There's no other live creatures nearby.[paragraph break]The place is like The leaning Tower of Piza and its leans towards south. Therefore also called the crooked house by some reports.[paragraph break]A beautiful picture of the building is attahced, in front of this sea, the gold-tinted glass tower looks as solemn and imposing as any place of religious worship.[paragraph break][paragraph break]'What an unusual design!' You exclaimed. You decide to knock Your supervisor's door to ask for details. ”;
+	If the noun is not The Ice Floe Mansion:
+		say "What are you looking for?"instead.
+
+The supervisor's door is in Letter from your employer. " "
+
+Knocking is an action applying to one touchable thing. Understand "knock [something]" as knocking.
+Report knocking: 
+	If the noun is the supervisor's door, say "Unfortunately, you find it might be too late to get the awards as it's the second day of Christmas. Your supervisor already left the office. You sit back to your chair frustrately.[paragraph break]Your phone's ringing suddenly break out the silence.[paragraph break]'Hi, this is the Detective Cheif Inspector Saburo Ushikoshi from Sapporo City Police Headquaters. We heard that you are invited to spend Christmas holiday in the Ice Floe Mansion. We ask you to come with us for investigation.'[paragraph break]Before you could answer, the phone was hung up in a hurry.[paragraph break] Several minutes later you are in the police car.";
+	now the player is in The police car;
+	If the noun is not the supervisor's door:
+		say "What door are you going to knock on?"instead.
+		
+The police car is a room."There are a police officers in the car. You are confused about the situatioin."
+
+Murder is a truth state that varies. Murder is false.
+Map is a truth state that varies. Map is false.
+T1 is a truth state that varies. T1 is false.
+
+The police officer is scenery in The police car. "He looks so serious"
+
+Understand the commands “answer”, “say”, “shout”, “speak”, “tell” and “ask” as something new.
+
+Asking is an action applying to one visible thing. Understand "ask [something]" as asking.
+Report asking:
+	if the noun is The police officer, say "One of the police rise their eyebrow, say: 'There's a murder happened last night in the Ice Floe Mansion.'[paragraph break] You write down 'There's a murder last night' in your notes, you could use notes to check important happenings and evidence.[paragraph break]Try 'Notes' to look for notes, they might be useful while solving the crimes.";
+	now The murder is true;
+	If the noun is not The police officer, say "ask someone who might know the situation."
+
+Notes is an action applying to nothing. Understand "Notes" as Notes.
+Report Notes:
+	If The murder is true: 
+		say "There's a murder happened last night in the Ice Floe Mansion.[paragraph break]";
+	If the Metal bar is true:
+		say "The metal bar in room 10, itlooks a bit different from the traditional bars, and there's no finger prints[paragraph break]";
+	If the Cellotape is true:
+		say "One of the shot puts has a typical longer strings and a cellotape in it, linking the shot puts and the weight sign, seemingly made by the killer.[paragraph break]";
+	If the Doll is true: 
+		say "Jack is a huge golem like human, and the parts of the golem is removeable. Masaki and the crowds all saw it scattered around the west outside ground this morning, now it is put back in the display room (room 3)[paragraph break]";
+	If the StickCheck is true: 
+		say "Yoshihiko said he saw there was 2 stick standing on the south outside ground when they have dinner, but now it falls. The stick looks nothing special[paragraph break]";
+	If the snow is true:
+		say "The snow is beautifully shining on top of the tower. Some parts of the south ground is shadowed by the tower[paragraph break]";
+	If The map is false and The murder is true:
+		say "[paragraph break]Another seemingly younger police suddenly yelled 'Look at this design of the crooked house!'[paragraph break]You politely ask if you could see the plan of the house, he fell into silence, then agreed.[paragraph break] Try 'maps' to look for the plan of the house, you are so curious why it is crooked[paragraph break]";
+		now map is true;
+	If the murder is false: 
+		say "You have not have any notes yet";
+
+Maps is an action applying to nothing. Understand "Maps" as Maps.
+Report Maps:
+	If The map is true:
+		display the Figure of Maps;
+		now the player is in the Salon;
+		now T1 is true;
+	if T1 is true:
+		say "After a long drive, you and the police finally arrived to the mansion. During the trip, you learn  a lot of things related to the murder. You are astonished about who you will live together during the Christmas if you do not missed the mail. [paragraph break]You could now use 'characters' or type in 'the character sheet', then type in their name with x (For example, 'x Kozaburo Hamamoto')to get their informations in salon.[paragraph break]As mentioned, you could use 'notes' to look for important happenings or clues; 'maps' to look for the plan of the mansion.";
+	If The map is false:
+		say "Maps is not available now".
+
+Greeting is a truth state that varies. Greeting is true.
+murderG is a truth state that varies. murderG is false.
+
+The Salon is a room. "You and the police get in the front door and find the crowds in entrance hall.It has two doors, back and front entrance. You could use 'character' or 'x name of one character'to know who they are in salon. (Don't forget 'notes' and 'maps' are important tools as well)[paragraph break]"
+
+Character is an action applying to nothing. Understand "Characters" as Character.
+Report Character:
+	if greeting is true and the map is true:
+		display the Figure of Characters;
+		say "A tall young lady stand up to greet you first. 'Good afternoon, officers.'Then she turned to you' This is..'[paragraph break] You look at her, she looks tall, confident and beautiful. [paragraph break] Your bose Kozaburo interrupt in, say 'Good afternoon, you must be the lucky one from the raffle. This is my daughter, Eiko.'[paragraph break] The crowds turned around to look at you. You could see they could be divided into three different kinds of people, the residents, Kozaburo and his daughter with three servants. The guests, Eikichi Kikuoka and some employers from Eikichi Kikuoka's company and some university students.";
+		now greeting is false;
+	if greeting is false:
+		say "[paragraph break]The officer urge you 'We need to go to Kazuya's room(room 10) for investigation'[paragraph break]";
+			
+
+Scene is an action applying to nothing. Understand "scene" as Scene.
+Report Scene:
+	If The murderG is true: 
+		display Figure of Murder Scene; 
+
+PeopleInfo is an action applying to nothing. Understand "the character sheet" as PeopleInfo.
+Report PeopleInfo:
+	now the player is in the salon. 
+	
+Help is an action applying to nothing. Understand "help" as help.
+Report help:
+	say "You could possibly use notes, maps, character, and scene to help you solve the situation". 
+
+[Characters]
+A person is a kind of thing.
+
+Kozaburo Hamamoto is a person. Kozaburo Hamamoto is in the salon. Kozaburo Hamamoto is scenery. The description of Kozaburo Hamamoto is "Kozaburo Hamamoto(68) is the owner of the Ice Floe Mansion and President of Hama Diesel".
+Eiko Hamamoto is a person. Eiko Hamamoto is in the salon. Eiko Hamamoto is scenery. "Eiko Hamamoto(23) is the daughter of Kozaburo Hamamoto(the owner of the Ice Floe Mansion). She seems pretty competent about company matters".
+Kohei Hayakawa is a person. Kohei Hayakawa is in the salon. Kohei Hayakawa is scenery. "live-in butler and chauffeur(50)".
+Chikako Hayakawa is a person. Chikako Hayakawa is in the salon. Chikako Hayakawa is scenery. "Kohei's wife, live-in housewife(44)".
+Haruo Kajiwara is a person. Haruo Kajiwara is in the salon. Haruo Kajiwara is scenery. "live-in chef(27)".
+Eikichi Kikuoka is a person. Eikichi Kikuoka is in the salon. Kikuoka is scenery. "President of Kikuoka Bearings(65). Kikuoka Bearings is a company which coporate with Hama Diesel. However, looking at Eikichi's flattering face, I guess his company's business might highly relied on Kozaburo's Hama Diesel".
+Kumi Aikura is a person. Kumi Aikura is in the salon. Kumi Aikura is scenery. "Mr Kikuoka's secretary and mistress(22). A very beautiful young women, you see tons of rumors about the secretary and president of kikuoka bearings on the net before".
+Kazuya Ueda is a person. Kazuya Ueda is in the salon. Kazuya Ueda is scenery. "Mr Kikuoka's chauffeur(30). He died yesterday".
+Michio Kanai is a person. Michio Kanai is in the salon. Michio Kanai is scenery. "executive at Kikuoka Bearings (47)".
+Hastue Kanai is a person. Hastue Kanai is in the salon. Hastue Kanai is scenery. "Michio's wife (38)".
+Shun Sasaki is a person. Shun Sasaki is in the salon. Shun Sasaki is scenery. "student at Jikei University School of Medicine(26)".
+Masaki Togai is a person. Masaki Togai is in the salon. Masaki Togai is scenery. "Tokyo University Student(24)".
+Yoshihiko Mamamoto is a person. Yoshihiko Mamamoto is in the salon. Yoshihiko Mamamoto is scenery. "Keio University student, grandson of Kozaburo Hamamoto's brother".
+Saburo Ushikoshi is a person. Saburo Ushikoshi is in the salon. Saburo Ushikoshi is scenery. "Detective Chief Inspector, Sapporo City Police Headquarters".
+
+
+The room 1 is the south of The room 2. 
+The room 8 is the south of The room 9. 
+The top of the Tower is above The room 1.
+The top of the Tower is above The room 2. 
+The stairway on 2nd Floor is below The room 1. 
+[The description of The stairway is "It is the metal stairway, the whole house's stairway is made of metal except the stair way from room 12 to room 3".]
+The stairway on 2nd Floor is below The room 2. 
+The Salon is below The stairway on 2nd floor. 
+The room 4 is the north of The room 3.
+The room 3 is below The room 8. 
+The west outside ground is below The room 10.
+The west outside ground is below The room 11.
+The south outside ground is the south of The salon. 
+The south outside ground is the east of the west outside ground.
+The south outside ground is the west of the garden.
+The room 10 is the south of The room 11.
+The room 3 is above The room 12.
+The room 12 is the west of The room 13. 
+The room 13 is the west of The Salon.
+The hall in basement is below the room 12.
+The room 14 is the west of The hall in basement. 
+The room 15 is the north of The hall in basement. 
+The room 6 is the east of The hall in basement. 
+The room 7 is the north of The room 6. 
+
+
+The description of The room 6 is "Haruo Kajiwara slept here yesterday".
+The description of The hall in basement is "You are on the underground level right now".
+The description of the room 15 is "Am empty room, unoccupied yesterday".
+The description of The room 13 is "Shun Sasaki slept here yesterday".
+The description of The room 12 is "Masaki Togai slept here yesterday".
+The description of The south outside ground is "You exit from the back door, to the west is the west outside ground. [paragraph break]Yoshihiko said 'I remembered seeing two sticks standing here on the ground yesterday, now it falls.'.".
+The description of The room 11 is "Table Tennis Room. This room could only be accessed from outside stairs.".
+The description of the room 14 is "It's a study room which looks splendid, Eikichi Kikuoka slept here yesterday".
+The description of The room 10 is "Sports equipment storeroom, Kazuya Ueda(dead person) slept here yesterday. There's a dagger in his body. This room could only be accessed from outside, however, there is no fingerprint in the metal bar.".
+The description of The room 8 is "Yoshiko Hamamoto slept here on 12.31".
+The description of The room 3 is "Display/ Tengu Room".
+The description of The top of the Tower is "Kozaburo Hamamoto slept here yesterday. It has a bridge link the room 1 and 2 to the top of tower, which needs people to manually lift it. [paragraph break]Now the snow is slow down, accumulating on the rooftop, shining brightly under sunshine.".
+The description of The room 2 is " Eiko Hamamoto, the daughter of the house owner, slept here on 12.31.".
+The description of The room 9 is "Kanai couple slept here on 12.31".
+The description of The room 1 is "Kumi Akirura slep here on 12.31. She said she heard some noice yesterday, maybe you could ask her for some details.".
+The description of the west outside ground is "Masaki Togai said 'Police officer, when I come to wake Kazuya up, the doll is everywhere'.[paragraph break] 'Where's the doll now?'[paragraph break] Kozaburo replied 'Golem is one of my rare collections, I collect them and put it back in the display room.'".
+
+
+Metal bar is a truth state that varies. Metal Bar is false.
+Cellotape is a truth state that varies. Cellotape is false.
+Doll is a truth state that varies. Doll is false.
+StickCheck is a truth state that varies. StickCheck is false.
+Snow is a truth state that varies. Snow is false.
+Prepared is a truth state that varies. Prepared is false.
+
+The body is in the room 10. The description of the body is "Kazuya seems does not died painfully, the dagger penetrate him on the back. 'Ew' Kumi curl up in Eikichi's arm.".
+After examining the body:
+	display Figure of Murder Scene;
+	say "Now you could use 'scene' to display the murder spot.[paragraph break]When you are ready, you could use 'solve' to solve the crime.";
+	now murderG is true.
+The bed is in the room 10. The description of the bed is "Kazuya should sleep here last night".
+The west window is in the room 10. The description of the west window is "has bars on the outside, no broke signs".
+The metal bars is in the room 10. The description of the metal bars is "It looks a bit different from the traditional bars, and there's no finger prints".
+After examining metal bars:
+	display figure of bar;
+	now metal bar is true.
+The shot puts is in the room 10. The description of the shot puts is "The owner did not notice where the shot puts located usually, however, one of the shot puts has a typical longer strings and a cellotape in it, linking the shot puts and the weight sign, seemingly made by the killer.".
+After examining shot puts:
+	now Cellotape is true.
+The skis is in the room 10. The description of the skis is "Normal skis, nothing special".
+The cord is in the room 10. The description of the cord is "There was a faint trace of blood on the cord.".
+The spot drawn in blood is in the room 10. The description of the spot drawn in blood is "There's no much blood, it seems that the Kazuya is died in peace.".
+The chairs is in the room 10. Understand "chair" and "chairs" as chairs. The description of The chairs is  "According to the house owner Kozaburo, the top shelf is just too high to reach, so it’s there to stand on.".
+The steam heater is in the room 10. The description of steam heater is "Normal steam heater, nothing special".
+The desk is in the room 10. The description of desk is "Normal desk, nothing special".
+The sports equipment cupboard is in the room 10. The description of sports equipment cupboard is "normal cupboard, nothing special ".
+The ventilation hole is in the room 10. The description of ventilation hole is "Carefully examained by the police, nobody could spy on anything through the hole.".
+The clear glass window is in the room 10. The description of clear glass window is "Does not have bars on the outside, It is made of glass. Unlike the other window, it is not double sided".
+
+
+The stick is in the south outside ground. The stick is scenery. "Ordinary stick, nothing special, but it's interesting why it was here.".
+
+After examining stick:
+	now stickCheck is true.
+	
+The snow cover is in the Top of the Tower. The snow cover is scenery. Understand "snow" as snow cover. The description of the snow cover is "The snow is beautifully shining on top of the tower. Some parts of the south ground is shadowed by the tower". 
+
+After examining snow cover:
+	now snow is true.
+	
+The doll collection is in the room 3."There's lots of golem and Tengo mask in the display room, they are gorgeous".
+
+After examining doll collection:
+	say "Masaki points out it's the jack golem appear in the west ground this morning. Jack is a huge golem like human, and the parts of the golem is removeable. ";
+	now doll is true.
+
+Solving is an action applying to nothing. Understand "solve" as solving. 
+
+Check solving: 
+	if Metal Bar is true and Cellotape is true and Doll is true and StickCheck is true and Snow is true:
+		say "I have collected some clues, I'm ready to solve the crime.[paragraph break] How could explain the there's no footprints outside? Asks Eiko.";
+	Otherwise:
+		say "I'm not ready to solve the crime.".
+
+[Solving is a scene. Solving begins when prepared is true. Solving ends when Cov3 is true.]
+
+Cov1 is a truth state that varies. Cov1 is false.
+Cov2 is a truth state that varies. Cov2 is false.
+Cov3 is a truth state that varies. Cov3 is false.
+
+Sol1 is an action applying to nothing. Understand "snow" and "stick" as Sol1.
+Report Sol1:
+	say "Someone pushed the snow from the top of the tower to hide the footprints, and they use the stick to mark the lines[paragraph break]'Then how to explain the scattering Golem body?' Masaki asked";
+	now Cov1 is true.
+
+Sol2 is an action applying to nothing. Understand "step on" and "wipeout" and "footprint" as sol2.
+Report Sol2:
+	If Cov1 is true:
+		say "The murderer step on the scattered body of Golem. 'Why there's no fingerprints?' The Police asks.";
+		now Cov2 is true;
+	Otherwise:
+		say "Everyone looked at each other, wondering what you meant.".
+
+Sol3 is an action applying to nothing. Understand "shot puts" and "strings" and "cellotape" as sol3.
+Report sol3:
+	If Cov2 is true:
+		say "The murderer use the design of the house and the shot puts to realize this.";
+		display the figure of puts;
+		say "Who is the killer then?";
+		now Cov3 is true;
+	Otherwise:
+		say "Everyone looked at each other, wondering what you meant.".		
+		
+Sol4 is an action applying to nothing. Understand "Kozaburo Hamamoto" and "Kozaburo" as Sol4.
+Report Sol4:
+	If Cov3 is true:
+		Say "The owner of the house lowered his head, admit commiting the sin. [line break] He said 'He is the sinner who caused my wife's death'. Then he told the story... ";
+		end the story;
+	Otherwise:
+		say "Everyone looked at each other, wondering what you meant.".	
+
+
+[other tools]
+The way you came from is a direction that varies.
+
+Carry out going a direction (called way):
+   now the way you came from is the opposite of the way.
+
+Returning is an action applying to nothing.
+
+Understand "leave" or "return" as returning.
+
+Check returning when the way you came from is nothing:
+   say "Return to where?" instead.
+
+Carry out returning:
+   try going the way you came from;
