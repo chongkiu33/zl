@@ -86,9 +86,8 @@ const Page = () => {
         <div className={styles.pChapter}>
             <div className={styles.pChapterTitle}>Why to use Interactive Fiction to recreate the experience?</div>
             <ul>
-                <li>Interactive Fiction allows users to interact with the characters in the novel, creating a real-time case investigation experience.</li>
-                <li>Interactive Fiction allows users to access to maps, character sheets, and crime scenes and many other crime solving tools without flipping through a book.</li>
-                <li>Unlike mobile games, interactive fiction do not have a portrait of main character, so it makes the user easier to recognize themselves as the detector</li>
+                <li>Interactive Fiction allows users to interact with the characters with texts and graphs in real time, creating a live case investigation experience.</li>
+                <li>Interactive Fiction allows users to access to maps, character sheets, and crime scenes and many other crime solving tools without fliping through a book.</li>
             </ul>
             
         </div>
