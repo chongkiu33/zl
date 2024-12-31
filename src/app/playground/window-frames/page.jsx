@@ -57,17 +57,11 @@ const Page = () => {
           <Link
             className={styles.link}
             target="_blank"
-            href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf"
+            href="https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf"
           >
-            Yuanzhi
+            The digital archive of Yuan Zhi (The Craft of Garden)
           </Link>
-          <Link
-            className={styles.link}
-            target="_blank"
-            href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://ia600703.us.archive.org/12/items/02090253.cn/02090253.cn.pdf"
-          >
-            The digital archive
-          </Link>
+          
         </div>
       </div>
 

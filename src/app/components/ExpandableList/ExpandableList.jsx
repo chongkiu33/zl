@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Expand.module.css'; // 替换成你的样式路径
 
-const ExpandableList = ({ title, items }) => {
+const ExpandableList = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleShow = () => {
@@ -15,11 +15,12 @@ const ExpandableList = ({ title, items }) => {
       </div>
       {isOpen && (
         <div>
-        <ul className={styles.nobullets}>
+        {/* <ul className={styles.nobullets}>
           {items.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
-        </ul>
+        </ul> */}
+        {children}
         </div>
       )}
     </div>

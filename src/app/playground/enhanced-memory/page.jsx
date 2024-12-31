@@ -1,10 +1,14 @@
+"use client"
 import styles from '../pg.module.css'
 import Image from 'next/image'
 import TextSplitter from '../../components/TextSplitter/TextSplitter'
 import Link from 'next/link';
 import ProjectTags from '../../components/ProjectTag/ProjectTag'
+import ExpandableList from '../../components/ExpandableList/ExpandableList'
 
 const Page = () => {
+     
+
   return (
   <div>
 
@@ -26,17 +30,23 @@ const Page = () => {
         <div className={styles.spChapter}>
             <div className={styles.spChapterTitle}>Prototype</div>
             <div className={styles.spChapterText}>
-            <iframe
-        width="100%"
-        height="400"
-        src="/enhancedMemory/EnhancedMemory_Prototype.mp4"  
-        title="YouTube Video Player"
-        frameBorder={"0"}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+           
 
-<div><Link className={styles.link} target="_blank" href="https://github.com/B2xx/chrome-extensions-visitedItems">The GitHub Page</Link>for historyVisitedItems is an extension for past browser history.</div>
+<div className="video-container">
+                <video
+                    src="/enhancedMemory/EnhancedMemory_Prototype_new.mp4" 
+                    controls
+                   
+                    loop
+                    className="responsive-video"
+                ></video>
+                </div>
+                <ExpandableList title="Explanation">
+                    <div>According to my previous research history, it predict me as a girl who like horror movie and generate an nonexisted horror movie website and fake profile for me</div>
+                    <Link className={styles.link} target="_blank" href="https://cinemacrypt.org/user/gorequeenHarper91?sessionID=DX1793abQ&tab=horror-picks">https://cinemacrypt.org/user/gorequeenHarper91?sessionID=DX1793abQ&tab=horror-picks</Link>
+                </ExpandableList>
+
+<div><Link className={styles.link} target="_blank" href="https://github.com/B2xx/chrome-extensions-visitedItems">The GitHub Page</Link> for historyVisitedItems is an extension for past browser history.</div>
       
         <TextSplitter text={`The GitHub Page displays the history of a website in URL form and the website is being developed. `}/>
     

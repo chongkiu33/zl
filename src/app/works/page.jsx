@@ -25,7 +25,7 @@ const works = [
         description:'I use interactive fiction to reconstruct the experience of a horror murder in a crooked house, which adopted certain setting and storyline from the book The Murder in Crooked House by Soji Shimada. ',
         image:'/TheMurder/Map_1.png',
         link:'/works/The-Murder-in-Crooked-House-as-an-interactive-fiction',
-        tags:["creative coding","serous game"],
+        tags:["creative coding","serious game"],
         date:"2024"
 
     },
