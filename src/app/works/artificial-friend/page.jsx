@@ -77,7 +77,7 @@ const Page = () => {
             <div className={styles.projectTag}>critical technology</div>
            
               </div>
-            <div className={styles.pDescri}>Have you imagined an “artificial friend” that could recognize your emotion and support you? Now she comes from the website to reality. Jane’s writable hand and face enable the users to have more tangible interaction with her, and reflect on what we need in the intimate relationship if what we need could all be satisfied by a considerate “machine”.</div>
+            <div className={styles.pDescri}>Have you imagined an “artificial friend” that could recognize your emotions and support you? Now, she is coming from the website to reality. Jane could recognize your emotions and respond to you in a written note along with a caring voice. This interactive installation aims to reflect on what we need in an intimate relationship if what we need could all be satisfied by a considerate “machine.”</div>
             <div className={styles.pDate}>2023</div>
     </div>
 

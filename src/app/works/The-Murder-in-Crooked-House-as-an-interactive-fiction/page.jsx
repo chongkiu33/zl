@@ -59,7 +59,7 @@ const Page = () => {
 
 
         <div className={styles.iframeContainer}>
-            <iframe src={"/TheMurder/Release/play.html"}  width="100%" height="600"></iframe>
+            <iframe src={"/TheMurder/Release1/play.html"}  width="100%" height="600"></iframe>
             
             
         </div>
