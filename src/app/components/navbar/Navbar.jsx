@@ -35,7 +35,7 @@ const Navbar = ({pathname}) => {
                 <Link className={`${styles.nav} ${isActive("playground")? styles.active : ''}`}   href="/playground">Playground</Link>
                 {isPlaygroundPath && (
               <div className={styles.switchContainer}>
-                <div className={styles.side}>Side Projects</div>
+                {/* <div className={styles.side}>Side Projects</div> */}
                 <div className={`${styles.side} ${isPoeticMode ? styles.checked : ""}`}>
                   Poetic Mode
                   <Switch
